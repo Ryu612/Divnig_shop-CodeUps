@@ -23,12 +23,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
     rel="stylesheet">
   <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 
@@ -130,8 +132,75 @@
 <!-- メインビュー -->
 <div class="mv">
   <div class="mv__inner">
-    
+    <!-- Slider main container -->
+    <div id="js-mv-swiper" class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="mv__image">
+            <picture>
+              <source media="(min-width:768px)" srcset="./assets/images/pc/top-mv-pc1.jpg">
+              <img src="./assets/images/sp/top-mv-sp1.jpg" alt="海の中にいる亀">
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mv__image">
+            <picture>
+              <source media="(min-width:768px)" srcset="./assets/images/pc/top-mv-pc2.jpg">
+              <img src="./assets/images/sp/top-mv-sp2.jpg" alt="海の中にいる亀">
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mv__image">
+            <picture>
+              <source media="(min-width:768px)" srcset="./assets/images/pc/top-mv-pc3.jpg">
+              <img src="./assets/images/sp/top-mv-sp3.jpg" alt="海に浮かぶヨットと山">
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="mv__image">
+            <picture>
+              <source media="(min-width:768px)" srcset="./assets/images/pc/top-mv-pc4.jpg">
+              <img src="./assets/images/sp/top-mv-sp4.jpg" alt="ビーチ">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mv__lead">
+      <p class="mv__title">DIVING</p>
+      <p class="mv__subtitle">into the ocean</p>
+    </div>
   </div>
 </div>
+
+<section class="campaign">
+  <div class="campaign__inner">
+    <div class="campaign__title section-header">
+      <h2 class="section-header__english"><span>C</span>ampaign</h2>
+      <p class="section-header__japanese">キャンペーン</p>
+    </div>
+    <div class="campaign__items">
+      <!-- ループ開始 -->
+      <div class="campaign__item campaign-card">
+        <div class="campaign-card__image"><img src="./assets/images/common/campaign1.jpg" alt="海の中を泳ぐたくさんの魚"></div>
+        <div class="campaign-card__label">ライセンス講習</div>
+        <h3 class="campaign-card__title">ライセンス取得</h3>
+        <p class="campaign-card__price-info">全部コミコミ(お一人様)</p>
+        <div class="campaign-card__price">
+          <div class="campaign-card__price-old">¥56,000</div>
+          <div class="campaign-card__price__new">¥46,000</div>
+        </div>
+      </div>
+    </div>
+    <div class="campaign__button">
+      <a href="" class="button"><p>View more</p></a>
+    </div>
+  </div>
+</section>
 
 </html>
