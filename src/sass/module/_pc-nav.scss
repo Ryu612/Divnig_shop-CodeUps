@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.pc-nav {
+	display: none;
+
+	@include mq("md") {
+		display: block;
+		display: flex;
+		align-items: center;
+		gap: rem(40);
+	}
+}
+
+.pc-nav__link {
+	text-align: center;
+	color: $color-white;
+}
+
+.pc-nav__link-en {
+	font-family: $english-font-family;
+	font-size: rem(18);
+	line-height: 1;
+}
+
+.pc-nav__link-ja {
+	margin-top: rem(4);
+	font-size: rem(10);
+	line-height: 1.5;
+}

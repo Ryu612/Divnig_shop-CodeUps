@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.drawer-content {
+	margin-top: rem(80);
+	padding: rem(24) rem(15);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background-color: $color-green;
+	display: flex;
+	gap: rem(7);
+	transform: translateX(100%);
+	transition: transform 0.3s linear;
+}
+
+.drawer-content.is-active {
+	transform: translateX(0);
+}
+
+.drawer-content__wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: rem(40);
+}
+
+.drawer-content__wrapper--left {
+}
+
+.drawer-content__wrapper--right {
+}
+
+.drawer-content__items {
+	display: flex;
+	flex-direction: column;
+	gap: rem(24);
+}
+
+.drawer-content__item {
+	padding-left: rem(22);
+	position: relative;
+}
+
+.drawer-content__item a {
+	display: block;
+	font-size: rem(16);
+	line-height: 1.125;
+	color: $color-white;
+}
+
+.drawer-content__item:first-child a {
+	font-weight: $bold;
+}
+
+.drawer-content__item:first-child::before {
+	position: absolute;
+	content: "";
+	background: url(../../assets/images/common/icon-starfish.png) no-repeat center center / contain;
+	width: rem(18);
+	height: rem(18);
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
