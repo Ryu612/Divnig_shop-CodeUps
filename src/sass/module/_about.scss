@@ -5,27 +5,26 @@
 
 	@include mq('md') {
 		margin-top: rem(140);
-		position: relative;
-		max-width: rem(1440);
-		margin-inline: auto;
 	}
 }
 
-.about::after {
+.about__inner {
+	@include mq('md') {
+		position: relative;
+	}
+}
+
+.about__inner::after {
 	@include mq('md') {
 		position: absolute;
 		content: "";
 		background: url(../../assets/images/pc/coral.png) no-repeat center center / contain;
 		width: rem(194);
 		height: rem(181);
-		right: rem(83);
-		// right: calc(85 / 1440) * 100%;
 		bottom: rem(-90);
+		right: 50%;
+		right: calc(50% - min(47vw, rem(637)));
 	}
-}
-
-.about__inner {
-	position: relative;
 }
 
 .about__title {

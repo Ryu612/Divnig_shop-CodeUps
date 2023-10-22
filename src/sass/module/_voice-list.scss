@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.blog-list {
+.voice-list {
 	display: flex;
 	flex-direction: column;
 	gap: rem(40);
@@ -10,5 +10,6 @@
 	}
 }
 
-.blog-list__item {
+.voice-list__item {
+	flex: 1;
 }

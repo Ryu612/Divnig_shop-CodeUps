@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.voice {
+	margin-top: rem(80);
+
+	@include mq("md") {
+		margin-top: rem(140);
+	}
+}
+
+.voice__inner {
+	position: relative;
+}
+
+.voice__inner::before {
+	@include mq("md") {
+		position: absolute;
+		content: "";
+		background: url(../../assets/images/pc/voice-fish.png) no-repeat center center / contain;
+		width: rem(301);
+		height: rem(138);
+		top: rem(-120);
+		left: calc(50% - min(47vw, rem(620)));
+	}
+}
+
+.voice__inner::after {
+	@include mq("md") {
+		position: absolute;
+		content: "";
+		background: url(../../assets/images/pc/voice-seahorse.png) no-repeat center center / contain;
+		width: rem(71);
+		height: rem(162);
+		right: rem(25);
+		bottom: rem(-67);
+	}
+}
+
+.voice__title {
+}
+
+.voice__items {
+	margin-top: rem(44);
+
+	@include mq("md") {
+		margin-top: rem(30);
+	}
+}
+
+.voice__button {
+	text-align: center;
+	margin-top: rem(40);
+
+	@include mq("md") {
+		margin-top: rem(80);
+	}
+}

@@ -1,1 +1,64 @@
 @use "global" as *;
+
+.blog {
+	margin-top: rem(80);
+
+	@include mq("md") {
+		margin-top: 0;
+		padding-top: rem(100);
+		background: url(../../assets/images/pc/blog-bg-pc.jpg) no-repeat top center / contain;
+	}
+}
+
+.blog__inner {
+	padding-inline: rem(21);
+	margin-inline: auto;
+
+	@include mq("md") {
+		max-width: rem(1130);
+		padding-inline: $padding-pc;
+		position: relative;
+	}
+}
+
+.blog__inner::after {
+	@include mq("md") {
+		position: absolute;
+		content: "";
+		background: url(../../assets/images/pc/blog-fish.png) no-repeat center center / contain;
+		width: rem(437);
+		height: rem(201);
+		top: rem(-76);
+		left: calc(50% - min(47vw, rem(619)));
+	}
+}
+
+.blog__title {
+	@include mq("md") {
+		.section-header__english span {
+			color: #ddf0f1;
+		}
+
+		.section-header__english,
+		.section-header__japanese {
+			color: $color-white;
+		}
+	}
+}
+
+.blog__items {
+	margin-top: rem(24);
+
+	@include mq("md") {
+		margin-top: rem(80);
+	}
+}
+
+.blog__button {
+	text-align: center;
+	margin-top: rem(40);
+
+	@include mq("md") {
+		margin-top: rem(80);
+	}
+}
