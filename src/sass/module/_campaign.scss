@@ -1,15 +1,24 @@
 @use "global" as *;
 
 .campaign {
-	margin-top: rem(40);
+	padding-top: rem(40);
+	padding-bottom: rem(4);
+	overflow: hidden;
+
+	@include mq('md') {
+		padding-top: rem(120);
+	}
 }
 
 .campaign__inner {
-	padding-left: rem(15);
-
-	@include mq('md') {
-		padding-left: rem(180);
+	@include mq("md") {
+		position: relative;
 	}
+}
+
+.campaign__swiper {
+	margin-right: calc(50% - 50vw);
+	width: 100vw;
 }
 
 .campaign__title {
@@ -17,6 +26,10 @@
 
 .campaign__items {
 	margin-top: rem(24);
+
+	@include mq('md') {
+		margin-top: rem(40);
+	}
 }
 
 .campaign__button {
@@ -27,15 +40,25 @@
 .campaign__prev {
 	display: none;
 
-	@include mq('md') {
+	@include mq("md") {
 		display: block;
+		background: url(../../assets/images/common/button-prev.png) no-repeat center center / contain;
+		width: rem(80);
+		height: rem(80);
+		top: rem(22);
+		left: calc(865 / 1130) * 100%;
 	}
 }
 
 .campaign__next {
 	display: none;
 
-	@include mq('md') {
+	@include mq("md") {
 		display: block;
+		background: url(../../assets/images/common/button-next.png) no-repeat center center / contain;
+		width: rem(80);
+		height: rem(80);
+		top: rem(22);
+		left: calc(1025 / 1130) * 100%;
 	}
 }
