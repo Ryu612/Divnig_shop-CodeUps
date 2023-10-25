@@ -1,0 +1,132 @@
+@use "global" as *;
+
+.price {
+	margin-top: rem(80);
+	padding-block: rem(80);
+	background-color: #DDF0F1;
+
+	@include mq("md") {
+		margin-top: rem(140);
+		padding-block: rem(100);
+	}
+}
+
+.price__inner.inner {
+	@include mq('md') {
+		max-width: rem(1127);
+	}
+}
+
+.price__inner {
+	position: relative;
+}
+
+.price__inner::before {
+	@include mq("md") {
+		position: absolute;
+		content: "";
+		background: url(../../assets/images/pc/price-fish.png) no-repeat center center / contain;
+		width: rem(437);
+		height: rem(201);
+		bottom: rem(-40);
+		left: calc(50% - min(47vw, rem(620)));
+	}
+}
+
+.price__title {
+}
+
+.price__body {
+	margin-top: rem(24);
+	display: flex;
+	flex-direction: column;
+	gap: rem(40);
+
+	@include mq("md") {
+		margin-top: rem(40);
+		flex-direction: row-reverse;
+		gap: rem(93);
+	}
+}
+
+.price__image {
+	@include mq('md') {
+		width: 50%;
+	}
+}
+
+.price__image source {
+
+}
+
+.price__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.price__lists {
+	display: flex;
+	flex-direction: column;
+	gap: rem(40);
+
+	@include mq('md') {
+		width: 50%;
+	}
+}
+
+.price__list {
+}
+
+.price__category {
+	font-size: rem(16);
+	font-weight: $bold;
+	line-height: 1.5;
+	padding-bottom: rem(4);
+	position: relative;
+}
+
+.price__category::after {
+	position: absolute;
+	content: "";
+	background-color: $color-green;
+	width: 100%;
+	height: rem(1);
+	bottom: 0;
+	left: 0;
+}
+
+.price__contents {
+	font-size: rem(14);
+	line-height: 1.7143;
+	display: flex;
+  flex-wrap: wrap;
+	justify-content: space-between;
+
+	@include mq('md') {
+		font-size: rem(16);
+		line-height: 1.5;
+	}
+}
+
+.price__name {
+	margin-top: rem(8);
+	width: calc(270 / 345) * 100%;
+
+	@include mq('md') {
+		width: calc(350 / 492) * 100%;
+	}
+}
+
+.price__cost {
+	margin-top: rem(8);
+}
+
+.price__button {
+	text-align: center;
+	margin-top: rem(40);
+
+	@include mq('md') {
+		margin-top: rem(80);
+	}
+}

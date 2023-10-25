@@ -21,7 +21,8 @@
 }
 
 .voice-card__title-wrapper {
-	width: calc(149 / 313) * 100%;
+	// width: calc(149 / 313) * 100%;
+	flex: 1;
 
 	@include mq('md') {
 		width: calc(276 / 348) * 100%;
@@ -54,6 +55,7 @@
 	padding-bottom: rem(4);
 	position: relative;
 	line-height: 1.44;
+	display: inline-block;
 
 	@include mq("md") {
 		font-size: rem(24);
