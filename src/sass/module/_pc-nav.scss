@@ -14,6 +14,29 @@
 .pc-nav__link {
 	text-align: center;
 	color: $color-white;
+	position: relative;
+}
+
+.pc-nav__link::after {
+	content: '';
+	position: absolute;
+	bottom: rem(-4);
+	left: 0;
+	width: 100%;
+	height: rem(1);
+	background: $color-white;
+	transition: all .3s;
+	transform: scale(0, 1);/*X方向0、Y方向1*/
+	transform-origin: center top;/*上部中央基点*/
+}
+
+.pc-nav__link:hover {
+	// opacity: 0.7;
+}
+
+.pc-nav__link.current::after,
+.pc-nav__link:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
 .pc-nav__link-en {

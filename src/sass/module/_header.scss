@@ -39,6 +39,10 @@
 	}
 }
 
+.header__logo a:hover {
+	opacity: 0.7;
+}
+
 .header__logo a img {
 	width: rem(102);
 
@@ -50,5 +54,15 @@
 .header__drawer-icon {
 	@include mq("md") {
 		display: none;
+	}
+}
+
+
+//ページ内リンクジャンプ先の位置調整
+html {
+	scroll-padding-top: rem(80);
+
+	@include mq('md') {
+		scroll-padding-top: rem(90);
 	}
 }

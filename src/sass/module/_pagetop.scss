@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.pagetop {
+	position: fixed;
+	bottom: rem(16);
+	right: rem(15);
+	border: 1px solid $color-green;
+	border-radius: 50%;
+	background: $color-white;
+	opacity: 0;
+	visibility: hidden;
+	transition:	opacity 0.3s,	visibility 0.3s;
+	z-index: map-get($layer, "pagetop");
+
+	@include mq("md") {
+		bottom: rem(20);
+		right: rem(20);
+	}
+}
+
+.pagetop a {
+	display: block;
+	width: rem(48);
+	height: rem(48);
+	position: relative;
+
+	@include mq("md") {
+		width: rem(80);
+		height: rem(80);
+	}
+}
+
+.pagetop a::after {
+	position: absolute;
+	content: "";
+	background: url(../../assets/images/common/pagetop-arrow.png) no-repeat center center / contain;
+	top: 50%;
+	left: 50%;
+	transform: translate(-80%, -50%);
+	width: rem(6);
+	height: rem(28);
+
+	@include mq("md") {
+		width: rem(8.5);
+		height: rem(40);
+	}
+}
+
+.pagetop.is-show {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 0.3s;
+}
+
+.pagetop.is-show:hover {
+	@include mq('md') {
+		opacity: 0.7;
+	}
+}
+
+.pagetop.is-hidden {
+	opacity: 0;
+  visibility: hidden;
+}
+
+.pagetop.is-stop {
+	position: absolute;
+	bottom: calc(rem(739) + rem(20));
+
+	@include mq('md') {
+		bottom: calc(rem(559) + rem(20));
+	}
+}

@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.footer-nav {
+	margin-top: rem(40);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: rem(40) rem(16);
+	justify-content: space-between;
+	white-space: nowrap;
+	grid-template-areas:
+		"a c"
+		"b d";
+
+	@include mq("md") {
+		margin-top: rem(24);
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-template-areas: "a b c d";
+	}
+}
+
+.footer-nav__1 {
+	grid-area: a;
+}
+.footer-nav__2 {
+	grid-area: b;
+}
+.footer-nav__3 {
+	grid-area: c;
+}
+.footer-nav__4 {
+	grid-area: d;
+}
+
+.footer-nav__items {
+	display: flex;
+	flex-direction: column;
+	gap: rem(24);
+}
+
+.footer-nav__items + .footer-nav__items {
+	margin-top: rem(40);
+}
+
+.footer-nav__item {
+	padding-left: rem(22);
+	position: relative;
+}
+
+.footer-nav__item a {
+	display: block;
+	line-height: 1.125;
+	color: $color-white;
+}
+
+.footer-nav__item a:hover {
+	@include mq("md") {
+		opacity: 0.7;
+	}
+}
+
+.footer-nav__item:first-child a {
+	font-weight: $bold;
+}
+
+.footer-nav__item:first-child::before {
+	position: absolute;
+	content: "";
+	background: url(../../assets/images/common/icon-starfish.png) no-repeat center center / contain;
+	width: rem(18);
+	height: rem(18);
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}

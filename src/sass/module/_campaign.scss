@@ -2,11 +2,12 @@
 
 .campaign {
 	padding-top: rem(40);
-	padding-bottom: rem(4);
+	padding-bottom: rem(44);
+	padding-block: rem(40) rem(44);
 	overflow: hidden;
 
 	@include mq('md') {
-		padding-top: rem(120);
+		padding-block: rem(120) rem(74);
 	}
 }
 
@@ -60,5 +61,18 @@
 		height: rem(80);
 		top: rem(22);
 		left: calc(1025 / 1130) * 100%;
+	}
+}
+
+.campaign__prev, .campaign__next {
+	@include mq('md') {
+		transition: opacity 0.3s;
+	}
+}
+
+
+:is(.campaign__prev, .campaign__next):hover {
+	@include mq('md') {
+		opacity: 0.7;
 	}
 }

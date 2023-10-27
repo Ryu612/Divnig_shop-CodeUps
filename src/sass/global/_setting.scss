@@ -37,6 +37,7 @@ body {
   background: $color-white;
   color: $color-black;
   font-size: rem(16);
+  position: relative;
 }
 
 ////////////////////
@@ -50,5 +51,6 @@ $layer: (
   sp-nav: 35,
   floating: 30,
   header: 20,
+  pagetop: 10,
   default: 1
 );
