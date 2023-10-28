@@ -4,8 +4,6 @@
 	// width: calc(280 / 375) * 100%;
 	width: rem(280);
 	box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
-	// margin-bottom: rem(40);
-	margin-bottom: rem(10);
 
 	@include mq('md') {
 		width: rem(333);
@@ -38,7 +36,7 @@
 	color: $color-green;
 	font-size: rem(12);
 	line-height: 1.8333;
-	padding: rem(4) rem(12);
+	padding: rem(3) rem(11);
 	border: 1px solid $color-green;
 	display: inline-block;
 
@@ -52,7 +50,7 @@
 	font-size: rem(16);
 	font-weight: 500;
 	position: relative;
-	padding-bottom: rem(9);
+	padding-bottom: rem(8.4);
 }
 
 .campaign-card__title::after {
@@ -110,9 +108,9 @@
 	background-color: #c94800;
 	width: 100%;
 	height: rem(3);
-	top: 50%;
+	top: 45%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -51%);
 }
 
 .campaign-card__price__new {

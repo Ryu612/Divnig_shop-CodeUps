@@ -23,8 +23,9 @@
 .voice-card__title-wrapper {
 	// width: calc(149 / 313) * 100%;
 	flex: 1;
+	margin-bottom: rem(1); //.voice-card__headにalign-items: flex-end;（画面幅を広げた時用）を指定したため調整
 
-	@include mq('md') {
+	@include mq("md") {
 		width: calc(276 / 348) * 100%;
 	}
 }

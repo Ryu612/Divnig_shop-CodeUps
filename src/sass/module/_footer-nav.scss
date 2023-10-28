@@ -5,7 +5,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
-	gap: rem(40) rem(16);
+	gap: rem(32) rem(18);
 	justify-content: space-between;
 	white-space: nowrap;
 	grid-template-areas:
@@ -70,7 +70,6 @@
 	background: url(../../assets/images/common/icon-starfish.png) no-repeat center center / contain;
 	width: rem(18);
 	height: rem(18);
-	top: 50%;
+	top: 0;
 	left: 0;
-	transform: translateY(-50%);
 }

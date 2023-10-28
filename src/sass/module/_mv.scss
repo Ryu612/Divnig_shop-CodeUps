@@ -10,6 +10,7 @@
 }
 
 .mv__image {
+	height: 100vh;
 	position: relative;
 }
 
@@ -22,18 +23,19 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -52%);
 	text-align: center;
 	color: $color-white;
 	z-index: 2;
+	font-weight: $normal;
 }
 
 .mv__title {
 	font-size: rem(40);
 	font-family: 'Lato', sans-serif;
-	font-weight: $normal;
 	letter-spacing: 0.54em;
 	margin-right: -0.54em;
+	line-height: calc(48 / 40);
 
 	@include mq('md') {
 		font-size: rem(80);
@@ -44,4 +46,5 @@
 .mv__subtitle {
 	font-size: rem(20);
 	font-family: $english-font-family;
+	line-height: calc(33 / 20);
 }

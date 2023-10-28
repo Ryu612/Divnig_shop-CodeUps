@@ -9,13 +9,13 @@
 	}
 }
 
-.blog__inner {
-	// padding-inline: rem(21);
-	// margin-inline: auto;
+.blog__inner.inner {
+	padding-inline: rem(21);
+	margin-inline: auto;
 
 	@include mq("md") {
-		// max-width: rem(1130);
-		// padding-inline: $padding-pc;
+		max-width: rem(1130);
+		padding-inline: $padding-pc;
 		position: relative;
 	}
 }
@@ -46,7 +46,7 @@
 }
 
 .blog__items {
-	margin-top: rem(24);
+	margin-top: rem(28);
 
 	@include mq("md") {
 		margin-top: rem(80);

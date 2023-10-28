@@ -8,10 +8,12 @@
 	padding-block: rem(16);
 	color: $color-white;
 	font-size: rem(14);
+	font-family: $english-font-family;
 	line-height: 1.57143;
 	position: relative;
 	z-index: 1;
 	transition: color 0.2s;
+	margin-right: rem(2);
 }
 
 .button::before {
@@ -54,17 +56,17 @@
 
 .button p {
 	display: inline-block;
-	padding-right: rem(48);
+	padding-right: rem(48.75);
 	position: relative;
 }
 
 .button p::after {
 	position: absolute;
-	top: 43%;
+	top: 40%;
 	right: 0;
 	transform: translateY(-50%);
-	width: rem(40);
-	height: rem(6);
+	width: rem(41);
+	height: rem(8);
 	background: url(../../assets/images/common/button-arrow.png) no-repeat center center / contain;
 	content: "";
 }

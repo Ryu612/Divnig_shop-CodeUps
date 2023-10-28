@@ -23,11 +23,11 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		// Optional parameters
 		loop: true,
 		effect: 'fade',
-		autoplay: {
-			delay: 2000,
-			disableOnInteraction: false,
-		},
-		speed: 3000,
+		// autoplay: {
+		// 	delay: 2000,
+		// 	disableOnInteraction: false,
+		// },
+		// speed: 3000,
 	});
 
 	/*
@@ -46,12 +46,12 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		slidesPerView: 'auto',
 		freeMode: true,
 		freeModeSticky: true,
-		grabCursor: true,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
-		speed: 1000,
+		// grabCursor: true,
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// },
+		// speed: 1000,
 
 		// Navigation arrows
 		navigation: {

@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .about {
-	padding-block: rem(40) rem(70);
+	padding-block: rem(40) rem(74);
 
 	@include mq('md') {
 		padding-block: rem(70) rem(164);
@@ -31,7 +31,7 @@
 }
 
 .about__image {
-	margin-top: rem(24);
+	margin-top: rem(28);
 	// height: rem(212);
 
 	// @include mq("md") {
@@ -54,7 +54,7 @@
 
 .about__right-image {
 	width: calc(281 / 345) * 100%;
-	margin-top: -49%;
+	margin-top: -48.5%;
 	margin-left: auto;
 	// aspect-ratio: 281 / 186;
 }
