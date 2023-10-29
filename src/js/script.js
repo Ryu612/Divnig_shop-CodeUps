@@ -23,11 +23,12 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		// Optional parameters
 		loop: true,
 		effect: 'fade',
-		// autoplay: {
-		// 	delay: 2000,
-		// 	disableOnInteraction: false,
-		// },
-		// speed: 3000,
+		allowTouchMove: false,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+		speed: 3000,
 	});
 
 	/*
@@ -47,16 +48,16 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		freeMode: true,
 		freeModeSticky: true,
 		grabCursor: true,
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: false,
-		// },
-		// speed: 1000,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		speed: 1000,
 
 		// Navigation arrows
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-button-next-origin',
+			prevEl: '.swiper-button-prev-origin',
 		},
 	});
 
