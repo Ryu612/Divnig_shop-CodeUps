@@ -33,9 +33,6 @@
 
 .header__logo {
 
-	@include mq('md') {
-		margin-top: rem(8);
-	}
 }
 
 .header__logo a:hover {

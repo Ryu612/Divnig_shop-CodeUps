@@ -3,6 +3,10 @@
 .footer {
 	padding-block: rem(48) rem(56);
 	background: $color-green;
+
+	@include mq('md') {
+		padding-block: rem(80);
+	}
 }
 
 .footer__inner {
@@ -63,6 +67,14 @@
 
 	@include mq("md") {
 		width: rem(32);
+	}
+}
+
+.footer__nav {
+	margin-top: rem(40);
+
+	@include mq('md') {
+		margin-top: rem(24);
 	}
 }
 

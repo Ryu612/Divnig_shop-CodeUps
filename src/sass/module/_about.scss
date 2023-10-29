@@ -37,6 +37,10 @@
 	// @include mq("md") {
 	// 	position: relative;
 	// }
+
+	@include mq('md') {
+		margin-top: rem(40);
+	}
 }
 
 .about__left-image {
@@ -57,6 +61,10 @@
 	margin-top: -48.5%;
 	margin-left: auto;
 	// aspect-ratio: 281 / 186;
+
+	@include mq('md') {
+		margin-top: -48.7%;
+	}
 }
 
 .about__right-image img {
@@ -73,7 +81,7 @@
 		position: absolute;
 		top: 53%;
 		transform: translateY(-50%);
-		right: 6%;
+		right: 5.8%;
 		z-index: 3;
 		display: flex;
 		justify-content: center;
@@ -100,6 +108,10 @@
 
 .about__content {
 	margin-top: rem(16);
+
+	@include mq('md') {
+		margin-top: rem(35);
+	}
 }
 
 .about__text {

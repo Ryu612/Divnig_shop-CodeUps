@@ -5,8 +5,7 @@
 	background-color: #DDF0F1;
 
 	@include mq("md") {
-		margin-top: rem(140);
-		padding-block: rem(100);
+		padding-block: rem(100) rem(104);
 	}
 }
 
@@ -27,7 +26,7 @@
 		background: url(../../assets/images/pc/price-fish.png) no-repeat center center / contain;
 		width: rem(437);
 		height: rem(201);
-		bottom: rem(-40);
+		bottom: rem(-45);
 		left: calc(50% - min(47vw, rem(620)));
 	}
 }

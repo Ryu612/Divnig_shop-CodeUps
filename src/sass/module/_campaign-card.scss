@@ -41,7 +41,7 @@
 	display: inline-block;
 
 	@include mq('md') {
-		padding: rem(6) rem(16);
+		padding: rem(5) rem(15);
 	}
 }
 
@@ -88,7 +88,11 @@
 	line-height: 1;
 
 	@include mq('md') {
+		margin-top: rem(7);
 		gap: rem(24);
+		//金額の桁数が減った時表記を左詰めにするかどうか
+		// justify-content: flex-start;
+		// margin-left: rem(18);
 	}
 }
 
@@ -111,6 +115,10 @@
 	top: 45%;
 	left: 50%;
 	transform: translate(-50%, -51%);
+
+	@include mq('md') {
+		top: 50%;
+	}
 }
 
 .campaign-card__price__new {

@@ -28,6 +28,10 @@
 	color: $color-white;
 	z-index: 2;
 	font-weight: $normal;
+
+	@include mq('md') {
+		transform: translate(-50%, -50%);
+	}
 }
 
 .mv__title {
@@ -39,7 +43,7 @@
 
 	@include mq('md') {
 		font-size: rem(80);
-		letter-spacing: 0.613em;
+		line-height: 1.25;
 	}
 }
 

@@ -27,11 +27,18 @@
 
 	@include mq("md") {
 		width: calc(276 / 348) * 100%;
+		margin-bottom: 0;
 	}
 }
 
 .voice-card__meta {
 	font-size: rem(12);
+
+	@include mq('md') {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
 }
 
 .voice-card__age {
@@ -45,7 +52,7 @@
 	border: 1px solid $color-green;
 
 	@include mq("md") {
-		padding: rem(6) rem(16);
+		padding: rem(5) rem(15);
 	}
 }
 
@@ -59,7 +66,9 @@
 	display: inline-block;
 
 	@include mq("md") {
+		margin-top: rem(8);
 		font-size: rem(24);
+		padding-bottom: rem(5);
 	}
 }
 

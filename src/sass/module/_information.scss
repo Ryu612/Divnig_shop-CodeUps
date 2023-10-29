@@ -37,8 +37,8 @@
 
 .information__body {
 	@include mq('md') {
-		width: calc(492 / 1080) * 100%
-
+		width: calc(492 / 1080) * 100%;
+		margin-top: rem(-6);
 	}
 }
 

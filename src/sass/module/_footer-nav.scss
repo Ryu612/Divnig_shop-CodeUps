@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .footer-nav {
-	margin-top: rem(40);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
@@ -13,7 +12,7 @@
 		"b d";
 
 	@include mq("md") {
-		margin-top: rem(24);
+		gap: rem(60);
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 1fr;
 		grid-template-areas: "a b c d";
@@ -28,9 +27,17 @@
 }
 .footer-nav__3 {
 	grid-area: c;
+
+	@include mq('md') {
+		margin-left: rem(-14);
+	}
 }
 .footer-nav__4 {
 	grid-area: d;
+
+	@include mq('md') {
+		margin-left: rem(-29);
+	}
 }
 
 .footer-nav__items {

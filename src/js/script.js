@@ -46,7 +46,7 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		slidesPerView: 'auto',
 		freeMode: true,
 		freeModeSticky: true,
-		// grabCursor: true,
+		grabCursor: true,
 		// autoplay: {
 		// 	delay: 3000,
 		// 	disableOnInteraction: false,

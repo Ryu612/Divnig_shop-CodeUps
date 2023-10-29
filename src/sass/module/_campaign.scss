@@ -17,14 +17,24 @@
 //swiperにbox-shadow分の余白を付けたため
 .campaign__inner.inner {
 	padding-left: rem(5);
+
+	@include mq('md') {
+		padding-left: rem(15);
+	}
+}
+
+.swiper-wrapper {
+
 }
 
 .campaign__swiper {
 	margin-right: calc(50% - 50vw);
 	// width: 100vw;
+	// overflow: visible;
+
 
 	//.swiper-containerクラスにはoverflow:hidden;が指定されているためpaddingの余白を設ける
-	//参考https://eclair.blog/swiper/
+	// 参考https://eclair.blog/swiper/
 	padding-left: rem(10);
 	padding-bottom: rem(10);
 }
@@ -44,9 +54,14 @@
 
 .campaign__button {
 	text-align: center;
+	// margin-top: rem(40);
 	//Swiperのbox-shadow分の余白
 	margin-top: calc(rem(40) - rem(10));
 	margin-left: rem(10);
+
+	@include mq('md') {
+		margin-top: calc(rem(80) - rem(10));
+	}
 }
 
 .campaign__prev,
