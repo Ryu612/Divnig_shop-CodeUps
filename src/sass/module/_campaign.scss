@@ -23,20 +23,19 @@
 	}
 }
 
-.swiper-wrapper {
-
-}
-
 .campaign__swiper {
 	margin-right: calc(50% - 50vw);
 	// width: 100vw;
 	// overflow: visible;
 
-
 	//.swiper-containerクラスにはoverflow:hidden;が指定されているためpaddingの余白を設ける
 	// 参考https://eclair.blog/swiper/
 	padding-left: rem(10);
 	padding-bottom: rem(10);
+}
+
+.swiper-wrapper {
+
 }
 
 //swiperにbox-shadow分の余白を付けたため

@@ -187,4 +187,24 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		});
 	});
 
+
+
+
+	/*
+	ローディングアニメーション
+	--------------------------------*/
+// window.onload = function() {
+//   const spinner = document.getElementById('loading');
+//   spinner.classList.add('loaded');
+// }
+
+// $(window).on("load", function () {
+//   $("#loading")
+//     .delay(3000)
+//     .queue(function () {
+//       $(this).addClass("close").dequeue();
+//     });
+// });
+
+
 });

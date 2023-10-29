@@ -9,8 +9,11 @@
 	left: 0;
 	position: fixed;
 	background-color: $color-green;
-	display: flex;
-	gap: rem(7);
+	// display: flex;
+	// gap: rem(7);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
 	transform: translateX(100%);
 	transition: transform 0.3s;
 	z-index: map-get($layer,"drawer");
@@ -59,7 +62,6 @@
 	background: url(../../assets/images/common/icon-starfish.png) no-repeat center center / contain;
 	width: rem(18);
 	height: rem(18);
-	top: 50%;
+	top: 0;
 	left: 0;
-	transform: translateY(-50%);
 }
