@@ -82,6 +82,10 @@
 	transform: translate(rem(4), rem(4));
 }
 
+.button{
+
+}
+
 .button:active::after {
 	display: none;
 }

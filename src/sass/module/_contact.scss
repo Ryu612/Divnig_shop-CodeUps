@@ -150,9 +150,8 @@
 	text-align: center;
 
 	@include mq("md") {
-		// padding: rem(20) rem(112) rem(23) rem(81);
-		padding: rem(20) 0 rem(23);
-		margin-left: rem(81);
+		padding: rem(20) 0 rem(23) rem(81);
+		// margin-left: rem(81);
 		// width: calc(508 / 1080) * 100%;
 	}
 }
