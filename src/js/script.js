@@ -193,18 +193,45 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 	/*
 	ローディングアニメーション
 	--------------------------------*/
-// window.onload = function() {
-//   const spinner = document.getElementById('loading');
-//   spinner.classList.add('loaded');
-// }
+	// window.onload = function() {
+	//   const spinner = document.getElementById('loading');
+	//   spinner.classList.add('loaded');
+	// }
 
-// $(window).on("load", function () {
-//   $("#loading")
-//     .delay(3000)
-//     .queue(function () {
-//       $(this).addClass("close").dequeue();
-//     });
-// });
+	// $(window).on("load", function () {
+	//   $("#loading")
+	//     .delay(3000)
+	//     .queue(function () {
+	//       $(this).addClass("close").dequeue();
+	//     });
+	// });
+
+
+
+
+	// JavaScriptでアニメーションを制御
+	const leftHalf = document.getElementById('leftHalf');
+	const rightHalf = document.getElementById('rightHalf');
+	const loadingLead = document.getElementById('loading__lead');
+	const mainContent = document.getElementById('mainContent');
+	const loading = document.getElementById('loading');
+
+	// アニメーションの開始
+	setTimeout(() => {
+		leftHalf.style.transform = 'translateY(0)';
+	}, 1000);
+	setTimeout(() => {
+		rightHalf.style.transform = 'translateY(0)';
+	}, 1200);
+	setTimeout(() => {
+		loadingLead.style.color = '#fff';
+	}, 2000);
+	setTimeout(() => {
+		mainContent.style.display = 'block';
+		leftHalf.style.display = 'none';
+		rightHalf.style.display = 'none';
+		loading.style.display = 'none';
+	}, 3000);
 
 
 });
