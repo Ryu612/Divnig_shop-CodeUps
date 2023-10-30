@@ -177,9 +177,11 @@
 .left-half {
 	left: 0;
 	background: url('../../assets/images/pc/loading-left.jpg') no-repeat center center / cover; /* 1枚の画像のパスを指定してください */
+	width: 50%;
 }
 
 .right-half {
 	right: 0;
 	background: url('../../assets/images/pc/loading-right.jpg') no-repeat center center / cover; /* 1枚の画像のパスを指定してください */
+	width: 50%;
 }
