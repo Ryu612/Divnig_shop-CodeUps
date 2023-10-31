@@ -115,14 +115,14 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 9999;
+	z-index: 8888;
 }
 
 .loading__lead {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -52%);
+	transform: translate(-50%, -50%);
 	text-align: center;
 	color: $color-green;
 	z-index: 2;
@@ -157,12 +157,11 @@
   visibility: hidden;
 }
 
-
-
 .loading__image {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
+	z-index: 9999;
 }
 
 .half {
@@ -171,17 +170,22 @@
 	height: 100%;
 	background-size: cover;
 	transform: translateY(100%); /* 初期状態は下に隠れている状態 */
-	transition: transform 1s ease-in-out;
+	transition: transform 1.5s ease-in-out;
 }
 
 .left-half {
 	left: 0;
-	background: url('../../assets/images/pc/loading-left.jpg') no-repeat center center / cover; /* 1枚の画像のパスを指定してください */
+	background: url('../../assets/images/pc/loading-left.jpg') no-repeat center right / cover; /* 1枚の画像のパスを指定してください */
 	width: 50%;
 }
 
 .right-half {
 	right: 0;
-	background: url('../../assets/images/pc/loading-right.jpg') no-repeat center center / cover; /* 1枚の画像のパスを指定してください */
+	background: url('../../assets/images/pc/loading-right.jpg') no-repeat center left / cover; /* 1枚の画像のパスを指定してください */
 	width: 50%;
+}
+
+.maincontent {
+	display: none;
+	// opacity: 0;
 }
