@@ -191,7 +191,7 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 
 
 	/*
-	ローディングアニメーション
+	ローディングアニメーション1
 	--------------------------------*/
 	// window.onload = function() {
 	//   const spinner = document.getElementById('loading');
@@ -206,7 +206,9 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 	//     });
 	// });
 
-
+	/*
+	ローディングアニメーション2
+	--------------------------------*/
 	// const leftHalf = document.getElementById('leftHalf');
 	// const rightHalf = document.getElementById('rightHalf');
 	// const mainContent = document.querySelector('.maincontent');
