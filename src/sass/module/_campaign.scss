@@ -14,11 +14,11 @@
 	}
 }
 
-//swiperにbox-shadow分の余白を付けたため
+//.campaign__swiper(.swiper)にbox-shadow分の余白を付けたため
 .campaign__inner.inner {
 	padding-left: rem(5);
 
-	@include mq('md') {
+	@include mq("md") {
 		padding-left: rem(15);
 	}
 }
@@ -35,7 +35,6 @@
 }
 
 .swiper-wrapper {
-
 }
 
 //swiperにbox-shadow分の余白を付けたため
@@ -58,7 +57,7 @@
 	margin-top: calc(rem(40) - rem(10));
 	margin-left: rem(10);
 
-	@include mq('md') {
+	@include mq("md") {
 		margin-top: calc(rem(80) - rem(10));
 	}
 }
@@ -71,7 +70,10 @@
 		height: rem(80);
 		position: absolute;
 		transition: opacity 0.3s;
-		margin-top: 0;
+		//.swiper-button-next, .swiper-button-prevにmargin-top: calc(0px - (var(--swiper-navigation-size)/ 2));が付いていたため初期化
+		// ↓↓↓↓↓↓↓↓↓↓
+		//swiper-button-prev(-next)にそれぞれ-originを付けることでデフォルトのスタイルが当たらないようにして対応したためやはり不要
+		// margin-top: 0;
 	}
 }
 

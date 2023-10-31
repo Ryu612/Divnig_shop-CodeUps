@@ -5,7 +5,7 @@
 	background-color: #ddf0f1;
 
 	@include mq('md') {
-		padding: rem(100) 0 rem(76);
+		padding-block: rem(100) rem(76);
 	}
 }
 

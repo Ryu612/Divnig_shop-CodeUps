@@ -9,6 +9,7 @@
 	}
 }
 
+//blogのinnerの左右の余白だけ15pxではなく21pxだったため
 .blog__inner.inner {
 	padding-inline: rem(21);
 	margin-inline: auto;
