@@ -7,9 +7,10 @@
 
 	@include mq("md") {
 		flex-direction: row;
+		flex-wrap: wrap;
 	}
 }
 
 .voice-list__item {
-	flex: 1;
+
 }

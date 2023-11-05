@@ -5,7 +5,21 @@
 
 	@include mq("md") {
 		padding-block: rem(100) rem(74);
-		background: url(../../assets/images/pc/blog-bg-pc.jpg) no-repeat top center / 100% 55.5%;
+		// background: url(../../assets/images/pc/blog-bg-pc.jpg) no-repeat top center / 100% 55.5%;
+		position: relative;
+	}
+}
+
+.blog::after {
+	@include mq("md") {
+		background: url(../../assets/images/pc/blog-bg-pc.jpg) no-repeat top center / cover;
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: rem(500);
+		z-index: -1;
 	}
 }
 

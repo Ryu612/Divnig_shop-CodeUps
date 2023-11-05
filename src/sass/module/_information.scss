@@ -31,7 +31,19 @@
 
 .information__image {
 	@include mq('md') {
-		width: calc(540 / 1080) * 100%
+		width: calc(540 / 1080) * 100%;
+
+	}
+}
+
+.information__image img {
+	aspect-ratio: 345 / 227;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+
+	@include mq('md') {
+		aspect-ratio: 540 / 356;
 	}
 }
 

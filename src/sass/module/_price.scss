@@ -2,7 +2,7 @@
 
 .price {
 	padding-block: rem(80) rem(84);
-	background-color: #DDF0F1;
+	background-color: #ddf0f1;
 
 	@include mq("md") {
 		padding-block: rem(100) rem(104);
@@ -10,7 +10,7 @@
 }
 
 .price__inner.inner {
-	@include mq('md') {
+	@include mq("md") {
 		max-width: rem(1127);
 	}
 }
@@ -48,19 +48,26 @@
 }
 
 .price__image {
-	@include mq('md') {
+	@include mq("md") {
 		width: 50%;
 	}
 }
 
 .price__image source {
-
-}
-
-.price__image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.price__image img {
+	aspect-ratio: 345 / 227;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+	@include mq('md') {
+		aspect-ratio: 492 / 746;
+	}
 }
 
 .price__lists {
@@ -68,7 +75,7 @@
 	flex-direction: column;
 	gap: rem(40);
 
-	@include mq('md') {
+	@include mq("md") {
 		width: 50%;
 	}
 }
@@ -98,10 +105,10 @@
 	font-size: rem(14);
 	line-height: 1.7143;
 	display: flex;
-  flex-wrap: wrap;
+	flex-wrap: wrap;
 	justify-content: space-between;
 
-	@include mq('md') {
+	@include mq("md") {
 		font-size: rem(16);
 		line-height: 1.5;
 	}
@@ -111,7 +118,7 @@
 	margin-top: rem(8);
 	width: calc(270 / 345) * 100%;
 
-	@include mq('md') {
+	@include mq("md") {
 		width: calc(350 / 492) * 100%;
 	}
 }
@@ -124,7 +131,7 @@
 	text-align: center;
 	margin-top: rem(40);
 
-	@include mq('md') {
+	@include mq("md") {
 		margin-top: rem(80);
 	}
 }

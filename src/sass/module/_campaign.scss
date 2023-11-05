@@ -70,6 +70,7 @@
 		height: rem(80);
 		position: absolute;
 		transition: opacity 0.3s;
+		cursor: pointer;
 		//.swiper-button-next, .swiper-button-prevにmargin-top: calc(0px - (var(--swiper-navigation-size)/ 2));が付いていたため初期化
 		// ↓↓↓↓↓↓↓↓↓↓
 		//swiper-button-prev(-next)にそれぞれ-originを付けることでデフォルトのスタイルが当たらないようにして対応したためやはり不要

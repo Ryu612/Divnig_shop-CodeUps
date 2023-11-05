@@ -48,10 +48,10 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		freeMode: true,
 		freeModeSticky: true,
 		grabCursor: true,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 3000,
+		// 	disableOnInteraction: false,
+		// },
 		speed: 1000,
 
 		// Navigation arrows
@@ -137,7 +137,7 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 			for (let key in array) {
 				if ($(key).offset()) {
 					array[key] = $(key).offset().top - 80; // 数値丁度だとずれるので10px余裕を作る
-					$globalNavi[key] = $('.pc-nav a[href="' + key + '"]');
+					$globalNavi[key] = $('.pc-nav__link a[href="' + key + '"]');
 				}
 			}
 
@@ -145,7 +145,7 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 			$(window).on("scroll", function () {
 				for (let key in array) {
 					if ($(window).scrollTop() > array[key] - 50) {
-						$(".pc-nav a").each(function () {
+						$(".pc-nav__link a").each(function () {
 							$(this).removeClass("current");
 						});
 						$globalNavi[key].addClass("current");
