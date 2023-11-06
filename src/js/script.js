@@ -48,10 +48,10 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		freeMode: true,
 		freeModeSticky: true,
 		grabCursor: true,
-		// autoplay: {
-		// 	delay: 3000,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		speed: 1000,
 
 		// Navigation arrows
