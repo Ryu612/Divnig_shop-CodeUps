@@ -24,16 +24,16 @@
 }
 
 //blogのinnerの左右の余白だけ15pxではなく21pxだったため
-.blog__inner.inner {
-	padding-inline: rem(21);
-	margin-inline: auto;
+// .blog__inner.inner {
+// 	padding-inline: rem(21);
+// 	margin-inline: auto;
 
-	@include mq("md") {
-		max-width: rem(1130);
-		padding-inline: $padding-pc;
-		position: relative;
-	}
-}
+// 	@include mq("md") {
+// 		max-width: rem(1130);
+// 		padding-inline: $padding-pc;
+// 		position: relative;
+// 	}
+// }
 
 .blog__inner::after {
 	@include mq("md") {

@@ -9,11 +9,11 @@
 	}
 }
 
-.price__inner.inner {
-	@include mq("md") {
-		max-width: rem(1127);
-	}
-}
+// .price__inner.inner {
+// 	@include mq("md") {
+// 		max-width: rem(1127);
+// 	}
+// }
 
 .price__inner {
 	position: relative;
@@ -43,7 +43,7 @@
 	@include mq("md") {
 		margin-top: rem(40);
 		flex-direction: row-reverse;
-		gap: rem(93);
+		gap: rem(96);
 	}
 }
 
