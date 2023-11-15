@@ -1,12 +1,8 @@
 @use "global" as *;
 
 .campaign {
-	padding-block: rem(40) rem(44);
 	overflow: hidden; //.campaign__swiperに当てたmargin-right: calc(50% - 50vw);による横スクロール発生のため
-
-	@include mq("md") {
-		padding-block: rem(120) rem(74);
-	}
+	padding-bottom: rem(4);
 }
 
 .campaign__inner {

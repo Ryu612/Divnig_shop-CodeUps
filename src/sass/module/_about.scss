@@ -1,11 +1,7 @@
 @use "global" as *;
 
 .about {
-	padding-block: rem(40) rem(74);
 
-	@include mq('md') {
-		padding-block: rem(70) rem(164);
-	}
 }
 
 .about__inner {

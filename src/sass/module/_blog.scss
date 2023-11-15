@@ -1,10 +1,8 @@
 @use "global" as *;
 
 .blog {
-	padding-block: rem(80) rem(44);
-
 	@include mq("md") {
-		padding-block: rem(100) rem(74);
+		padding-top: rem(100);
 		// background: url(../../assets/images/pc/blog-bg-pc.jpg) no-repeat top center / 100% 55.5%;
 		position: relative;
 	}
@@ -42,7 +40,7 @@
 		background: url(../../assets/images/pc/blog-fish.png) no-repeat center center / contain;
 		width: rem(437);
 		height: rem(201);
-		top: rem(-76);
+		top: rem(24);
 		left: calc(50% - min(47vw, rem(619)));
 	}
 }
