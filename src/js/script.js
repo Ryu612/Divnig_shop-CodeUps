@@ -214,6 +214,7 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 	const rightHalf = document.getElementById('rightHalf');
 	const mainContent = document.querySelector('.maincontent');
 	const loading = document.querySelector('.loading');
+	const lead = document.querySelector('.loading__lead');
 
 	// アニメーションの開始
 	setTimeout(() => {
@@ -222,6 +223,9 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 	setTimeout(() => {
 		rightHalf.style.transform = 'translateY(0)';
 	}, 900);
+	setTimeout(() => {
+		lead.style.color = 'white';
+		}, 1600);
 	setTimeout(() => {
 		leftHalf.style.display = 'none';
 		rightHalf.style.display = 'none';
