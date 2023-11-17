@@ -4,11 +4,11 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 	ドロワー
 	--------------------------------*/
 	$("#js-drawer-icon").on("click", function (e) {
-		;
 		e.preventDefault();
-		$("#js-drawer-icon").toggleClass("is-active");
+		$(this).toggleClass("is-active");
 		$("#js-drawer-content").toggleClass("is-active");
 		$("#js-header").toggleClass("is-active");
+		$("body").toggleClass("is-active");
 	})
 
 	$('#js-drawer-content a[href^="#"]').on('click', function () {
