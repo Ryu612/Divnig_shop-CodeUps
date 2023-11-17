@@ -6,22 +6,20 @@
 	background-color: rgba(13, 41, 54, 0.68);
 	position: fixed;
 	z-index: map-get($layer, "header");
-	transition: background-color 0.3s;
+	// transition: background-color 0.3s;
 
 	@include mq("md") {
 		height: rem(90);
 	}
 }
 
-.bgright::before {
+.header::before {
 	content: "";
-	/*絶対配置で位置を指定*/
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 2;
-	/*色や形状*/
-	background: $color-green; /*背景色*/
+	background-color: $color-green;
 	width: 100%;
 	height: 100%;
 	/*アニメーション*/
@@ -30,14 +28,8 @@
 	transform-origin: right top;
 }
 
-/*hoverした際の形状*/
-
-.header.is-active {
-	// background-color: $color-green;
-}
-
-.bgright.is-active.bgright::before {
-	transform-origin: right top;
+.header.is-active::before {
+	// transform-origin: right top;
 	transform: scale(1, 1);
 }
 
