@@ -9,6 +9,7 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		$("#js-drawer-content").toggleClass("is-active");
 		$("#js-header").toggleClass("is-active");
 		$("body").toggleClass("is-active");
+		$("bgright").toggleClass("is-active");
 	})
 
 	$('#js-drawer-content a[href^="#"]').on('click', function () {
