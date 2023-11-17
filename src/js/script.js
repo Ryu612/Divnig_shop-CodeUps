@@ -230,7 +230,7 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		leftHalf.style.display = 'none';
 		rightHalf.style.display = 'none';
 		loading.style.display = 'none';
-		mainContent.style.display = 'block';
+		// mainContent.style.display = 'block';
 		// mainContent.style.opacity = '1';
 	}, 3300);
 
