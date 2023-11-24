@@ -113,50 +113,50 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 	/*
 	ヘッダーメニューのスクロール位置でのcurrent表示
 	--------------------------------*/
-	$(function ($) {
-		/**
-		 * 現在スクロール位置によるグローバルナビのアクティブ表示
-		 */
-		let scrollMenu = function () {
-			// 配列宣言
-			// ここにスクロールで点灯させる箇所のidを記述する
-			// 数値は全て0でOK
-			let array = {
-				"#mv": 0,
-				"#campaign": 0,
-				"#about": 0,
-				"#information": 0,
-				"#blog": 0,
-				"#voice": 0,
-				"#price": 0,
-				"#contact": 0,
-			};
+	// $(function ($) {
+	// 	/**
+	// 	 * 現在スクロール位置によるグローバルナビのアクティブ表示
+	// 	 */
+	// 	let scrollMenu = function () {
+	// 		// 配列宣言
+	// 		// ここにスクロールで点灯させる箇所のidを記述する
+	// 		// 数値は全て0でOK
+	// 		let array = {
+	// 			"#mv": 0,
+	// 			"#campaign": 0,
+	// 			"#about": 0,
+	// 			"#information": 0,
+	// 			"#blog": 0,
+	// 			"#voice": 0,
+	// 			"#price": 0,
+	// 			"#contact": 0,
+	// 		};
 
-			let $globalNavi = new Array();
+	// 		let $globalNavi = new Array();
 
-			// 各要素のスクロール値を保存
-			for (let key in array) {
-				if ($(key).offset()) {
-					array[key] = $(key).offset().top - 80; // 数値丁度だとずれるので10px余裕を作る
-					$globalNavi[key] = $('.pc-nav__link a[href="' + key + '"]');
-				}
-			}
+	// 		// 各要素のスクロール値を保存
+	// 		for (let key in array) {
+	// 			if ($(key).offset()) {
+	// 				array[key] = $(key).offset().top - 80; // 数値丁度だとずれるので10px余裕を作る
+	// 				$globalNavi[key] = $('.pc-nav__link a[href="' + key + '"]');
+	// 			}
+	// 		}
 
-			// スクロールイベントで判定
-			$(window).on("scroll", function () {
-				for (let key in array) {
-					if ($(window).scrollTop() > array[key] - 50) {
-						$(".pc-nav__link a").each(function () {
-							$(this).removeClass("current");
-						});
-						$globalNavi[key].addClass("current");
-					}
-				}
-			});
-		};
-		// 実行
-		scrollMenu();
-	});
+	// 		// スクロールイベントで判定
+	// 		$(window).on("scroll", function () {
+	// 			for (let key in array) {
+	// 				if ($(window).scrollTop() > array[key] - 50) {
+	// 					$(".pc-nav__link a").each(function () {
+	// 						$(this).removeClass("current");
+	// 					});
+	// 					$globalNavi[key].addClass("current");
+	// 				}
+	// 			}
+	// 		});
+	// 	};
+	// 	// 実行
+	// 	scrollMenu();
+	// });
 
 
 	/*

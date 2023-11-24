@@ -42,6 +42,10 @@
 	gap: rem(24);
 }
 
+.drawer-content__items:last-child {
+	padding-bottom: rem(100); //ドロワーの高さが足りない時に最後の要素が見きれないようにするため
+}
+
 .drawer-content__item {
 	padding-left: rem(22);
 	position: relative;
