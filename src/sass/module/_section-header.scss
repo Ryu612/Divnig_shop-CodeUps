@@ -16,7 +16,7 @@
 	}
 }
 
-.section-header__english span {
+.section-header__english::first-letter {
 	color: $color-green;
 }
 

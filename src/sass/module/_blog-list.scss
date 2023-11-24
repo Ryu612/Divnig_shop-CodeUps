@@ -1,13 +1,11 @@
 @use "global" as *;
 
 .blog-list {
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	gap: rem(40);
 
 	@include mq("md") {
-		flex-direction: row;
-		flex-wrap: wrap;
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 

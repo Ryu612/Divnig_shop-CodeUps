@@ -41,13 +41,13 @@
 		width: rem(437);
 		height: rem(201);
 		top: rem(24);
-		left: calc(50% - min(47vw, rem(619)));
+		left: calc(50% - min(48vw, rem(619)));
 	}
 }
 
 .blog__title {
 	@include mq("md") {
-		.section-header__english span {
+		.section-header__english::first-letter {
 			color: #ddf0f1;
 		}
 
