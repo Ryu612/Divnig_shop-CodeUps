@@ -9,8 +9,18 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		$("#js-drawer-content").toggleClass("is-active");
 		$("#js-header").toggleClass("is-active");
 		$("body").toggleClass("is-active");
-		$("bgright").toggleClass("is-active");
-	})
+		if ($("body").hasClass("is-active")) {
+			$("body").css({
+				"height": "100%",
+				"overflow": "hidden"
+			});
+		} else {
+			$("body").css({
+				"height": "",
+				"overflow": ""
+			});
+		}
+	});
 
 	$('#js-drawer-content a[href^="#"]').on('click', function () {
 		$("#js-drawer-icon, #js-drawer-content, #js-header").removeClass("is-active");
@@ -225,7 +235,7 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 	}, 900);
 	setTimeout(() => {
 		lead.style.color = 'white';
-		}, 1600);
+	}, 1600);
 	setTimeout(() => {
 		leftHalf.style.display = 'none';
 		rightHalf.style.display = 'none';

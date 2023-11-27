@@ -1,20 +1,27 @@
 @use "global" as *;
 
-.campaign-card {
-	// width: calc(280 / 375) * 100%;
+.campaign__item {
 	width: rem(280);
-	box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
-	display: flex;
-	flex-direction: column;
-	height: auto;
 
 	@include mq("md") {
 		width: rem(333);
 	}
 }
 
-.campaign-card__image {
+.campaign-card {
+	// width: calc(280 / 375) * 100%;
+	// width: rem(280);
+	box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+	display: flex;
+	flex-direction: column;
+	height: auto;
 
+	// @include mq("md") {
+	// 	width: rem(333);
+	// }
+}
+
+.campaign-card__image {
 }
 
 .campaign-card__image img {
@@ -134,7 +141,7 @@
 	}
 }
 
-.campaign-card__price__new {
+.campaign-card__price-new {
 	font-size: rem(32);
 	color: $color-green;
 

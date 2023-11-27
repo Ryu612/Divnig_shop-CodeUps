@@ -46,16 +46,7 @@
 }
 
 .blog__title {
-	@include mq("md") {
-		.section-header__english::first-letter {
-			color: #ddf0f1;
-		}
 
-		.section-header__english,
-		.section-header__japanese {
-			color: $color-white;
-		}
-	}
 }
 
 .blog__items {
