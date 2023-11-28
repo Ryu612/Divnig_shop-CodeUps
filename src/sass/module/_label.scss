@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.label {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: rem(16) rem(21);
+}
+
+.label__link {
+	padding: rem(6) rem(10);
+	color: $color-green;
+	font-size: rem(14);
+	line-height: 1.57143;
+	border: 1px solid $color-green;
+	text-align: center;
+}
