@@ -1,13 +1,28 @@
 @use "global" as *;
 
 .archive-campaign {
-
 }
 
 .archive-campaign__inner {
-
 }
 
 .archive-campaign__label {
+}
+
+.archive-campaign__items {
+	margin-top: rem(40);
+	display: grid;
+	gap: rem(40);
+	justify-content: center;
+	padding-inline: rem(32.5);
+
+	@include mq("md") {
+		gap: rem(80) rem(40);
+		grid-template-columns: repeat(2, 1fr);
+		padding-inline: 0;
+	}
+}
+
+.archive-campaign__item {
 
 }

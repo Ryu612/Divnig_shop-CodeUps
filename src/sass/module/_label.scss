@@ -4,6 +4,10 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: rem(16) rem(21);
+
+	@include mq("md") {
+		grid-template-columns: repeat(auto-fill, minmax(rem(162), 1fr));
+	}
 }
 
 .label__link {
@@ -13,4 +17,17 @@
 	line-height: 1.57143;
 	border: 1px solid $color-green;
 	text-align: center;
+	transition:
+		color 0.3s,
+		background-color 0.3s;
+}
+
+.label__link.is-active {
+	color: $color-white;
+	background-color: $color-green;
+}
+
+.label__link:hover {
+	color: $color-white;
+	background-color: $color-green;
 }

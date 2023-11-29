@@ -14,11 +14,12 @@
 	z-index: 1;
 	transition: color 0.2s;
 	margin-right: rem(3);
+	border: 1px solid $color-green;
 }
 
 .button::before {
 	background: $color-white;
-	border: 1px solid $color-green;
+	// border: 1px solid $color-green;
 	position: absolute;
 	top: 0;
 	left: 0;
