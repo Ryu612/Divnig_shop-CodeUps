@@ -1,6 +1,25 @@
 @use "global" as *;
 
 .archive-campaign {
+	position: relative;
+}
+
+.archive-campaign::before {
+	position: absolute;
+	content: "";
+	background: url(../../assets/images/pc/voice-fish.png) no-repeat center center / contain;
+	width: rem(120);
+	height: rem(55);
+	top: rem(-24);
+	left: calc(50% - min(46vw, rem(620)));
+	z-index: -1;
+
+	@include mq("md") {
+		width: rem(301);
+		height: rem(138);
+		top: rem(-70);
+		left: calc(50% - min(47.5vw, rem(620)));
+	}
 }
 
 .archive-campaign__inner {
@@ -10,7 +29,7 @@
 }
 
 .archive-campaign__items {
-	margin-top: rem(40);
+	margin-top: rem(39);
 	display: grid;
 	gap: rem(40);
 	justify-content: center;
@@ -24,5 +43,7 @@
 }
 
 .archive-campaign__item {
+}
 
+.archive-campaign__pagination {
 }

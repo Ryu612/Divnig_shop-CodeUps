@@ -50,10 +50,6 @@
 	flex-grow: 1;
 }
 
-.campaign-card__head--archive {
-	flex-grow: 0;
-}
-
 .campaign-card__label {
 	color: $color-green;
 	font-size: rem(12);
@@ -157,9 +153,44 @@
 /*
 下層ページのcampaign-card
 --------------------------------*/
-.campaign-card__contents--archive {
+.campaign-card__image--sub img {
+	@include mq("md") {
+		aspect-ratio: 520 / 347;
+	}
+}
+
+.campaign-card__contents--sub {
+	@include mq("md") {
+		padding: rem(24) rem(24) rem(44);
+	}
+}
+
+.campaign-card__head--sub {
+	flex-grow: 0;
+}
+
+.campaign-card__title--sub {
+	@include mq("md") {
+		font-size: rem(24);
+	}
+}
+
+.campaign-card__price-body--sub {
+	@include mq("md") {
+		margin-top: rem(2);
+	}
+}
+
+.campaign-card__price-info--sub {
 	@include mq('md') {
-	padding: rem(24) rem(24) rem(40);
+		margin-top: rem(24);
+	}
+}
+
+.campaign-card__price--sub {
+	@include mq('md') {
+		gap: rem(40);
+		margin-top: rem(9);
 	}
 }
 
@@ -170,23 +201,23 @@
 
 .campaign-card__info {
 	margin-top: auto;
+	text-align: center;
 }
 
 .campaign-card__dates {
 	margin-top: rem(32);
 	color: $color-green;
 	font-weight: 700;
-	text-align: center;
+	line-height: 1.125;
 }
 
 .campaign-card__contact {
 	margin-top: rem(7);
 	color: $color-green;
 	font-size: rem(14);
-	text-align: center;
+	line-height: 1.2857;
 }
 
 .campaign-card__button {
-	margin-top: rem(16);
-	text-align: center;
+	margin-top: rem(15);
 }

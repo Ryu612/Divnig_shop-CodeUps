@@ -76,7 +76,7 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 	トップへ戻るボタンをmv過ぎたら表示
 	--------------------------------*/
 	$(window).on('scroll', function () {
-		if ($('.mv').height() - $('header').height() < $(this).scrollTop()) {
+		if ($('.mv, .sub-mv').height() - $('header').height() < $(this).scrollTop()) {
 			$('#js-pagetop').addClass('is-show');
 		} else {
 			$('#js-pagetop').removeClass('is-show');

@@ -6,13 +6,15 @@
 	gap: rem(16) rem(21);
 
 	@include mq("md") {
-		grid-template-columns: repeat(auto-fill, minmax(rem(162), 1fr));
+		grid-template-columns: repeat(auto-fill, rem(162));
+		gap: rem(32);
 	}
 }
 
-.label__link {
-	padding: rem(6) rem(10);
+.label__item {
+	padding: rem(5) rem(10);
 	color: $color-green;
+	background-color: $color-white;
 	font-size: rem(14);
 	line-height: 1.57143;
 	border: 1px solid $color-green;
@@ -22,12 +24,12 @@
 		background-color 0.3s;
 }
 
-.label__link.is-active {
+.label__item.is-active {
 	color: $color-white;
 	background-color: $color-green;
 }
 
-.label__link:hover {
+.label__item:hover {
 	color: $color-white;
 	background-color: $color-green;
 }
