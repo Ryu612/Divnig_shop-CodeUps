@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.gallery {
+}
+
+.sub-gallery {
+}
+
+.gallery__inner {
+}
+
+.gallery__title {
+}
+
+.gallery__photos {
+	display: grid;
+	grid-template-columns: rem(746) rem(80) rem(746);
+	grid-template-rows: repeat(4, rem(369));
+	gap: rem(8);
+	grid-template-areas:
+		"a b b"
+		"a c c"
+		"d d f"
+		"e e f";
+}
+
+.gallery__photo-a {
+	grid-area: a;
+}
+
+.gallery__photo-b {
+	grid-area: b;
+}
+
+.gallery__photo-c {
+	grid-area: c;
+}
+
+.gallery__photo-d {
+	grid-area: d;
+}
+
+.gallery__photo-e {
+	grid-area: e;
+}
+
+.gallery__photo-f {
+	grid-area: f;
+}

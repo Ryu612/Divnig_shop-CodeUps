@@ -1,18 +1,36 @@
 @use "global" as *;
 
 .sub-mv {
-	background: url(../../assets/images/sp/sub-campaign-mv-sp.jpg) no-repeat center center / cover;
 	width: 100%;
 	height: rem(460);
 	position: relative;
 
 	@include mq("md") {
-		background: url(../../assets/images/pc/sub-campaign-mv-pc.jpg) no-repeat center center / cover;
 		height: rem(548);
 	}
 }
 
-.sub-mv::before {
+.sub-mv--campaign {
+	background: url(../../assets/images/sp/sub-campaign-mv-sp.jpg) no-repeat center center / cover;
+
+	@include mq('md') {
+		background: url(../../assets/images/pc/sub-campaign-mv-pc.jpg) no-repeat center center / cover;
+	}
+}
+
+.sub-mv--about {
+	background: url(../../assets/images/sp/sub-aboutus-mv-sp.jpg) no-repeat center center / cover;
+
+	@include mq('md') {
+		background: url(../../assets/images/pc/sub-aboutus-mv-pc.jpg) no-repeat center center / cover;
+	}
+}
+
+.sub-mv-mask {
+	position: relative;
+}
+
+.sub-mv-mask::before {
 	position: absolute;
 	content: "";
 	top: 0;
@@ -39,6 +57,9 @@
 		transform: translate(-50%, 14%);
 	}
 }
+
+
+
 
 // .sub-mv {
 // 	width: 100%;

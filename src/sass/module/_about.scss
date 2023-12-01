@@ -1,17 +1,16 @@
 @use "global" as *;
 
 .about {
-
 }
 
 .about__inner {
-	@include mq('md') {
+	@include mq("md") {
 		position: relative;
 	}
 }
 
 .about__inner::after {
-	@include mq('md') {
+	@include mq("md") {
 		position: absolute;
 		content: "";
 		background: url(../../assets/images/pc/coral.png) no-repeat center center / contain;
@@ -34,7 +33,7 @@
 	// 	position: relative;
 	// }
 
-	@include mq('md') {
+	@include mq("md") {
 		margin-top: rem(40);
 	}
 }
@@ -58,7 +57,7 @@
 	margin-left: auto;
 	// aspect-ratio: 281 / 186;
 
-	@include mq('md') {
+	@include mq("md") {
 		margin-top: -48.7%;
 	}
 }
@@ -105,7 +104,7 @@
 .about__content {
 	margin-top: rem(16);
 
-	@include mq('md') {
+	@include mq("md") {
 		margin-top: rem(35);
 	}
 }
@@ -113,7 +112,7 @@
 .about__text {
 	line-height: 1.5;
 
-	@include mq('md') {
+	@include mq("md") {
 		color: $color-white;
 	}
 }
@@ -122,8 +121,104 @@
 	text-align: center;
 	margin-top: rem(50);
 
-	@include mq('md') {
+	@include mq("md") {
 		margin-top: rem(40);
+	}
+}
+
+/*
+下層ページ
+--------------------------------*/
+.about__inner--sub {
+	position: relative;
+}
+
+.about__inner--sub::before {
+	position: absolute;
+	content: "";
+	background: url(../../assets/images/pc/voice-fish.png) no-repeat center center / contain;
+	width: rem(120);
+	height: rem(55);
+	top: rem(-24);
+	left: calc(50% - min(46vw, rem(620)));
+	z-index: 1;
+
+	@include mq("md") {
+		width: rem(301);
+		height: rem(138);
+		top: rem(-70);
+		left: calc(50% - min(47.5vw, rem(620)));
+		z-index: -1;
+	}
+}
+
+.about__inner--sub::after {
+	@include mq("md") {
+		position: absolute;
+		content: "";
+		background: url(../../assets/images/pc/price-fish.png) no-repeat center center / contain;
+		width: rem(301);
+		height: rem(138);
+		bottom: rem(-178);
+		right: 50%;
+		right: calc(50% - min(48vw, rem(637)));
+	}
+}
+
+.about__image--sub {
+	margin-top: 0;
+
+	@include mq("md") {
+		margin-top: 0;
+	}
+}
+
+.about__left-image--sub {
+	display: none;
+
+	@include mq("md") {
+		display: block;
+		width: calc(128 / 345) * 100%;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.about__right-image--sub {
+	width: 100%;
+	margin-top: 0;
+
+	@include mq("md") {
+		width: calc(281 / 345) * 100%;
+		margin-top: -48.5%;
+		margin-left: auto;
+	}
+}
+
+.about__body--sub {
+	@include mq("md") {
+		align-items: start;
+		top: 46%;
+	}
+}
+
+.about__head--sub {
+	color: $color-white;
+	position: absolute;
+	top: rem(24);
+	left: rem(39);
+
+	@include mq("md") {
+		position: relative;
+		inset: 0;
+	}
+}
+
+.about__content--sub {
+	margin-top: 0;
+
+	@include mq("md") {
+		margin-top: rem(20);
 	}
 }
 
