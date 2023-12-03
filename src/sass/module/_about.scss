@@ -190,7 +190,7 @@
 
 	@include mq("md") {
 		width: calc(281 / 345) * 100%;
-		margin-top: -48.5%;
+		margin-top: -48.9%;
 		margin-left: auto;
 	}
 }
@@ -198,7 +198,8 @@
 .about__body--sub {
 	@include mq("md") {
 		align-items: start;
-		top: 46%;
+		top: 45.7%;
+		gap: rem(41);
 	}
 }
 
@@ -218,7 +219,7 @@
 	margin-top: 0;
 
 	@include mq("md") {
-		margin-top: rem(20);
+		margin-top: rem(24);
 	}
 }
 

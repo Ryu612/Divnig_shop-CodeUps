@@ -72,9 +72,9 @@
 }
 
 /* ドロワーメニューが開かれている時背景をスクロールさせない */
-// body.is-active {
-//   height: 100%;
-//   overflow: hidden;
-// }
+body.is-active {
+  height: 100%;
+  overflow: hidden;
+}
 // ↓↓↓↓↓↓↓↓↓↓
 // JSで制御することに変更
