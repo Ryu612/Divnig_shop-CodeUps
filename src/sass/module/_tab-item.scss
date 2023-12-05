@@ -5,7 +5,6 @@
 	padding: rem(23);
 
 	@include mq('md') {
-		display: flex;
 		gap: rem(48);
 		align-items: center;
 	}
@@ -21,7 +20,7 @@
 	font-size: rem(24);
 	font-weight: 700;
 	line-height: 1;
-	padding-bottom: rem(7.5);
+	padding-bottom: rem(8.5);
 	position: relative;
 }
 

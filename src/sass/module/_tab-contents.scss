@@ -9,4 +9,8 @@
 
 .tab-contents__item.is-show {
 	display: block;
+
+	@include mq("md") {
+		display: flex;
+	}
 }
