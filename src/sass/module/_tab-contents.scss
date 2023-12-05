@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.tab-contents {
+}
+
+.tab-contents__item {
+	display: none;
+}
+
+.tab-contents__item.is-show {
+	display: block;
+}

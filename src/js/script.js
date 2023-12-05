@@ -248,6 +248,7 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 /*================================
 下層ページ
 ================================*/
+
 /*
 About usギャラリーのモーダル
 --------------------------------*/
@@ -270,5 +271,14 @@ About usギャラリーのモーダル
 		return false;
 	});
 
-
+/*
+informationのタブ
+--------------------------------*/
+$('.tab-group__tab').on('click',function(){
+	var idx = $('.tab-group__tab').index(this);
+	$(this).addClass('is-active').siblings('.tab-group__tab').removeClass('is-active');
+	var tabContents = $(this).closest('.page-information__inner').find('.tab-contents__item');
+	tabContents.removeClass('is-show');
+	tabContents.eq(idx).addClass('is-show');
+});
 });
