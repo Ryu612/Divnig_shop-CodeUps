@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.side-head {
+	font-size: rem(24);
+	font-weight: 400;
+	line-height: calc(50 / 24);
+	padding-left: rem(82);
+	position: relative;
+}
+
+.side-head::before {
+	position: absolute;
+	content: "";
+	width: rem(8);
+	height: rem(50);
+	background-color: $color-green;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+}
+
+.side-head::after {
+	position: absolute;
+	content: "";
+	background: url(../../assets/images//common/side-head-icon.png) no-repeat center center / cover;
+	width: rem(50);
+	height: rem(50);
+	top: 50%;
+	transform: translateY(-50%);
+	left: rem(24);
+}

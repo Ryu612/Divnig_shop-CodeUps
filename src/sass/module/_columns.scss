@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.columns {
+	@include mq('md') {
+		display: grid;
+		grid-template-columns: 1fr rem(294);
+		gap: rem(80);
+	}
+}
+
+.columns__post {
+
+}
+
+.columns__blog-list {
+
+}
+
+.columns__pagination {
+	margin-top: rem(80);
+}
+
+.columns__side {
+	width: rem(294);
+	margin: rem(80) auto 0;
+
+	@include mq('md') {
+		margin-top: 0;
+	}
+}

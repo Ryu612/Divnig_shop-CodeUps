@@ -34,6 +34,14 @@
 	}
 }
 
+.sub-mv--blog {
+	background: url(../../assets/images/sp/sub-blog-mv-sp.jpg) no-repeat center center / cover;
+
+	@include mq('md') {
+		background: url(../../assets/images/pc/sub-blog-mv-pc.jpg) no-repeat center center / cover;
+	}
+}
+
 .sub-mv-mask {
 	position: relative;
 }
