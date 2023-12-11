@@ -282,3 +282,20 @@ $('.tab-group__tab').on('click',function(){
 	tabContents.eq(idx).addClass('is-show');
 });
 });
+
+/*
+Blog一覧のSideアーカイブのアコーディオン
+--------------------------------*/
+// $(function () {
+// 	$('.side-archive__year').on('click', function () {
+// 		$(this).children('.side-archive__months').slideToggle();
+// 		$(this).toggleClass("is-active");
+// 	});
+// });
+
+$(function () {
+	$('.side-archive__year').on('click', function () {
+		$(this).next().slideToggle();
+		$(this).toggleClass("is-open");
+	});
+});

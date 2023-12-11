@@ -1,26 +1,88 @@
 @use "global" as *;
 
 .side-archive {
-
 }
 
 .side-archive__head {
-	
 }
 
-.side-archive__years {
-
+.side-archive__items {
+	margin-top: rem(24);
+	font-size: rem(24);
+	color: $color-green;
 }
+
+// .side-archive__years li {
+// position: relative;
+// padding-left: rem(24);
+// }
+
+// .side-archive__years li::before {
+// 	position: absolute;
+// 	content: "";
+// 	background: url(../../assets/images//common/triangle-down.png) no-repeat center center / cover;
+// 	width: rem(24);
+// 	height: rem(24);
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// 	left: 0;
+// }
+
 
 .side-archive__year {
+	padding-left: rem(32);
+	position: relative;
+}
 
+.side-archive__year::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	transform: translateY(40%);
+	left: 0;
+	background: $color-green;
+	width: rem(18);
+	height: rem(21);
+	clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.side-archive__year.is-open::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	transform: translateY(55%);
+	left: 0;
+	background: $color-green;
+	width: rem(21);
+	height: rem(18);
+	clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
 .side-archive__months {
+	margin-left: rem(32);
+}
 
+.side-archive__months {
+	display: none;
+}
+
+.side-archive__months.is-open {
+	display: block;
 }
 
 .side-archive__month {
-
+	padding-left: rem(32);
+	position: relative;
 }
 
+.side-archive__month::before {
+	position: absolute;
+	content: "";
+	width: rem(18);
+	height: rem(21);
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	background: $color-green;
+	clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
