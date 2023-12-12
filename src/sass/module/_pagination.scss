@@ -14,6 +14,12 @@
 	place-content: center;
 	width: rem(38);
 	height: rem(38);
+	transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.pagination a:hover {
+	color: $color-white;
+	background-color: $color-green;
 }
 
 .pagination__prev {
@@ -61,4 +67,15 @@
 	top: 50%;
 	right: 55%;
 	transform: rotate(45deg) translateY(-56%);
+	transition: border-color 0.3s ease;
+}
+
+.pagination__prev:hover::before {
+	border-top: 1px solid $color-white;
+	border-left: 1px solid $color-white;
+}
+
+.pagination__next:hover::before {
+	border-top: 1px solid $color-white;
+	border-right: 1px solid $color-white;
 }
