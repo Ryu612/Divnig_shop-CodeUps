@@ -1,12 +1,12 @@
 @use "global" as *;
 
-.pagination {
+.single-pagination {
 	display: flex;
 	justify-content: center;
-	gap: rem(12);
+	gap: rem(82);
 }
 
-.pagination a {
+.single-pagination a {
 	border: 1px solid $color-green;
 	font-family: "Lato", sans-serif;
 	color: $color-green;
@@ -17,17 +17,16 @@
 	transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.pagination a:hover {
+.single-pagination a:hover {
 	color: $color-white;
 	background-color: $color-green;
 }
 
-.pagination__prev {
+.single-pagination__prev {
 	position: relative;
-	margin-right: rem(28);
 }
 
-.pagination__prev::before {
+.single-pagination__prev::before {
 	position: absolute;
 	content: "";
 	width: rem(11);
@@ -37,28 +36,19 @@
 	top: 50%;
 	left: 55%;
 	transform: rotate(-45deg) translateY(-53%);
-	transition: border-color 0.3s ease;
+		transition: border-color 0.3s ease;
 }
 
-.pagination__page.u-desktop {
-	display: none;
-
-	@include mq("md") {
-		display: grid;
-	}
+.single-pagination__prev:hover::before {
+	border-top: 1px solid $color-white;
+	border-left: 1px solid $color-white;
 }
 
-.pagination__page.current {
-	color: $color-white;
-	background-color: $color-green;
-}
-
-.pagination__next {
+.single-pagination__next {
 	position: relative;
-	margin-left: rem(28);
 }
 
-.pagination__next::before {
+.single-pagination__next::before {
 	position: absolute;
 	content: "";
 	width: rem(11);
@@ -71,12 +61,7 @@
 	transition: border-color 0.3s ease;
 }
 
-.pagination__prev:hover::before {
-	border-top: 1px solid $color-white;
-	border-left: 1px solid $color-white;
-}
-
-.pagination__next:hover::before {
+.single-pagination__next:hover::before {
 	border-top: 1px solid $color-white;
 	border-right: 1px solid $color-white;
 }
