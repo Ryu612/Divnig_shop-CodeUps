@@ -9,5 +9,11 @@
 	}
 }
 
+.voice-list--sub {
+	@include mq('md') {
+		gap: rem(80) rem(40);
+	}
+}
+
 .voice-list__item {
 }

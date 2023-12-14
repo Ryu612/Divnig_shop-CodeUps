@@ -42,6 +42,14 @@
 	}
 }
 
+.sub-mv--voice {
+	background: url(../../assets/images/sp/sub-voice-mv-sp.jpg) no-repeat center center / cover;
+
+	@include mq('md') {
+		background: url(../../assets/images/pc/sub-voice-mv-pc.jpg) no-repeat center center / cover;
+	}
+}
+
 .sub-mv-mask {
 	position: relative;
 }
