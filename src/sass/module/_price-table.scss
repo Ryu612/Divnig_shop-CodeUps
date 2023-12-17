@@ -115,7 +115,7 @@
 		top: rem(32);
 		// bottom: 0;
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translateX(-47%);
 		width: rem(64);
 		height: rem(64);
 	}
@@ -139,6 +139,11 @@
 	height: rem(60);
 	line-height: 1.4;
 	text-align: center;
+
+	@include mq('md') {
+		padding: rem(5) rem(16) rem(5) rem(14);
+		height: rem(59);
+	}
 }
 
 .price-table__body td:first-child {
@@ -146,7 +151,7 @@
 
 	@include mq('md') {
 		text-align: left;
-		width: calc(338 / 500) * 100%;
+		width: calc(339 / 500) * 100%;
 	}
 }
 
