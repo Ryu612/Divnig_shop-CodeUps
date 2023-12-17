@@ -50,6 +50,14 @@
 	}
 }
 
+.sub-mv--price {
+	background: url(../../assets/images/sp/sub-price-mv-sp.jpg) no-repeat center center / cover;
+
+	@include mq('md') {
+		background: url(../../assets/images/pc/sub-price-mv-pc.jpg) no-repeat center center / cover;
+	}
+}
+
 .sub-mv-mask {
 	position: relative;
 }

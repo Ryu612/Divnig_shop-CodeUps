@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.price-tablels {
+	margin-inline: auto;
+	display: grid;
+	gap: rem(40);
+}
+
+.price-tablels__item {
+
+}

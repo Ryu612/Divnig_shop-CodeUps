@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.archive-price {
+
+}
+
+.archive-price__inner {
+	position: relative;
+}
+
+.archive-price__inner::before {
+	position: absolute;
+	content: "";
+	background: url(../../assets/images/pc/voice-fish.png) no-repeat center center / contain;
+	width: rem(120);
+	height: rem(55);
+	top: rem(-24);
+	left: calc(50% - min(46vw, rem(620)));
+	z-index: 1;
+
+	@include mq("md") {
+		width: rem(301);
+		height: rem(138);
+		top: rem(-70);
+		left: calc(50% - min(47.5vw, rem(620)));
+		z-index: -1;
+	}
+}
+
+
+.archive-price__table {
+
+}

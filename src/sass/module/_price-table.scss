@@ -1,0 +1,114 @@
+@use "global" as *;
+
+// .price-table {
+// 	width: 100%;
+// 	text-align: center;
+// 	display: grid;
+// 	grid-template-columns: 1fr;
+// }
+
+// .price-table th, td{
+// 	border-collapse: collapse;
+// 	border: 1px solid $color-green;
+// }
+
+// .price-table td {
+// 	// border: 1px solid $color-green;
+// 	padding: rem(6) rem(16);
+// 	height: rem(60);
+// }
+
+// .price-table td:first-child {
+// 	// width: calc(240 / 345) * 100%;
+// }
+
+// .price-table td:nth-child(2) {
+// 	text-align: end;
+// }
+
+// .price-table__head {
+// 	background: $color-green;
+// 	color: $color-white;
+// 	padding-block: rem(8);
+// 	text-align: center;
+// 	display: grid; // 追加
+// 	grid-template-columns: 1fr; // 追加
+// }
+
+// .price-table__head th {
+// 	// color: $color-white;
+// 	// background: $color-green;
+// }
+
+// .price-table__head th span {
+// 	padding-left: rem(32);
+// 	position: relative;
+// }
+
+// .price-table__head th span::before {
+// 	position: absolute;
+// 	content: "";
+// 	background: url(../../assets/images//common/price-icon.png) no-repeat center center / cover;
+// 	width: rem(24);
+// 	height: rem(24);
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// 	left: 0;
+// 	color: $color-white;
+// }
+
+// .price-table__body {
+// }
+
+// .price-table__body tr {
+// 	display: grid;
+// 	grid-template-columns: calc(240 / 345) * 100% calc(105 / 345) * 100%;
+// }
+
+
+
+.price-table {
+	border-collapse: collapse;
+}
+
+.price-table, .price-table td {
+	border: 1px solid $color-green;
+}
+
+.price-table th {
+	background: $color-green;
+	color: $color-white;
+	padding-block: rem(8);
+}
+
+.price-table th span {
+	padding-left: rem(32);
+	position: relative;
+}
+
+.price-table th span::before {
+	position: absolute;
+	content: "";
+	background: url(../../assets/images//common/price-icon.png) no-repeat center center / cover;
+	width: rem(24);
+	height: rem(24);
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	color: $color-white;
+}
+
+.price-table td {
+	padding: rem(6) rem(16);
+	height: rem(60);
+	line-height: 1.4;
+	text-align: center;
+}
+
+.price-table td:first-child {
+	width: calc(240 / 345) * 100%;
+}
+
+.price-table td:nth-child(2) {
+	text-align: end;
+}
