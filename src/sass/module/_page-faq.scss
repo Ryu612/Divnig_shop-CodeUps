@@ -1,14 +1,13 @@
 @use "global" as *;
 
-.archive-price {
-
+.page-faq {
 }
 
-.archive-price__inner {
+.page-faq__inner {
 	position: relative;
 }
 
-.archive-price__inner::before {
+.page-faq__inner::before {
 	position: absolute;
 	content: "";
 	background: url(../../assets/images/pc/voice-fish.png) no-repeat center center / contain;
@@ -27,7 +26,16 @@
 	}
 }
 
+.page-faq__items {
+	display: grid;
+	gap: rem(40);
+	width: 100%;
 
-.archive-price__table {
+	@include mq('md') {
+		margin-inline: auto;
+		max-width: rem(700);
+	}
+}
 
+.page-faq__item {
 }

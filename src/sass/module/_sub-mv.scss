@@ -58,6 +58,14 @@
 	}
 }
 
+.sub-mv--faq {
+	background: url(../../assets/images/sp/sub-faq-mv-sp.jpg) no-repeat center center / cover;
+
+	@include mq('md') {
+		background: url(../../assets/images/pc/sub-faq-mv-pc.jpg) no-repeat center center / cover;
+	}
+}
+
 .sub-mv-mask {
 	position: relative;
 }

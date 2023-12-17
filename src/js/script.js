@@ -245,13 +245,13 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 	}, 3300);
 
 
-/*================================
-下層ページ
-================================*/
+	/*================================
+	下層ページ
+	================================*/
 
-/*
-About usギャラリーのモーダル
---------------------------------*/
+	/*
+	About usギャラリーのモーダル
+	--------------------------------*/
 	$(".gallery__photos img").click(function () {
 		// クリックした画像の HTML(<img>タグ全体)を#blackDisplay内にコピー
 		$("#blackDisplay").html($(this).prop("outerHTML"));
@@ -271,20 +271,19 @@ About usギャラリーのモーダル
 		return false;
 	});
 
-/*
-informationのタブ
---------------------------------*/
-$('.tab-group__tab').on('click',function(){
-	var idx = $('.tab-group__tab').index(this);
-	$(this).addClass('is-active').siblings('.tab-group__tab').removeClass('is-active');
-	var tabContents = $(this).closest('.page-information__inner').find('.tab-contents__item');
-	tabContents.removeClass('is-show');
-	tabContents.eq(idx).addClass('is-show');
-});
-});
+	/*
+	informationのタブ
+	--------------------------------*/
+	$('.tab-group__tab').on('click', function () {
+		var idx = $('.tab-group__tab').index(this);
+		$(this).addClass('is-active').siblings('.tab-group__tab').removeClass('is-active');
+		var tabContents = $(this).closest('.page-information__inner').find('.tab-contents__item');
+		tabContents.removeClass('is-show');
+		tabContents.eq(idx).addClass('is-show');
+	});
 
 /*
-Blog一覧のSideアーカイブのアコーディオン
+Blog一覧のSideのアーカイブのアコーディオン
 --------------------------------*/
 // $(function () {
 // 	$('.side-archive__year').on('click', function () {
@@ -298,4 +297,15 @@ $(function () {
 		$(this).next().slideToggle();
 		$(this).toggleClass("is-open");
 	});
+});
+
+/*
+FAQのアコーディオン
+--------------------------------*/
+$('.faq__q').click(function () {
+	$(this).next().slideToggle();
+	$(this).children('.faq__icon').toggleClass('is-open');
+});
+
+
 });
