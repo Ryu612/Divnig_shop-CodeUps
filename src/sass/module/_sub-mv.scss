@@ -66,6 +66,14 @@
 	}
 }
 
+.sub-mv--contact {
+	background: url(../../assets/images/sp/sub-contact-mv-sp.jpg) no-repeat center center / cover;
+
+	@include mq('md') {
+		background: url(../../assets/images/pc/sub-contact-mv-pc.jpg) no-repeat center center / cover;
+	}
+}
+
 .sub-mv-mask {
 	position: relative;
 }
