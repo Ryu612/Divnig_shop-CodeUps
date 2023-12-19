@@ -72,24 +72,29 @@ textarea {
 		border: 1px solid $border-cr;
 		box-shadow: 0px 0px 8px $color-green;
 	}
+
+	@include mq('md') {
+		margin-top: 0;
+		// margin-left: rem(39);
+	}
 }
 
 [type="button"],
 [type="submit"] {
-	padding: $padding-und-btn $padding-lnr-btn;
-	background: $back-cr-btn;
+	// padding: $padding-und-btn $padding-lnr-btn;
+	// background: $back-cr-btn;
 	color: $font-cr-btn;
 	font-size: $fz-btn;
 	transition: 0.3s ease;
-	border-radius: $border-r-btn;
-	line-height: 1;
+	// border-radius: $border-r-btn;
+	// line-height: 1;
 }
 
 [type="radio"] {
 	+ span {
 		display: inline-block;
 		position: relative;
-		padding: 0 0 0 calc($check-size + $check-space);
+		padding: 0 0 0 calc(rem(14) + rem(8));
 		// margin: 0 $check-space-betweenRadio 0 0;
 		font-size: $check-fz;
 		line-height: 1;
@@ -103,8 +108,8 @@ textarea {
 			transform: translateY(-50%);
 			background: $check-bg-cr;
 			border: 1px solid $check-border-cr;
-			width: $check-size;
-			height: $check-size;
+			width: rem(14);
+			height: rem(14);
 			display: block;
 		}
 
@@ -112,14 +117,14 @@ textarea {
 			content: "";
 			position: absolute;
 			top: 50%;
-			left: rem(2.5);
+			left: rem(1);
 			display: block;
 			opacity: 0;
 			transition: 0.2s ease;
 			/*チェックマークじゃない場合は以下を変更する*/
 			transform: translateY(-64%) rotate(-38deg);
-			width: calc($check-size * 0.7);
-			height: calc($check-size * 0.4);
+			width: calc(rem(14) * 0.7);
+			height: calc(rem(14) * 0.4);
 			margin-top: -0.05em;
 			margin-left: 0.1em;
 			border-left: $check-weight solid $check-bg-cr-inner;
@@ -166,6 +171,11 @@ select {
 		border: 1px solid $border-cr;
 		box-shadow: 0px 0px 8px #4973ff80;
 	}
+
+	@include mq('md') {
+		margin-top: 0;
+		padding: rem(5) rem(8);
+	}
 }
 
 textarea {
@@ -211,6 +221,10 @@ textarea {
 			margin-left: 0.1em;
 			border-left: $check-weight solid $check-bg-cr-inner;
 			border-bottom: $check-weight solid $check-bg-cr-inner;
+
+			@include mq('md') {
+				top: 21%;
+			}
 		}
 	}
 
@@ -237,9 +251,23 @@ textarea {
 form {
 	display: grid;
 	gap: rem(24);
+
+	@include mq('md') {
+		max-width: rem(700);
+		width: 100%;
+		margin-inline: auto;
+	}
 }
 
-.form__item:not(:last-of-type) {
+.form__item {
+	@include mq('md') {
+		display: grid;
+		grid-template-columns: rem(181) 1fr;
+		gap: rem(39);
+	}
+}
+
+.form__item:not(:last-child) {
 	padding-bottom: rem(24);
 	border-bottom: 1px dashed $color-green;
 }
@@ -265,6 +293,11 @@ form {
 	margin-top: rem(16);
 	display: grid;
 	gap: rem(4);
+
+	@include mq('md') {
+		margin-top: 0;
+		// margin-left: rem(39);
+	}
 }
 
 .form__checkbox {
@@ -279,4 +312,97 @@ form {
 
 .form__checkbox label {
   text-align: left;
+}
+
+.form__button {
+	margin: 0 auto;
+	display: inline-block;
+	width: rem(202);
+	background-color: $color-green;
+	text-align: center;
+	padding-block: rem(15);
+	color: $color-white;
+	font-size: rem(14);
+	font-family: $english-font-family;
+	line-height: 1.57143;
+	position: relative;
+	z-index: 1;
+	transition: color 0.2s;
+	border: 1px solid $color-green;
+	position: relative;
+
+	@include mq('md') {
+		margin-top: rem(16);
+	}
+}
+
+
+.form__button::before {
+	background: $color-white;
+	// border: 1px solid $color-green;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	transform: scale(0, 1);
+	transform-origin: left top;
+	transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+	z-index: -1;
+}
+
+.form__button:hover [type="button"] {
+	@include mq("md") {
+		color: $color-green;
+	}
+}
+
+.form__button:hover::before {
+	@include mq("md") {
+		transform: scale(1, 1);
+	}
+}
+
+.form__button::after {
+	position: absolute;
+	content: "";
+	border: 1px solid $color-green;
+	top: rem(4);
+	right: rem(-4);
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+}
+
+.form__button p {
+	display: inline-block;
+	padding-right: rem(48.75);
+	position: relative;
+}
+
+.form__button p::after {
+	position: absolute;
+	top: 40%;
+	right: 0;
+	transform: translateY(-50%);
+	width: rem(41);
+	height: rem(8);
+	background: url(../../assets/images/common/button-arrow.png) no-repeat center center / contain;
+	content: "";
+}
+
+.form__button:hover p::after {
+	@include mq("md") {
+		background: url(../../assets/images/common/button-arrow-green.png) no-repeat center center / contain;
+		z-index: 3;
+	}
+}
+
+.form__button:active {
+	transform: translate(rem(4), rem(4));
+}
+
+.form__button:active::after {
+	display: none;
 }
