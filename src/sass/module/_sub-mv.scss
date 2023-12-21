@@ -66,6 +66,14 @@
 	}
 }
 
+.sub-mv--sitemap {
+	background: url(../../assets/images/sp/sub-sitemap-mv-sp.jpg) no-repeat center center / cover;
+
+	@include mq('md') {
+		background: url(../../assets/images/pc/sub-sitemap-mv-pc.jpg) no-repeat center center / cover;
+	}
+}
+
 .sub-mv--contact {
 	background: url(../../assets/images/sp/sub-contact-mv-sp.jpg) no-repeat center center / cover;
 
@@ -99,6 +107,7 @@
 	font-weight: 400;
 	color: $color-white;
 	line-height: 1;
+	white-space: nowrap;
 
 	@include mq("md") {
 		font-size: rem(80);

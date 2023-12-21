@@ -22,9 +22,7 @@
 	<!-- Googleフォント -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 	<!-- css -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
@@ -54,7 +52,7 @@
 						<p class="pc-nav__link-en">Campaign</p>
 						<p class="pc-nav__link-ja">キャンペーン</p>
 					</a>
-			</div>
+				</div>
 				<div class="pc-nav__link">
 					<a href="page-about.html">
 						<p class="pc-nav__link-en">About us</p>
@@ -149,95 +147,62 @@
 	</nav>
 
 	<!-- メインビュー -->
-	<div class="sub-mv sub-mv--about">
-		<h2 class="sub-mv__title">About us</h2>
+	<div class="sub-mv sub-mv--sitemap">
+		<h2 class="sub-mv__title">Privacy Policy</h2>
 	</div>
+	<!-- <div class="sub-mv">
+		<figure class="sub-mv__image">
+			<picture>
+				<source srcset="./assets/images/pc/sub-campaign-mv-pc.webp" media="(min-width: 768px)" type="image/webp">
+				<source srcset="./assets/images/pc/sub-campaign-mv-pc.jpg" media="(min-width: 768px)" type="image/jpg">
+				<source srcset="./assets/images/sp/sub-campaign-mv-sp.webp" type="image/webp">
+				<img src="./assets/images/sp/sub-campaign-mv-sp.jpg" alt='海の中を泳ぐ2匹の黄色い魚' width='375' height='460' loading='lazy'>
+			</picture>
+		</figure>
+		<h2 class="sub-mv__title">Campaign</h2>
+	</div> -->
 
 	<!-- パンくず -->
 	<div class="breadcrumb layout-breadcrumb">
 		<div class="breadcrumb__inner inner">
-			<div>TOP > 私たちについて</div>
+			<div>TOP > プライバシーポリシー</div>
 		</div>
 	</div>
 
-	<section class="about layout-page-about">
-		<div class="about__inner inner about__inner--sub">
-			<div class="about__image about__image--sub">
-				<div class="about__left-image about__left-image--sub">
-					<picture>
-						<source media="(min-width:768px)" srcset="./assets/images/pc/ocean1-pc.jpg">
-						<img src="./assets/images/sp/ocean1-sp.jpg" alt="屋根の上のシーサー">
-					</picture>
-				</div>
-				<div class="about__right-image about__right-image--sub">
-					<picture>
-						<source media="(min-width:768px)" srcset="./assets/images/pc/ocean2-pc.jpg">
-						<img src="./assets/images/sp/ocean2-sp.jpg" alt="海の中を泳ぐ海水魚">
-					</picture>
-				</div>
-			</div>
-			<div class="about__body about__body--sub">
-				<h3 class="about__head about__head--sub">Dive into<br>the Ocean</h3>
-				<div class="about__content about__content--sub">
-					<p class="about__text">
-						ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-						ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+	<section class="page-privacy-policy layout-page-privacy-policy">
+		<div class="page-privacy-policy__inner inner">
+			<div class="page-privacy-policy__content">
+				<h3 class="page-privacy-policy__title">プライバシーポリシー</h3>
+				<div class="page-privacy-policy__text">
+					<p>
+						以下は、Webサイトで使用するための一般的なプライバシーポリシーの例です。
 					</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="gallery layout-gallery">
-		<div class="gallery__inner inner">
-			<div class="gallery__title section-header">
-        <p class="section-header__english section-header__english--gallery">Gallery</p>
-        <h2 class="section-header__japanese section-header__japanese--gallery">フォト</h2>
-      </div>
-			<div class="gallery__photos">
-				<img src="./assets/images/common/gallery1.jpg" alt="海の中を泳ぐ魚">
-				<img src="./assets/images/common/gallery2.jpg" alt="綺麗な海に浮かぶボートと島">
-				<img src="./assets/images/common/gallery3.jpg" alt="海の中を泳ぐ魚">
-				<img src="./assets/images/common/gallery4.jpg" alt="海の中を泳ぐ魚">
-				<img src="./assets/images/common/gallery5.jpg" alt="海の中を泳ぐ魚">
-				<img src="./assets/images/common/gallery6.jpg" alt="海の中を泳ぐ魚">
-			</div>
-		</div>
-		<div id="blackDisplay"></div>
-	</section>
-
-	<section id="contact" class="layout-sub-contact contact">
-		<div class="contact__inner inner">
-			<div class="contact__wrapper">
-				<div class="contact__left-wrapper">
-					<h3 class="contact__logo"><img src="./assets/images/common/contact-logo.png" alt="CodeUpsのロゴ"></h3>
-					<div class="contact__logo-line"></div>
-					<div class="contact__info">
-						<div class="contact__info-detail">
-							<p class="contact__address">沖縄県那覇市1-1</p>
-							<p class="contact__tel">TEL:<a href="tel:0120-000-0000">0120-000-0000</a></p>
-							<p class="contact__hour">営業時間:8:30-19:00</p>
-							<p class="contact__holiday">定休日:毎週火曜日</p>
-						</div>
-						<div class="contact__map">
-							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.1927241401213!2d127.6948673!3d26.22292675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5696278d6553b%3A0xcb44277c653ed00b!2z44CSOTAwLTAwMDYg5rKW57iE55yM6YKj6KaH5biC44GK44KC44KN44G-44Gh77yR5LiB55uu77yR!5e0!3m2!1sja!2sjp!4v1698046004296!5m2!1sja!2sjp"
-								width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-								referrerpolicy="no-referrer-when-downgrade"></iframe>
-						</div>
+					<ol>
+						<li>概要 当社は、お客様の個人情報を大切に扱い、個人情報保護に努めています。本プライバシーポリシーには、当社がどのように個人情報を収集し、使用するかについて説明しています。</li>
+						<li>収集する情報 当社は、お客様が当社のサービスを利用する際に、お名前、住所、電話番号、メールアドレスなどの個人情報を収集する場合があります。</li>
+					</ol>
+					<div>
+						<p>また、当社のサイトを閲覧する際に、IPアドレス、ブラウザの種類、言語設定、アクセス日時などの情報も収集する場合があります。</p>
+						<ol>
+							<li>情報の使用 当社は、お客様から収集した個人情報を、以下の目的で使用することがあります。</li>
+						</ol>
 					</div>
-				</div>
-				<div class="contact__right-wrapper">
-					<div class="contact__title section-header section-header--contact">
-						<p class="section-header__english">Contact</p>
-						<h2 class="section-header__japanese">お問い合わせ</h2>
+					<div>
+						<p>・お客様からのお問い合わせやサポートの提供 ・当社のサービスや製品の提供 ・当社のサイトの改善や新しいサービスの開発 ・法律や規制に基づく義務の履行</p>
+						<ol>
+							<li>情報の共有 当社は、お客様から収集した個人情報を、以下の場合に限り第三者に提供することがあります。</li>
+						</ol>
 					</div>
-					<p class="contact__text">ご予約・お問い合わせはコチラ</p>
-					<div class="contact__button">
-						<a href="" class="button">
-							<p>Contact us</p>
-						</a>
+					<div>
+						<p>・お客様の同意がある場合 ・法律や規制に基づく場合 ・当社が信頼できると判断した業務委託先に必要な範囲で提供する場合</p>
+						<ol>
+							<li>セキュリティ 当社は、お客様の個人情報を適切に保護するために、適切な安全対策を講じます。個人情報への不正アクセス、紛失、改ざん、漏洩等を防止するための措置を講じます。</li>
+							<li>Cookieの使用 当社は、お客様により良いサイトの利用体験を提供するために、Cookieを使用する場合があります。Cookieは、お客様が当社のサイトを訪れた際に、お客様のブラウザに保存される小さなデータファイルです。Cookieには個人情報は含まれません。</li>
+							<li>お問い合わせ先 当社のプライバシーポリシーに関するご質問やご意見は、以下の連絡先までお問い合わせください。 [会社名] [住所] [電話番号] [メールアドレス]</li>
+							<li>プライバシーポリシーの変更 当社は、必要に応じて本プライバシーポリシーを変更することがあります。変更後のプライバシーポリシーは、当社のサイトに掲載された時点から効力を有するものとします。変更があった場合、当社は適切な手段でお知らせします。</li>
+						</ol>
 					</div>
+					<p>以上が、当社のプライバシーポリシーの概要です。お客様の個人情報保護のために、常に努めてまいります。</p>
 				</div>
 			</div>
 		</div>
@@ -250,10 +215,8 @@
 				<div class="footer__logo"><a href="#"><img src="./assets/images/common/footer-logo.png" alt="CodeUpsのロゴ"></a>
 				</div>
 				<div class="footer__sns">
-					<a href="#" class="footer__facebook"><img src="./assets/images/common/icon-facebook.png"
-							alt="facebookのアイコン"></a>
-					<a href="#" class="footer__instagram"><img src="./assets/images/common/icon-instagram.png"
-							alt="インスタグラムのアイコン"></a>
+					<a href="#" class="footer__facebook"><img src="./assets/images/common/icon-facebook.png" alt="facebookのアイコン"></a>
+					<a href="#" class="footer__instagram"><img src="./assets/images/common/icon-instagram.png" alt="インスタグラムのアイコン"></a>
 				</div>
 			</div>
 			<div class="footer__nav footer-nav">

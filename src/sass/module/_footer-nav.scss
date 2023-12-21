@@ -19,6 +19,14 @@
 	}
 }
 
+.footer-nav--sitemap {
+	gap: rem(32) rem(28);
+
+	@include mq("md") {
+		gap: rem(144);
+	}
+}
+
 .footer-nav__1 {
 	grid-area: a;
 }
@@ -28,15 +36,26 @@
 .footer-nav__3 {
 	grid-area: c;
 
-	@include mq('md') {
+	@include mq("md") {
 		margin-left: rem(-14);
 	}
 }
 .footer-nav__4 {
 	grid-area: d;
 
-	@include mq('md') {
+	@include mq("md") {
 		margin-left: rem(-29);
+	}
+}
+
+.footer-nav__3--sitemap {
+	@include mq("md") {
+		margin-left: 0;
+	}
+}
+.footer-nav__4--sitemap {
+	@include mq("md") {
+		margin-left: 0;
 	}
 }
 
@@ -50,6 +69,10 @@
 	margin-top: rem(40);
 }
 
+.footer-nav__4 > .footer-nav__items + .footer-nav__items {
+	margin-top: rem(29);
+}
+
 .footer-nav__item {
 	padding-left: rem(22);
 	position: relative;
@@ -59,6 +82,10 @@
 	display: block;
 	line-height: 1.125;
 	color: $color-white;
+}
+
+.footer-nav__item--sitemap a {
+	color: #0d2936;
 }
 
 .footer-nav__item a:hover {
@@ -79,4 +106,8 @@
 	height: rem(18);
 	top: 0;
 	left: 0;
+}
+
+.footer-nav__item--sitemap:first-child::before {
+	background: url(../../assets/images/common/icon-starfish-black.png) no-repeat center center / contain;
 }
