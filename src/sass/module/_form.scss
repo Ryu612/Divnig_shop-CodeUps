@@ -7,7 +7,7 @@ $back-cr: #fff; //input（テキスト系）の背景色
 
 /*サイズ等の指定*/
 $fz: rem(16); //入力するときのfont-size
-$padding-und: rem(8); //paddingの指定（上下） inputの内側の余白で使う
+$padding-und: rem(7); //paddingの指定（上下） inputの内側の余白で使う
 $padding-lnr: rem(16); //paddingの指定（左右） inputの内側の余白で使う
 $border-r: 0; //border-radius（テキスト系）
 
@@ -54,7 +54,7 @@ $textarea-height: rem(200);
 [type="password"],
 [type="date"],
 textarea {
-	margin-top: rem(17);
+	margin-top: rem(16);
 	font-size: $fz;
 	padding: $padding-und $padding-lnr;
 	width: 100%;
@@ -73,7 +73,7 @@ textarea {
 		box-shadow: 0px 0px 8px $color-green;
 	}
 
-	@include mq('md') {
+	@include mq("md") {
 		margin-top: 0;
 		// margin-left: rem(39);
 	}
@@ -96,7 +96,7 @@ textarea {
 		position: relative;
 		padding: 0 0 0 calc(rem(14) + rem(8));
 		// margin: 0 $check-space-betweenRadio 0 0;
-		font-size: $check-fz;
+		font-size: $radio-fz;
 		line-height: 1;
 		// transition: 0.3s ease;
 
@@ -156,7 +156,8 @@ select {
 	/*↓カスタム */
 	margin-top: rem(16);
 	font-size: rem(12);
-	padding: rem(11) rem(8);
+	line-height: calc(17 / 12);
+	padding: rem(10) rem(8);
 	background-color: $back-cr;
 	border: 1px solid $border-cr-default;
 	border-radius: $border-r;
@@ -172,9 +173,9 @@ select {
 		box-shadow: 0px 0px 8px #4973ff80;
 	}
 
-	@include mq('md') {
+	@include mq("md") {
 		margin-top: 0;
-		padding: rem(5) rem(8);
+		padding: rem(5.5) rem(8);
 	}
 }
 
@@ -182,6 +183,7 @@ textarea {
 	height: $textarea-height;
 	width: 100%;
 	max-width: rem(600);
+	display: block;
 }
 
 [type="checkbox"] {
@@ -191,6 +193,10 @@ textarea {
 		padding: 0 0 0 calc($check-size + $check-space);
 		font-size: $check-fz;
 		// transition: 0.3s ease;
+
+		@include mq('md') {
+		padding: 0 0 0 calc($check-size + rem(16));
+		}
 
 		&::before {
 			position: absolute;
@@ -222,7 +228,7 @@ textarea {
 			border-left: $check-weight solid $check-bg-cr-inner;
 			border-bottom: $check-weight solid $check-bg-cr-inner;
 
-			@include mq('md') {
+			@include mq("md") {
 				top: 21%;
 			}
 		}
@@ -250,9 +256,10 @@ textarea {
 
 form {
 	display: grid;
-	gap: rem(24);
+	gap: rem(22);
 
-	@include mq('md') {
+	@include mq("md") {
+		gap: rem(39);
 		max-width: rem(700);
 		width: 100%;
 		margin-inline: auto;
@@ -260,7 +267,7 @@ form {
 }
 
 .form__item {
-	@include mq('md') {
+	@include mq("md") {
 		display: grid;
 		grid-template-columns: rem(181) 1fr;
 		gap: rem(39);
@@ -270,6 +277,20 @@ form {
 .form__item:not(:last-child) {
 	padding-bottom: rem(24);
 	border-bottom: 1px dashed $color-green;
+
+	@include mq("md") {
+		padding-bottom: rem(40);
+	}
+}
+
+.form__item:nth-child(5) {
+	@include mq("md") {
+		margin-top: rem(-4);
+	}
+}
+
+.form__item:nth-child(5) dt {
+	align-self: center;
 }
 
 .form__item dt {
@@ -280,21 +301,21 @@ form {
 	display: inline-block;
 	font-size: rem(12);
 	font-weight: 400;
-	line-height: calc(17 / 12);
+	line-height: 1;
 	letter-spacing: 0.4em;
 	text-indent: 0.4em;
 	color: $color-white;
 	margin-left: rem(8);
-	padding: rem(2) rem(11.2);
+	padding: rem(6) rem(11.2) rem(4);
 	background: #c94800;
 }
 
 .form__radio {
-	margin-top: rem(16);
+	margin-top: rem(14);
 	display: grid;
 	gap: rem(4);
 
-	@include mq('md') {
+	@include mq("md") {
 		margin-top: 0;
 		// margin-left: rem(39);
 	}
@@ -308,14 +329,18 @@ form {
 	justify-content: center;
 	max-width: calc(282 / 345) * 100%;
 	width: 100%;
+
+	@include mq('md') {
+		margin: rem(40) auto 0;
+	}
 }
 
 .form__checkbox label {
-  text-align: left;
+	text-align: left;
 }
 
 .form__button {
-	margin: 0 auto;
+	margin: rem(2) auto 0;
 	display: inline-block;
 	width: rem(202);
 	background-color: $color-green;
@@ -325,17 +350,11 @@ form {
 	font-size: rem(14);
 	font-family: $english-font-family;
 	line-height: 1.57143;
-	position: relative;
 	z-index: 1;
 	transition: color 0.2s;
 	border: 1px solid $color-green;
 	position: relative;
-
-	@include mq('md') {
-		margin-top: rem(16);
-	}
 }
-
 
 .form__button::before {
 	background: $color-white;
@@ -352,7 +371,7 @@ form {
 	z-index: -1;
 }
 
-.form__button:hover [type="button"] {
+.form__button:hover [type="submit"] {
 	@include mq("md") {
 		color: $color-green;
 	}
@@ -405,4 +424,23 @@ form {
 
 .form__button:active::after {
 	display: none;
+}
+
+input.is-error {
+	border: 1px solid #c94800;
+	background: rgba(201, 72, 0, 0.2);
+}
+
+input.is-error::placeholder {
+	color: $color-white;
+}
+
+textarea.is-error {
+	border: 1px solid #c94800;
+	background: rgba(201, 72, 0, 0.2);
+}
+
+[type="checkbox"].is-error + span::before {
+	border: 1px solid #c94800;
+	background: rgba(201, 72, 0, 0.2);
 }

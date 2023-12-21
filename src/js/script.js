@@ -282,30 +282,94 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 		tabContents.eq(idx).addClass('is-show');
 	});
 
-/*
-Blog一覧のSideのアーカイブのアコーディオン
---------------------------------*/
-// $(function () {
-// 	$('.side-archive__year').on('click', function () {
-// 		$(this).children('.side-archive__months').slideToggle();
-// 		$(this).toggleClass("is-active");
-// 	});
-// });
+	/*
+	Blog一覧のSideのアーカイブのアコーディオン
+	--------------------------------*/
+	// $(function () {
+	// 	$('.side-archive__year').on('click', function () {
+	// 		$(this).children('.side-archive__months').slideToggle();
+	// 		$(this).toggleClass("is-active");
+	// 	});
+	// });
 
-$(function () {
-	$('.side-archive__year').on('click', function () {
-		$(this).next().slideToggle();
-		$(this).toggleClass("is-open");
+	$(function () {
+		$('.side-archive__year').on('click', function () {
+			$(this).next().slideToggle();
+			$(this).toggleClass("is-open");
+		});
 	});
-});
 
-/*
-FAQのアコーディオン
---------------------------------*/
-$('.faq__q').click(function () {
-	$(this).next().slideToggle();
-	$(this).children('.faq__icon').toggleClass('is-open');
-});
+	/*
+	FAQのアコーディオン
+	--------------------------------*/
+	$('.faq__q').click(function () {
+		$(this).next().slideToggle();
+		$(this).children('.faq__icon').toggleClass('is-open');
+	});
+
+	/*
+	フォームの必須項目に入力がない場合にエラーを表示する
+	--------------------------------*/
+	// var requiredFields = document.querySelectorAll('.required');
+
+	// // 各項目をループ
+	// requiredFields.forEach(function(field) {
+	//   // 項目の値が空かどうかを確認
+	//   if (field.value === '') {
+	//     // 値が空の場合、その項目に 'is-error' クラスを追加
+	//     field.classList.add('is-error');
+	//   }
+	// });
+	$(function ($) {
+		$('#send').on("click", function () {
+			$('form').find('.is-error').removeClass('is-error');// 初期化
+			$('input[required]:invalid,textarea[required]:invalid').each(function () {// 項目が空だったらエラー表示をする
+				$(this).addClass('is-error');
+				$('.page-contact__error-message').addClass('is-error');
+			});
+
+			var errorPos = ($('input[required]:invalid:first').offset() && $('input[required]:invalid:first').offset().top) || 0;
+			// ずれるときは $().get(0).offsetTop を使う
+			$('body').animate(
+				{ scrollTop: errorPos },
+				'slow'
+			);
+
+			// let $form = $('#form_id')
+			// $form.submit(function (e) {
+			// 	$.ajax({
+			// 		url: $form.attr('action'),
+			// 		data: $form.serialize(),
+			// 		type: "POST",
+			// 		dataType: "xml",
+			// 		statusCode: {
+			// 			0: function () {
+			// 				//送信に成功したときの処理
+			// 				$form.slideUp()
+			// 				$('#js-success').slideDown()
+			// 			},
+			// 			200: function () {
+			// 				//送信に失敗したときの処理
+			// 				$form.slideUp()
+			// 				$('#js-error').slideDown()
+			// 			}
+			// 		}
+			// 	});
+			// 	return false;
+			// });
+
+			if ($('.is-error').length == 0) {// 未入力がない時
+				$('form').submit();
+				let $form = $('#form_id')
+				$form.slideUp()
+				$('#js-success').slideDown()
+			} else {// 未入力がある時
+				console.log('未入力があります');
+			}
+			return false;// submitの送信中止用
+		});
+	});
+
 
 
 });

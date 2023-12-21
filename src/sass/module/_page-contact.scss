@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .page-contact {
-
 }
 
 .page-contact__inner {
@@ -26,6 +25,34 @@
 	}
 }
 
-.page-contact__content {
+.page-contact__error-message {
+	font-size: rem(14);
+	color: #c94800;
+	width: calc(224 / 345) * 100%;
+	margin-inline: auto;
+	padding-left:1em;
+	text-indent:-1em;
+	text-align: center;
+	display: none;
+}
 
+.page-contact__error-message.is-error {
+	display: block;
+}
+
+.page-contact__content {
+	margin-top: rem(41);
+}
+
+form {
+	// display: none;
+}
+
+.form__success-message {
+	display: none;
+	text-align: center;
+}
+
+.form__success-message p+ p {
+	margin-top: rem(40);
 }

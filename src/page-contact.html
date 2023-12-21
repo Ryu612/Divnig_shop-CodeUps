@@ -171,12 +171,15 @@
 
 	<section class="page-contact layout-page-contact">
 		<div class="page-contact__inner inner">
+			<p class="page-contact__error-message">
+				※必須項目が入力されていません。入力してください。
+			</p>
 			<div class="page-contact__content form">
-				<form action="" method="post" id="">
+				<form action="" method="post" id="form_id">
 					<dl class="form__item">
 						<dt>お名前<span>必須</span></dt>
 						<dd>
-							<input type="text" name="name" placeholder="沖縄　太郎" required />
+							<input type="text" name="name" placeholder="沖縄　太郎" class="" required />
 						</dd>
 					</dl>
 					<dl class="form__item">
@@ -214,11 +217,11 @@
 					<dl class="form__item">
 						<dt>お問合せ内容<span>必須</span></dt>
 						<dd>
-							<textarea name="contents"></textarea>
+							<textarea name="contents" required></textarea>
 						</dd>
 					</dl>
 					<div class="form__checkbox">
-						<label><input type="checkbox" name="checkbox" value="個人情報保護方針に同意する" id="" /><span>個人情報の取り扱いについて同意のうえ送信します。</span></label>
+						<label><input type="checkbox" name="checkbox" value="個人情報保護方針に同意する" id="" required /><span>個人情報の取り扱いについて同意のうえ送信します。</span></label>
 					</div>
 					<!-- <dl class="form__checkbox">
             <dd class="">
@@ -227,15 +230,21 @@
             <dt class="">個人情報の取り扱いについて同意のうえ送信します。</dt>
           </dl> -->
 					<div class="form__button">
-						<p><input type="button" value="Send" /></p>
+						<p><input type="submit" id="send" value="Send" /></p>
 					</div>
 				</form>
+				<div id="js-success" class="form__success-message">
+					<p>お問い合わせ内容を送信完了しました。</p>
+					<p>このたびは、お問い合わせ頂き<br class="u-mobile">誠にありがとうございます。<br>
+						お送り頂きました内容を確認の上、<br class="u-mobile">3営業日以内に折り返しご連絡させて頂きます。<br>
+						また、ご記入頂いたメールアドレスへ、<br class="u-mobile">自動返信の確認メールをお送りしております。</p>
+				</div>
 			</div>
 		</div>
 	</section>
 
 
-	<footer id="footer" class="top-footer footer">
+	<footer id="footer" class="top-footer top-footer--contact footer">
 		<div class="footer__inner inner">
 			<div class="footer__header">
 				<div class="footer__logo"><a href="#"><img src="./assets/images/common/footer-logo.png" alt="CodeUpsのロゴ"></a>
