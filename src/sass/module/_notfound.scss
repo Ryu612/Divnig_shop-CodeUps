@@ -12,10 +12,6 @@
 	}
 }
 
-.notfound__inner {
-	text-align: center;
-}
-
 .notfound::after {
 	position: absolute;
 	content: "";
@@ -32,6 +28,14 @@
 		transform: translate(-79%, -42%);
 	}
 }
+
+.notfound__inner {
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+
 
 .notfound__title {
 	margin-top: rem(39);
