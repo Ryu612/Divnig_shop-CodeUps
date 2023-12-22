@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.notfound {
+	background: $color-green;
+	color: $color-white;
+	// height: rem(787);
+	padding-block: rem(80) rem(44);
+	position: relative;
+
+	@include mq("md") {
+		padding-block: rem(90) rem(152);
+	}
+}
+
+.notfound__inner {
+	text-align: center;
+}
+
+.notfound::after {
+	position: absolute;
+	content: "";
+	background: url(../../assets/images//common/404-shark.png) no-repeat center center / cover;
+	width: rem(328.843);
+	height: rem(293.594);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -38%);
+
+	@include mq('md') {
+		width: rem(665.311);
+		height: rem(593.996);
+		transform: translate(-79%, -42%);
+	}
+}
+
+.notfound__title {
+	margin-top: rem(39);
+	font-family: "Lato", sans-serif;
+	font-size: rem(80);
+	letter-spacing: 0.5em;
+	text-indent: 0.5em;
+
+	@include mq('md') {
+		margin-top: rem(119);
+		font-size: rem(160);
+		line-height: calc(192 / 160);
+	}
+}
+
+.notfound__text {
+	font-family: "Lato", sans-serif;
+	margin-top: rem(-16);
+
+	@include mq("md") {
+		margin-top: rem(24);
+	}
+}
+
+.notfound__button {
+	margin-top: rem(40);
+	text-align: center;
+
+	@include mq('md') {
+		margin-top: rem(80);
+	}
+}

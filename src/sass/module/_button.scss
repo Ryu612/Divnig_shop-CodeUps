@@ -83,10 +83,42 @@
 	transform: translate(rem(4), rem(4));
 }
 
-.button{
-
-}
-
 .button:active::after {
 	display: none;
+}
+
+
+.button--white {
+	background-color: $color-white;
+	color: $color-green;
+	border: 1px solid $color-white;
+}
+
+.button--white p {
+	padding-right: rem(57);
+}
+
+.button--white:hover {
+	@include mq("md") {
+		color: $color-white;
+	}
+}
+
+.button--white::before {
+	background: $color-green;
+}
+
+.button--white::after {
+	border: 1px solid $color-white;
+}
+
+.button--white p::after {
+	background: url(../../assets/images/common/button-arrow-green.png) no-repeat center center / contain;
+}
+
+.button--white:hover p::after {
+	@include mq("md") {
+		background: url(../../assets/images/common/button-arrow.png) no-repeat center center / contain;
+		z-index: 3;
+	}
 }
