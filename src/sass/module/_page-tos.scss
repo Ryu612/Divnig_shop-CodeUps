@@ -1,9 +1,9 @@
 @use "global" as *;
 
-.page-privacy-policy {
+.page-tos {
 }
 
-.page-privacy-policy__inner.inner {
+.page-tos__inner {
 	position: relative;
 
 	@include mq("md") {
@@ -11,7 +11,7 @@
 	}
 }
 
-.page-privacy-policy__inner::before {
+.page-tos__inner::before {
 	position: absolute;
 	content: "";
 	background: url(../../assets/images/pc/voice-fish.png) no-repeat center center / contain;
@@ -30,7 +30,7 @@
 	}
 }
 
-.page-privacy-policy__content {
+.page-tos__content {
 	display: grid;
 	gap: rem(40);
 
@@ -39,7 +39,7 @@
 	}
 }
 
-.page-privacy-policy__title {
+.page-tos__title {
 	font-size: rem(24);
 	font-weight: 500;
 
@@ -48,13 +48,13 @@
 	}
 }
 
-.page-privacy-policy__text {
+.page-tos__text {
 	display: grid;
 	gap: rem(32);
 	line-height: 2;
 }
 
-.page-privacy-policy__text ol {
+.page-tos__text ol {
 	list-style: decimal inside;
 	margin-left: rem(7);
 	text-indent: -1em;
