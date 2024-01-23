@@ -1,6 +1,10 @@
 @use "global" as *;
 
 .columns {
+	
+}
+
+.columns__2columns {
 	@include mq('md') {
 		display: grid;
 		grid-template-columns: 1fr rem(294);
