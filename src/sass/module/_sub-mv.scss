@@ -10,77 +10,89 @@
 	}
 }
 
-.sub-mv--campaign {
-	background: url(../../assets/images/sp/sub-campaign-mv-sp.jpg) no-repeat center center / cover;
-
-	@include mq('md') {
-		background: url(../../assets/images/pc/sub-campaign-mv-pc.jpg) no-repeat center center / cover;
-	}
+.sub-mv__image {
+	width: 100%;
+	height: 100%;
 }
 
-.sub-mv--about {
-	background: url(../../assets/images/sp/sub-aboutus-mv-sp.jpg) no-repeat center center / cover;
-
-	@include mq('md') {
-		background: url(../../assets/images/pc/sub-aboutus-mv-pc.jpg) no-repeat center center / cover;
-	}
+.sub-mv__image picture img {
+	aspect-ratio: 375 / 460;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
-.sub-mv--information {
-	background: url(../../assets/images/sp/sub-information-mv-sp.jpg) no-repeat center center / cover;
+// .sub-mv--campaign {
+// 	background: url(../../assets/images/sp/sub-campaign-mv-sp.jpg) no-repeat center center / cover;
 
-	@include mq('md') {
-		background: url(../../assets/images/pc/sub-information-mv-pc.jpg) no-repeat center center / cover;
-	}
-}
+// 	@include mq('md') {
+// 		background: url(../../assets/images/pc/sub-campaign-mv-pc.jpg) no-repeat center center / cover;
+// 	}
+// }
 
-.sub-mv--blog {
-	background: url(../../assets/images/sp/sub-blog-mv-sp.jpg) no-repeat center center / cover;
+// .sub-mv--about {
+// 	background: url(../../assets/images/sp/sub-aboutus-mv-sp.jpg) no-repeat center center / cover;
 
-	@include mq('md') {
-		background: url(../../assets/images/pc/sub-blog-mv-pc.jpg) no-repeat center center / cover;
-	}
-}
+// 	@include mq('md') {
+// 		background: url(../../assets/images/pc/sub-aboutus-mv-pc.jpg) no-repeat center center / cover;
+// 	}
+// }
 
-.sub-mv--voice {
-	background: url(../../assets/images/sp/sub-voice-mv-sp.jpg) no-repeat center center / cover;
+// .sub-mv--information {
+// 	background: url(../../assets/images/sp/sub-information-mv-sp.jpg) no-repeat center center / cover;
 
-	@include mq('md') {
-		background: url(../../assets/images/pc/sub-voice-mv-pc.jpg) no-repeat center center / cover;
-	}
-}
+// 	@include mq('md') {
+// 		background: url(../../assets/images/pc/sub-information-mv-pc.jpg) no-repeat center center / cover;
+// 	}
+// }
 
-.sub-mv--price {
-	background: url(../../assets/images/sp/sub-price-mv-sp.jpg) no-repeat center center / cover;
+// .sub-mv--blog {
+// 	background: url(../../assets/images/sp/sub-blog-mv-sp.jpg) no-repeat center center / cover;
 
-	@include mq('md') {
-		background: url(../../assets/images/pc/sub-price-mv-pc.jpg) no-repeat center center / cover;
-	}
-}
+// 	@include mq('md') {
+// 		background: url(../../assets/images/pc/sub-blog-mv-pc.jpg) no-repeat center center / cover;
+// 	}
+// }
 
-.sub-mv--faq {
-	background: url(../../assets/images/sp/sub-faq-mv-sp.jpg) no-repeat center center / cover;
+// .sub-mv--voice {
+// 	background: url(../../assets/images/sp/sub-voice-mv-sp.jpg) no-repeat center center / cover;
 
-	@include mq('md') {
-		background: url(../../assets/images/pc/sub-faq-mv-pc.jpg) no-repeat center center / cover;
-	}
-}
+// 	@include mq('md') {
+// 		background: url(../../assets/images/pc/sub-voice-mv-pc.jpg) no-repeat center center / cover;
+// 	}
+// }
 
-.sub-mv--sitemap {
-	background: url(../../assets/images/sp/sub-sitemap-mv-sp.jpg) no-repeat center center / cover;
+// .sub-mv--price {
+// 	background: url(../../assets/images/sp/sub-price-mv-sp.jpg) no-repeat center center / cover;
 
-	@include mq('md') {
-		background: url(../../assets/images/pc/sub-sitemap-mv-pc.jpg) no-repeat center center / cover;
-	}
-}
+// 	@include mq('md') {
+// 		background: url(../../assets/images/pc/sub-price-mv-pc.jpg) no-repeat center center / cover;
+// 	}
+// }
 
-.sub-mv--contact {
-	background: url(../../assets/images/sp/sub-contact-mv-sp.jpg) no-repeat center center / cover;
+// .sub-mv--faq {
+// 	background: url(../../assets/images/sp/sub-faq-mv-sp.jpg) no-repeat center center / cover;
 
-	@include mq('md') {
-		background: url(../../assets/images/pc/sub-contact-mv-pc.jpg) no-repeat center center / cover;
-	}
-}
+// 	@include mq('md') {
+// 		background: url(../../assets/images/pc/sub-faq-mv-pc.jpg) no-repeat center center / cover;
+// 	}
+// }
+
+// .sub-mv--sitemap {
+// 	background: url(../../assets/images/sp/sub-sitemap-mv-sp.jpg) no-repeat center center / cover;
+
+// 	@include mq('md') {
+// 		background: url(../../assets/images/pc/sub-sitemap-mv-pc.jpg) no-repeat center center / cover;
+// 	}
+// }
+
+// .sub-mv--contact {
+// 	background: url(../../assets/images/sp/sub-contact-mv-sp.jpg) no-repeat center center / cover;
+
+// 	@include mq('md') {
+// 		background: url(../../assets/images/pc/sub-contact-mv-pc.jpg) no-repeat center center / cover;
+// 	}
+// }
 
 .sub-mv-mask {
 	position: relative;

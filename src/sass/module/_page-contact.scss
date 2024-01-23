@@ -3,27 +3,27 @@
 .page-contact {
 }
 
-.page-contact__inner {
-	position: relative;
-}
+// .page-contact__inner {
+// 	position: relative;
+// }
 
-.page-contact__inner::before {
-	position: absolute;
-	content: "";
-	background: url(../../assets/images/pc/voice-fish.png) no-repeat center center / contain;
-	width: rem(120);
-	height: rem(55);
-	top: rem(-24);
-	left: calc(50% - min(46vw, rem(620)));
-	z-index: -1;
+// .page-contact__inner::before {
+// 	position: absolute;
+// 	content: "";
+// 	background: url(../../assets/images/pc/voice-fish.png) no-repeat center center / contain;
+// 	width: rem(120);
+// 	height: rem(55);
+// 	top: rem(-24);
+// 	left: calc(50% - min(46vw, rem(620)));
+// 	z-index: -1;
 
-	@include mq("md") {
-		width: rem(301);
-		height: rem(138);
-		top: rem(-70);
-		left: calc(50% - min(47.5vw, rem(620)));
-	}
-}
+// 	@include mq("md") {
+// 		width: rem(301);
+// 		height: rem(138);
+// 		top: rem(-70);
+// 		left: calc(50% - min(47.5vw, rem(620)));
+// 	}
+// }
 
 .page-contact__error-message {
 	font-size: rem(14);
