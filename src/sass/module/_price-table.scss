@@ -5,8 +5,9 @@
 
 	@include mq("md") {
 		display: flex;
-		width: rem(700);
-		margin-inline: auto;
+		justify-content: center;
+		// margin-inline: auto;
+		// width: rem(700);
 	}
 }
 
@@ -17,7 +18,8 @@
 	text-align: center;
 
 	@include mq('md') {
-		width: rem(200);
+		// width: rem(200);
+		width: calc(200 / 700) * 100%;
 		display: grid;
 		place-content: center;
 		padding-block: 0;
@@ -59,7 +61,8 @@
 	width: 100%;
 
 	@include mq('md') {
-		width: rem(500);
+		// width: rem(500);
+		width: calc(500 / 700) * 100%;
 	}
 }
 

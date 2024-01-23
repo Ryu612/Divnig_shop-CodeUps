@@ -4,6 +4,12 @@
 
 }
 
+.page-price__inner.inner {
+	@include mq('md') {
+		max-width: rem(750);
+	}
+}
+
 // .page-price__inner {
 // 	position: relative;
 // }

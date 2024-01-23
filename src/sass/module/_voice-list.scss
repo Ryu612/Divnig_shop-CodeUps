@@ -6,13 +6,14 @@
 
 	@include mq("md") {
 		grid-template-columns: repeat(2, 1fr);
+
+		@include mq("md") {
+			gap: rem(80) rem(40);
+		}
 	}
 }
 
 .voice-list--sub {
-	@include mq('md') {
-		gap: rem(80) rem(40);
-	}
 }
 
 .voice-list__item {
