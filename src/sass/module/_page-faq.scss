@@ -3,6 +3,13 @@
 .page-faq {
 }
 
+
+.page-faq__inner.inner {
+	@include mq('md') {
+		max-width: rem(750);
+	}
+}
+
 // .page-faq__inner {
 // 	position: relative;
 // }
@@ -31,10 +38,10 @@
 	gap: rem(40);
 	width: 100%;
 
-	@include mq('md') {
-		margin-inline: auto;
-		max-width: rem(700);
-	}
+	// @include mq('md') {
+	// 	margin-inline: auto;
+	// 	max-width: rem(700);
+	// }
 }
 
 .page-faq__item {
