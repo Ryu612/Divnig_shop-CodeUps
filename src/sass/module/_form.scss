@@ -257,12 +257,12 @@ textarea {
 form {
 	display: grid;
 	gap: rem(22);
+	width: 100%;
 
 	@include mq("md") {
 		gap: rem(39);
-		max-width: rem(700);
-		width: 100%;
-		margin-inline: auto;
+		// max-width: rem(700);
+		// margin-inline: auto;
 	}
 }
 
@@ -318,6 +318,86 @@ form {
 	@include mq("md") {
 		margin-top: 0;
 		// margin-left: rem(39);
+	}
+}
+
+.form__checkbox1 {
+	margin-top: rem(16);
+	font-size: rem(16);
+	display: grid;
+	gap: rem(4);
+
+	@include mq('md') {
+		margin-top: 0;
+	}
+}
+
+.form__checkbox1 [type="checkbox"] {
+	+ span {
+		display: inline-block;
+		position: relative;
+		padding: 0 0 0 calc(rem(14) + rem(10));
+		font-size: $check-fz;
+		// transition: 0.3s ease;
+
+		@include mq('md') {
+		padding: 0 0 0 calc(rem(14) + rem(10));
+		}
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			// transform: translateY(-74%);
+			background: $check-bg-cr;
+			border: 1px solid $check-border-cr;
+			width: rem(14);
+			height: rem(14);
+			display: block;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 22%;
+			left: rem(2.5);
+			display: block;
+			opacity: 0;
+			transition: 0.2s ease;
+			/*チェックマークじゃない場合は以下を変更する*/
+			transform: rotate(-45deg);
+			width: calc(rem(14) * 0.7);
+			height: calc(rem(14) * 0.4);
+			margin-top: 0.1em;
+			margin-left: 0em;
+			border-left: $check-weight solid $check-bg-cr-inner;
+			border-bottom: $check-weight solid $check-bg-cr-inner;
+
+			@include mq("md") {
+				// top: 21%;
+			}
+		}
+	}
+
+	&:checked + span {
+		&::after {
+			opacity: 1;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		+ span::before {
+			border: 1px solid $border-cr;
+			box-shadow: 0px 0px 5px #4973ff33;
+		}
+	}
+
+	&:active + span::before {
+		border: 1px solid $border-cr;
+		background: #4973ff33;
 	}
 }
 

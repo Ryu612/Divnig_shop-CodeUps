@@ -3,6 +3,12 @@
 .page-contact {
 }
 
+.page-contact__inner.inner {
+	@include mq('md') {
+		max-width: rem(750);
+	}
+}
+
 // .page-contact__inner {
 // 	position: relative;
 // }
