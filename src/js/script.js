@@ -274,12 +274,54 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 	/*
 	informationのタブ
 	--------------------------------*/
-	$('.tab-group__tab').on('click', function () {
-		var idx = $('.tab-group__tab').index(this);
-		$(this).addClass('is-active').siblings('.tab-group__tab').removeClass('is-active');
-		var tabContents = $(this).closest('.page-information__inner').find('.tab-contents__item');
-		tabContents.removeClass('is-show');
-		tabContents.eq(idx).addClass('is-show');
+	// $('.tab-group__tab').on('click', function () {
+	// 	var idx = $('.tab-group__tab').index(this);
+	// 	$(this).addClass('is-active').siblings('.tab-group__tab').removeClass('is-active');
+	// 	var tabContents = $(this).closest('.page-information__inner').find('.tab-contents__item');
+	// 	tabContents.removeClass('is-show');
+	// 	tabContents.eq(idx).addClass('is-show');
+	// });
+
+
+	$(function () {
+		//タブの実装F
+		$(".tab-group__tab").click(function () {
+			var index = $(".tab-group__tab").index(this);
+			$(".tab-group__tab").removeClass("is-active");
+			$(".tab-item").removeClass("is-show");
+			$(this).addClass("is-active");
+			$(".tab-item").eq(index).addClass("is-show");
+		});
+	});
+
+	/*
+	ナビリンクから飛んだ時に特定のinformationのタブを開く
+	--------------------------------*/
+	$(function () {
+		//タブへダイレクトリンクの実装
+		//リンクからハッシュを取得
+		var hash = location.hash;
+		hash = (hash.match(/^#tab\d+$/) || [])[0];
+
+		//リンクにハッシュが入っていればtabnameに格納
+		if ($(hash).length) {
+			var tabname = hash.slice(1);
+		} else {
+			var tabname = "tab1";
+		}
+
+		//コンテンツ非表示・タブを非アクティブ
+		$(".tab-group__tab").removeClass("is-active");
+		$(".tab-item").removeClass("is-show");
+
+		//何番目のタブかを格納
+		var tabno = $(".tab-group__tab#" + tabname).index();
+
+		//コンテンツ表示
+		$(".tab-item").eq(tabno).addClass("is-show");
+
+		//タブのアクティブ化
+		$(".tab-group__tab").eq(tabno).addClass("is-active");
 	});
 
 	/*
