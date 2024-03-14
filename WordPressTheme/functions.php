@@ -20,11 +20,7 @@ function my_script_init()
 { // WordPressに含まれているjquery.jsを読み込まない
     wp_deregister_script('jquery');
     // Google Fonts
-    wp_enqueue_style('NotoSansJP', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
-    wp_enqueue_style('Oswald', '//fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
-    wp_enqueue_style('Robots', '//fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-    // Font Awesome
-    wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/6ec95a7f03.js', array(), "1.0.1", true);
+    wp_enqueue_style('GoogleFonts', 'https://fonts.googleapis.com/css2?family=Gotu&family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap');
     // Swiper JS
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), "1.0.1", true);
     // jQuery Inview
@@ -34,7 +30,7 @@ function my_script_init()
     // Custom Script
     wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'),  filemtime( get_theme_file_path( '/assets/js/script.js' )), true);
     // Swiper CSS
-    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', "", "1.0.1");
+    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', "", "8.0.0");
     // Custom Style
     wp_enqueue_style('style-css', get_template_directory_uri() . '/assets/css/style.css', array(), filemtime( get_theme_file_path( '/assets/css/style.css' )));
 }
