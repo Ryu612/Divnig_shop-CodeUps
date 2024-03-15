@@ -1,3 +1,15 @@
+<?php
+$home = esc_url(home_url('/'));
+$campaign = esc_url(home_url('/campaign/'));
+$about = esc_url(home_url('/about-us/'));
+$information = esc_url(home_url('/information/'));
+$blog = esc_url(home_url('/blog/'));
+$voice = esc_url(home_url('/voice/'));
+$price = esc_url(home_url('/price/'));
+$faq = esc_url(home_url('/faq/'));
+$contact = esc_url(home_url('/contact/'));
+?>
+
 <?php if( !is_page('contact')): ?>
 <section id="contact" class="top-contact contact">
 	<div class="contact__inner inner">
@@ -24,7 +36,7 @@
 				</div>
 				<p class="contact__text">ご予約・お問い合わせはコチラ</p>
 				<div class="contact__button">
-					<a href="" class="button">
+					<a href="<?php echo $contact; ?>" class="button">
 						<p>Contact us</p>
 					</a>
 				</div>
@@ -37,7 +49,7 @@
 <footer id="footer" class="top-footer footer">
 	<div class="footer__inner inner">
 		<div class="footer__header">
-			<div class="footer__logo"><a href="#"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/footer-logo.png")); ?>" alt="CodeUpsのロゴ"></a>
+			<div class="footer__logo"><a href="<?php echo $home; ?>"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/footer-logo.png")); ?>" alt="CodeUpsのロゴ"></a>
 			</div>
 			<div class="footer__sns">
 				<a href="#" class="footer__facebook"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/icon-facebook.png")); ?>" alt="facebookのアイコン"></a>
@@ -47,32 +59,32 @@
 		<div class="footer__nav footer-nav">
 			<div class="footer-nav__1">
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item"><a href="archive-campaign.html">キャンペーン</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $campaign; ?>">キャンペーン</a></li>
 					<li class="footer-nav__item"><a href="#">ライセンス取得</a></li>
 					<li class="footer-nav__item"><a href="#">貸切体験ダイビング</a></li>
 					<li class="footer-nav__item"><a href="#">ナイトダイビング</a></li>
 				</ul>
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item"><a href="page-about.html">私たちについて</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $about; ?>">私たちについて</a></li>
 				</ul>
 			</div>
 			<div class="footer-nav__2">
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item"><a href="page-information.html">ダイビング情報</a></li>
-					<li class="footer-nav__item"><a href="page-information.html#tab1">ライセンス講習</a></li>
-					<li class="footer-nav__item"><a href="page-information.html#tab2">ファンダイビング</a></li>
-					<li class="footer-nav__item"><a href="page-information.html#tab3">体験ダイビング</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $information; ?>">ダイビング情報</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $information; ?>#tab1">ライセンス講習</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $information; ?>#tab2">ファンダイビング</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $information; ?>#tab3">体験ダイビング</a></li>
 				</ul>
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item"><a href="home.html">ブログ</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $blog; ?>">ブログ</a></li>
 				</ul>
 			</div>
 			<div class="footer-nav__3">
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item"><a href="archive-voice.html">お客様の声</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $voice; ?>">お客様の声</a></li>
 				</ul>
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item"><a href="page-price.html">料金一覧</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $price; ?>">料金一覧</a></li>
 					<li class="footer-nav__item"><a href="#">ライセンス講習</a></li>
 					<li class="footer-nav__item"><a href="#">体験ダイビング</a></li>
 					<li class="footer-nav__item"><a href="#">ファンダイビング</a></li>
@@ -80,7 +92,7 @@
 			</div>
 			<div class="footer-nav__4">
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item"><a href="page-faq.html">よくある質問</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $faq; ?>">よくある質問</a></li>
 				</ul>
 				<ul class="footer-nav__items">
 					<li class="footer-nav__item"><a href="page-privacy-policy.html">プライバシー<br class="u-mobile">ポリシー</a></li>
@@ -89,7 +101,7 @@
 					<li class="footer-nav__item"><a href="page-tos.html">利用規約</a></li>
 				</ul>
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item"><a href="page-contact.html">お問いわ合せ</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $contact; ?>">お問いわ合せ</a></li>
 				</ul>
 			</div>
 		</div>
