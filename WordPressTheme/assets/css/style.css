@@ -3193,12 +3193,12 @@ html {
 	grid-template-columns: repeat(2, 1fr);
 }
 
-.blog {
+.blog1 {
 	padding-top: 6.25rem;
 	position: relative;
 }
 
-.blog::after {
+.blog1::after {
 	background: url(../../assets/images/pc/blog-bg-pc.jpg) no-repeat top center/cover;
 	content: "";
 	height: 31.25rem;

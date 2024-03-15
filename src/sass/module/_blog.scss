@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.blog {
+.blog1 {
 	@include mq("md") {
 		padding-top: rem(100);
 		// background: url(../../assets/images/pc/blog-bg-pc.jpg) no-repeat top center / 100% 55.5%;
@@ -8,7 +8,7 @@
 	}
 }
 
-.blog::after {
+.blog1::after {
 	@include mq("md") {
 		background: url(../../assets/images/pc/blog-bg-pc.jpg) no-repeat top center / cover;
 		position: absolute;
