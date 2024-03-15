@@ -25,69 +25,69 @@
 			<div class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>ライセンス講習</span></h3>
 				<table class="price-table__body">
-					<?php
-					$licenceItems = SCF::get('licence');
-					foreach ($licenceItems as $item) :
-						$licence_name = esc_html($item['plan_name_for_licence']);
-						$licence_name2 = esc_html($item['plan_name_2nd_for_licence']);
-						$licence_price = esc_html($item['price_for_licence']);
+				<?php
+					$priceItems = SCF::get_option_meta('price_list', 'licence');
+					foreach ($priceItems as $item) {
+						$plan_name = esc_html($item['plan_name_for_licence']);
+						$plan_name2 = esc_html($item['plan_name_2nd_for_licence']);
+						$price = esc_html($item['price_for_licence']);
 					?>
 						<tr>
-							<td><?php echo $licence_name; ?><br class="u-mobile"><?php echo $licence_name2; ?></td>
-							<td><?php echo $licence_price; ?></td>
+							<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
+							<td><?php echo $price; ?></td>
 						</tr>
-					<?php endforeach; ?>
+					<?php } ?>
 				</table>
 			</div>
 			<div class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>体験ダイビング</span></h3>
 				<table class="price-table__body">
-					<?php
-					$experienceItems = SCF::get('experience');
-					foreach ($experienceItems as $item) :
-						$experience_name = esc_html($item['plan_name_for_experience']);
-						$experience_name2 = esc_html($item['plan_name_2nd_for_experience']);
-						$experience_price = esc_html($item['price_for_experience']);
+				<?php
+					$priceItems = SCF::get_option_meta('price_list', 'experience');
+					foreach ($priceItems as $item) {
+						$plan_name = esc_html($item['plan_name_for_experience']);
+						$plan_name2 = esc_html($item['plan_name_2nd_for_experience']);
+						$price = esc_html($item['price_for_experience']);
 					?>
 						<tr>
-							<td><?php echo $experience_name; ?><br class="u-mobile"><?php echo $experience_name2; ?></td>
-							<td><?php echo $experience_price; ?></td>
+							<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
+							<td><?php echo $price; ?></td>
 						</tr>
-					<?php endforeach; ?>
+						<?php } ?>
 				</table>
 			</div>
 			<div class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>ファンダイビング</span></h3>
 				<table class="price-table__body">
-					<?php
-					$funItems = SCF::get('fun');
-					foreach ($funItems as $item) :
-						$fun_name = esc_html($item['plan_name_for_fun']);
-						$fun_name2 = esc_html($item['plan_name_2nd_for_fun']);
-						$fun_price = esc_html($item['price_for_fun']);
+				<?php
+					$priceItems = SCF::get_option_meta('price_list', 'fun');
+					foreach ($priceItems as $item) {
+						$plan_name = esc_html($item['plan_name_for_fun']);
+						$plan_name2 = esc_html($item['plan_name_2nd_for_fun']);
+						$price = esc_html($item['price_for_fun']);
 					?>
 						<tr>
-							<td><?php echo $fun_name; ?><br class="u-mobile"><?php echo $fun_name2; ?></td>
-							<td><?php echo $fun_price; ?></td>
+							<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
+							<td><?php echo $price; ?></td>
 						</tr>
-					<?php endforeach; ?>
+						<?php } ?>
 				</table>
 			</div>
 			<div class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>スペシャルダイビング</span></h3>
 				<table class="price-table__body">
-					<?php
-					$specialItems = SCF::get('special');
-					foreach ($specialItems as $item) :
-						$special_name = esc_html($item['plan_name_for_special']);
-						$special_name2 = esc_html($item['plan_name_2nd_for_special']);
-						$special_price = esc_html($item['price_for_special']);
+				<?php
+					$priceItems = SCF::get_option_meta('price_list', 'special');
+					foreach ($priceItems as $item) {
+						$plan_name = esc_html($item['plan_name_for_special']);
+						$plan_name2 = esc_html($item['plan_name_2nd_for_special']);
+						$price = esc_html($item['price_for_special']);
 					?>
 						<tr>
-							<td><?php echo $special_name; ?><br class="u-mobile"><?php echo $special_name2; ?></td>
-							<td><?php echo $special_price; ?></td>
+							<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
+							<td><?php echo $price; ?></td>
 						</tr>
-					<?php endforeach; ?>
+						<?php } ?>
 				</table>
 			</div>
 

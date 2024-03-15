@@ -37,7 +37,7 @@ function my_script_init()
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
-//About us ギャラリー設定
+//SCF設定
 /**
  * @param string $page_title ページのtitle属性値 (必須)
  * @param string $menu_title 管理画面のメニューに表示するタイトル (必須)
@@ -47,9 +47,10 @@ add_action('wp_enqueue_scripts', 'my_script_init');
  * @param int $position メニューの位置
  */
 SCF::add_options_page('About-ギャラリー', 'About-ギャラリー', 'edit_posts', 'about_gallery', 'dashicons-format-gallery', 21);
+SCF::add_options_page('料金一覧', '料金一覧', 'manage_options', 'price_list', 'dashicons-money-alt', 21);
 
 /**
- * カスタムフィールドを定義
+ * About usギャラリーのカスタムフィールドを定義
  *
  * @param array  $settings  MW_WP_Form_Setting オブジェクトの配列
  * @param string $type      投稿タイプ or ロール
