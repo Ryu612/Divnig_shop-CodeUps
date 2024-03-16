@@ -10,6 +10,7 @@ $faq = esc_url(home_url('/faq/'));
 $contact = esc_url(home_url('/contact/'));
 $policy = esc_url(home_url('/privacy-policy/'));
 $tos = esc_url(home_url('/terms-of-service/'));
+$sitemap = esc_url(home_url('/sitemap/'));
 ?>
 
 <?php if (!(is_page('contact') || is_404())) : ?>
@@ -109,6 +110,9 @@ $tos = esc_url(home_url('/terms-of-service/'));
 					</ul>
 					<ul class="footer-nav__items">
 						<li class="footer-nav__item"><a href="<?php echo $contact; ?>">お問いわ合せ</a></li>
+					</ul>
+					<ul class="footer-nav__items">
+						<li class="footer-nav__item"><a href="<?php echo $sitemap; ?>">サイトマップ</a></li>
 					</ul>
 				</div>
 			</div>
