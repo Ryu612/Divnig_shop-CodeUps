@@ -2,6 +2,9 @@
 <html <?php language_attributes(); ?>>
 
 <head>
+    <?php if (is_404()) : ?>
+        <meta http-equiv="refresh" content=" 5; url=<?php echo esc_url(home_url("")); ?>">
+    <?php endif; ?>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
