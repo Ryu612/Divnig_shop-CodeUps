@@ -1972,9 +1972,6 @@ html {
 }
 
 .page-privacy-policy__text {
-	grid-gap: 2rem;
-	display: grid;
-	gap: 2rem;
 	line-height: 2;
 }
 
@@ -2027,9 +2024,6 @@ html {
 }
 
 .page-tos__text {
-	grid-gap: 2rem;
-	display: grid;
-	gap: 2rem;
 	line-height: 2;
 }
 

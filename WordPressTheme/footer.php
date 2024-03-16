@@ -8,6 +8,8 @@ $voice = esc_url(home_url('/voice/'));
 $price = esc_url(home_url('/price/'));
 $faq = esc_url(home_url('/faq/'));
 $contact = esc_url(home_url('/contact/'));
+$policy = esc_url(home_url('/privacy-policy/'));
+$tos = esc_url(home_url('/terms-of-service/'));
 ?>
 
 <?php if( !is_page('contact')): ?>
@@ -95,10 +97,10 @@ $contact = esc_url(home_url('/contact/'));
 					<li class="footer-nav__item"><a href="<?php echo $faq; ?>">よくある質問</a></li>
 				</ul>
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item"><a href="page-privacy-policy.html">プライバシー<br class="u-mobile">ポリシー</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $policy; ?>">プライバシー<br class="u-mobile">ポリシー</a></li>
 				</ul>
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item"><a href="page-tos.html">利用規約</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $tos; ?>">利用規約</a></li>
 				</ul>
 				<ul class="footer-nav__items">
 					<li class="footer-nav__item"><a href="<?php echo $contact; ?>">お問いわ合せ</a></li>
