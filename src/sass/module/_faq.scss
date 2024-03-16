@@ -11,12 +11,12 @@
 .faq__q {
 	background: $color-green;
 	color: $color-white;
-	padding: rem(15.5) rem(16);
+	padding: rem(15.5) rem(55) rem(15.5) rem(16);
 	position: relative;
 
 	@include mq('md') {
 		font-size: rem(20);
-		padding: rem(25) rem(40);
+		padding: rem(25) rem(100) rem(25) rem(40);
 		cursor: pointer;
 	}
 }

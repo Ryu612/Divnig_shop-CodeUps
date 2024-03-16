@@ -942,7 +942,7 @@ body.is-active {
 .faq__q {
 	background: #408f95;
 	color: #fff;
-	padding: 0.96875rem 1rem;
+	padding: 0.96875rem 3.4375rem 0.96875rem 1rem;
 	position: relative;
 }
 
@@ -3459,7 +3459,7 @@ html {
 .faq__q {
 	cursor: pointer;
 	font-size: 1.25rem;
-	padding: 1.5625rem 2.5rem;
+	padding: 1.5625rem 6.25rem 1.5625rem 2.5rem;
 }
 
 .faq__icon {
