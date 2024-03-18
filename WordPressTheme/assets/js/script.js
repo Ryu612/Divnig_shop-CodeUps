@@ -365,7 +365,7 @@ $(function ($) {
   // });
   $(function ($) {
     $('#send').on("click", function () {
-      $('form').find('.is-error').removeClass('is-error'); // 初期化
+      $('.form').find('.is-error').removeClass('is-error'); // 初期化
       $('input[required]:invalid,textarea[required]:invalid').each(function () {
         // 項目が空だったらエラー表示をする
         $(this).addClass('is-error');
@@ -402,7 +402,7 @@ $(function ($) {
 
       if ($('.is-error').length == 0) {
         // 未入力がない時
-        $('form').submit();
+        $('.form').submit();
         var $form = $('#form_id');
         $form.slideUp();
         $('#js-success').slideDown();

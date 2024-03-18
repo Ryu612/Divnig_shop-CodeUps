@@ -1532,6 +1532,10 @@ textarea.is-error {
 	border: 1px solid #c94800;
 }
 
+.wpcf7-spinner {
+	display: contents;
+}
+
 .gallery__photos {
 	grid-gap: 0.5rem;
 	display: grid;
@@ -1922,7 +1926,6 @@ html {
 }
 
 .form__success-message {
-	display: none;
 	text-align: center;
 }
 
