@@ -50,7 +50,7 @@ $sitemap = esc_url(home_url('/sitemap/'));
 <?php endif; ?>
 
 
-<?php if (!(is_page('contact') || is_404())) : ?>
+<?php if (!(is_404())) : ?>
 	<footer id="footer" class="top-footer footer">
 	<?php else : ?>
 		<footer id="footer" class="footer">

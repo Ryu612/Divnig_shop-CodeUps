@@ -254,7 +254,7 @@ textarea {
 	}
 }
 
-form {
+.form__layout {
 	display: grid;
 	gap: rem(22);
 	width: 100%;
@@ -290,7 +290,7 @@ form {
 }
 
 .form__item:nth-child(5) dt {
-	align-self: center;
+	// align-self: center;
 }
 
 .form__item dt {
@@ -321,7 +321,7 @@ form {
 	}
 }
 
-.form__checkbox1 {
+.form__checkbox1 p span span{
 	margin-top: rem(16);
 	font-size: rem(16);
 	display: grid;

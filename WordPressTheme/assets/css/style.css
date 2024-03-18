@@ -1331,7 +1331,7 @@ textarea {
 	border: 1px solid #408f95;
 }
 
-form {
+.form__layout {
 	grid-gap: 1.375rem;
 	display: grid;
 	gap: 1.375rem;
@@ -1341,10 +1341,6 @@ form {
 .form__item:not(:last-child) {
 	border-bottom: 1px dashed #408f95;
 	padding-bottom: 1.5rem;
-}
-
-.form__item:nth-child(5) dt {
-	align-self: center;
 }
 
 .form__item dt {
@@ -1371,7 +1367,7 @@ form {
 	margin-top: 0.875rem;
 }
 
-.form__checkbox1 {
+.form__checkbox1 p span span {
 	grid-gap: 0.25rem;
 	display: grid;
 	font-size: 1rem;
@@ -3579,7 +3575,7 @@ select {
 	top: 21%;
 }
 
-form {
+.form__layout {
 	gap: 2.4375rem;
 }
 
@@ -3602,7 +3598,7 @@ form {
 	margin-top: 0;
 }
 
-.form__checkbox1 {
+.form__checkbox1 p span span {
 	margin-top: 0;
 }
 
