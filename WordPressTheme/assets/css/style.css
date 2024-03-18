@@ -1527,6 +1527,10 @@ textarea.is-error {
 	border: 1px solid #c94800;
 }
 
+.wpcf7-list-item-label.is-error {
+	background: rgba(201, 72, 0, 0.2);
+}
+
 [type=checkbox].is-error + span::before {
 	background: rgba(201, 72, 0, 0.2);
 	border: 1px solid #c94800;
@@ -1534,6 +1538,14 @@ textarea.is-error {
 
 .wpcf7-spinner {
 	display: contents;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	display: none;
+}
+
+.wpcf7-list-item {
+	margin: 0;
 }
 
 .gallery__photos {
