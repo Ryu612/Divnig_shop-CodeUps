@@ -77,3 +77,17 @@ function my_add_meta_box($settings, $type, $id, $meta_type)
     return $settings;
 }
 add_filter('smart-cf-register-fields', 'my_add_meta_box', 10, 4);
+
+
+// カスタム投稿の1ページに表示する最大投稿数
+function custom_posts_per_page($query)
+{
+    if (!is_admin() && $query->is_main_query()) {
+        // カスタム投稿のスラッグを記述
+        if (is_post_type_archive('campaign')) {
+            // 表示件数を指定
+            $query->set('posts_per_page', 4);
+        }
+    }
+}
+add_action('pre_get_posts', 'custom_posts_per_page');

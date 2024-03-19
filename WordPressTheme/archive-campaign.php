@@ -39,7 +39,8 @@ $contact = esc_url(home_url('/contact/'));
 		<?php
 		$args = array(
 			"post_type" => "campaign",
-			"posts_per_page" => 4
+			"posts_per_page" => 4,
+			"paged" => get_query_var('paged')
 		);
 		$the_query = new WP_Query($args);
 		?>
@@ -92,15 +93,15 @@ $contact = esc_url(home_url('/contact/'));
 			<p>記事が投稿されていません</p>
 		<?php endif; ?>
 
-		<div class="archive-campaign__pagination pagination">
-			<a href="#" class="pagination__prev"></a>
-			<a href="#" class="pagination__page current">1</a>
-			<a href="#" class="pagination__page">2</a>
-			<a href="#" class="pagination__page">3</a>
-			<a href="#" class="pagination__page">4</a>
-			<a href="#" class="pagination__page u-desktop">5</a>
-			<a href="#" class="pagination__page u-desktop">6</a>
-			<a href="#" class="pagination__next"></a>
+		<div class="archive-campaign__pagination">
+		<?php
+		$args = array(
+			'mid_size' => 1,
+			'prev_text' => '<div class="pagination__prev"></div>',
+			'next_text' => '<div class="pagination__next"></div>',
+		);
+		the_posts_pagination($args);
+		?>
 		</div>
 	</div>
 </section>

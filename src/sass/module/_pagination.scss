@@ -1,12 +1,13 @@
 @use "global" as *;
 
-.pagination {
+.pagination .nav-links {
 	display: flex;
 	justify-content: center;
 	gap: rem(12);
 }
 
-.pagination a {
+.pagination .nav-links span,
+.pagination .nav-links a {
 	border: 1px solid $color-green;
 	font-family: "Lato", sans-serif;
 	color: $color-green;
@@ -14,17 +15,19 @@
 	place-content: center;
 	width: rem(38);
 	height: rem(38);
-	transition: color 0.3s ease, background-color 0.3s ease;
+	transition:
+		color 0.3s ease,
+		background-color 0.3s ease;
 }
 
-.pagination a:hover {
+.pagination .nav-links a:hover {
 	color: $color-white;
 	background-color: $color-green;
 }
 
 .pagination__prev {
 	position: relative;
-	margin-right: rem(28);
+	// margin-right: rem(28);
 }
 
 .pagination__prev::before {
@@ -48,14 +51,14 @@
 	}
 }
 
-.pagination__page.current {
+.pagination .nav-links .page-numbers.current {
 	color: $color-white;
 	background-color: $color-green;
 }
 
 .pagination__next {
 	position: relative;
-	margin-left: rem(28);
+	// margin-left: rem(28);
 }
 
 .pagination__next::before {
@@ -71,12 +74,16 @@
 	transition: border-color 0.3s ease;
 }
 
-.pagination__prev:hover::before {
-	border-top: 1px solid $color-white;
-	border-left: 1px solid $color-white;
-}
 
-.pagination__next:hover::before {
-	border-top: 1px solid $color-white;
-	border-right: 1px solid $color-white;
+.pagination .nav-links a:hover {
+	.pagination__next::before {
+		border-top: 1px solid $color-white;
+		border-right: 1px solid $color-white;
+	}
+}
+.pagination .nav-links a:hover {
+	.pagination__prev::before {
+		border-top: 1px solid $color-white;
+		border-left: 1px solid $color-white;
+	}
 }

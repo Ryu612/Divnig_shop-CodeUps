@@ -2097,13 +2097,14 @@ html {
 	position: absolute;
 }
 
-.pagination {
+.pagination .nav-links {
 	display: flex;
 	gap: 0.75rem;
 	justify-content: center;
 }
 
-.pagination a {
+.pagination .nav-links span,
+.pagination .nav-links a {
 	align-content: center;
 	border: 1px solid #408f95;
 	color: #408f95;
@@ -2116,13 +2117,12 @@ html {
 	width: 2.375rem;
 }
 
-.pagination a:hover {
+.pagination .nav-links a:hover {
 	background-color: #408f95;
 	color: #fff;
 }
 
 .pagination__prev {
-	margin-right: 1.75rem;
 	position: relative;
 }
 
@@ -2143,13 +2143,12 @@ html {
 	display: none;
 }
 
-.pagination__page.current {
+.pagination .nav-links .page-numbers.current {
 	background-color: #408f95;
 	color: #fff;
 }
 
 .pagination__next {
-	margin-left: 1.75rem;
 	position: relative;
 }
 
@@ -2166,13 +2165,13 @@ html {
 	width: 0.6875rem;
 }
 
-.pagination__prev:hover::before {
-	border-left: 1px solid #fff;
+.pagination .nav-links a:hover .pagination__next::before {
+	border-right: 1px solid #fff;
 	border-top: 1px solid #fff;
 }
 
-.pagination__next:hover::before {
-	border-right: 1px solid #fff;
+.pagination .nav-links a:hover .pagination__prev::before {
+	border-left: 1px solid #fff;
 	border-top: 1px solid #fff;
 }
 
