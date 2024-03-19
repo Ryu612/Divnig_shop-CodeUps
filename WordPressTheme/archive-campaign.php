@@ -69,13 +69,13 @@ $contact = esc_url(home_url('/contact/'));
 							<div class="campaign-card__price-body campaign-card__price-body--sub">
 								<p class="campaign-card__price-info campaign-card__price-info--sub">全部コミコミ(お一人様)</p>
 								<div class="campaign-card__price campaign-card__price--sub">
-									<div class="campaign-card__price-old">¥56,000</div>
-									<div class="campaign-card__price-new">¥46,000</div>
+									<div class="campaign-card__price-old"><?php the_field("old-price"); ?></div>
+									<div class="campaign-card__price-new"><?php the_field("new-price"); ?></div>
 								</div>
 							</div>
 							<p class="campaign-card__text u-desktop"><?php the_content(); ?></p>
 							<div class="campaign-card__info u-desktop">
-								<div class="campaign-card__dates">2023/6/1-9/30</div>
+								<div class="campaign-card__dates"><?php the_field("campaign-period"); ?></div>
 								<div class="campaign-card__contact">ご予約・お問い合わせはコチラ</div>
 								<div class="campaign-card__button">
 									<a href="<?php echo $contact; ?>" class="button">

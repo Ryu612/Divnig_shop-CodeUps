@@ -569,6 +569,10 @@ a {
 	padding: 0.1875rem 0.6875rem;
 }
 
+.campaign-card__label + .campaign-card__label {
+	margin-left: 0.625rem;
+}
+
 .campaign-card__price-body {
 	margin-top: 0.5rem;
 	position: relative;

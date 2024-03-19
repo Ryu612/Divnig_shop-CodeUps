@@ -81,6 +81,10 @@
 	}
 }
 
+.campaign-card__label + .campaign-card__label {
+	margin-left: rem(10);
+}
+
 .campaign-card__price-body {
 	position: relative;
 	margin-top: rem(8);
