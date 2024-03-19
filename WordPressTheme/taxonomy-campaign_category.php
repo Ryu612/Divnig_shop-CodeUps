@@ -36,6 +36,14 @@ $args = array(
 	"post_type" => "campaign",
 	"posts_per_page" => 4,
 	"paged" => get_query_var('paged'),
+	'tax_query' => array(
+    array(
+      // タクソノミーのスラッグを指定
+      'taxonomy' => 'campaign_category',
+      'field'    => 'slug',
+      'terms'    => $genre_slug,
+    ),
+  ),
 );
 $the_query = new WP_Query($args);
 ?>
