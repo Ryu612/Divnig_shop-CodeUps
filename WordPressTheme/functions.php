@@ -91,3 +91,26 @@ function custom_posts_per_page($query)
     }
 }
 add_action('pre_get_posts', 'custom_posts_per_page');
+
+
+//セレクトボックスを動的にするショートコード
+function add_original_choices()
+{
+    ob_start();
+    $args = array(
+        'post_type' => 'campaign', //worksというカスタム投稿をもとに動的にinputを生成
+        'order' => 'ASC'
+    );
+    $the_query = new WP_Query($args);
+    $i = 0;
+    if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
+?>
+            <option value="<?php echo $i; ?>"><?php the_title(); ?></option>
+<?php
+            $i++;
+        endwhile;
+    endif;
+    return ob_get_clean();
+}
+wpcf7_add_form_tag('add_original_tag', 'add_original_choices');
+// この場合「add_original_tag」がショートコード名
