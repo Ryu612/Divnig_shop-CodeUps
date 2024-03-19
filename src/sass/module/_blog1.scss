@@ -1,5 +1,14 @@
 @use "global" as *;
 
+.no-posts {
+	font-size: rem(20);
+	text-align: center;
+
+	@include mq("md") {
+		font-size: rem(30);
+	}
+}
+
 .blog1 {
 	@include mq("md") {
 		padding-top: rem(100);
@@ -46,7 +55,6 @@
 }
 
 .blog__title {
-
 }
 
 .blog__items {

@@ -142,7 +142,7 @@ $the_query = new WP_Query($args);
 				<?php wp_reset_postdata(); ?>
 			</div>
 		<?php else : ?>
-			<p>記事が投稿されていません</p>
+			<p class="no-posts">記事が投稿されていません。</p>
 		<?php endif; ?>
 
 		<div class="archive-campaign__pagination">
