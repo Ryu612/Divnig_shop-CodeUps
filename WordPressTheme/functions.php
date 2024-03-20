@@ -108,9 +108,8 @@ function add_original_choices()
             <option value="<?php echo $i; ?>"><?php the_title(); ?></option>
 <?php
             $i++;
-        endwhile;
+         endwhile;
     endif;
     return ob_get_clean();
 }
 wpcf7_add_form_tag('add_original_tag', 'add_original_choices');
-// この場合「add_original_tag」がショートコード名
