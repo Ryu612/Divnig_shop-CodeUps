@@ -1,3 +1,7 @@
+<?php
+$campaign = esc_url(home_url('/campaign/'));
+$voice = esc_url(home_url('/voice/'));
+?>
 <aside class="columns__side side">
 	<!-- =======================
 							人気記事
@@ -89,7 +93,7 @@
 			<div class="side-campaign__items">
 				<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 					<!-- ループ開始 -->
-					<a href="#" class="side-campaign__item">
+					<a href="<?php echo $campaign; ?>" class="side-campaign__item">
 						<div class="campaign-card">
 							<div class="campaign-card__image campaign-card__image--side">
 								<?php if (has_post_thumbnail()) : ?>
