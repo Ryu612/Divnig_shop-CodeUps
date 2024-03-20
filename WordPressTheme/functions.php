@@ -92,6 +92,18 @@ function custom_posts_per_page($query)
 }
 add_action('pre_get_posts', 'custom_posts_per_page');
 
+function custom_posts_per_page2($query)
+{
+    if (!is_admin() && $query->is_main_query()) {
+        // カスタム投稿のスラッグを記述
+        if (is_post_type_archive('voice')) {
+            // 表示件数を指定
+            $query->set('posts_per_page', 6);
+        }
+    }
+}
+add_action('pre_get_posts', 'custom_posts_per_page2');
+
 
 //セレクトボックスを動的にするショートコード
 function add_original_choices()
@@ -108,8 +120,64 @@ function add_original_choices()
             <option value="<?php echo $i; ?>"><?php the_title(); ?></option>
 <?php
             $i++;
-         endwhile;
+        endwhile;
     endif;
     return ob_get_clean();
 }
 wpcf7_add_form_tag('add_original_tag', 'add_original_choices');
+
+
+// 管理画面の「投稿」を「ブログ」に変更
+function Change_menulabel()
+{
+    global $menu;
+    global $submenu;
+    $name = 'ブログ';
+    $menu[5][0] = $name;
+    $submenu['edit.php'][5][0] = $name . '一覧';
+    $submenu['edit.php'][10][0] = '新しい' . $name;
+}
+function Change_objectlabel()
+{
+    global $wp_post_types;
+    $name = 'ブログ';
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = $name;
+    $labels->singular_name = $name;
+    $labels->add_new = _x('追加', $name);
+    $labels->add_new_item = $name . 'の新規追加';
+    $labels->edit_item = $name . 'の編集';
+    $labels->new_item = '新規' . $name;
+    $labels->view_item = $name . 'を表示';
+    $labels->search_items = $name . 'を検索';
+    $labels->not_found = $name . 'が見つかりませんでした';
+    $labels->not_found_in_trash = 'ゴミ箱に' . $name . 'は見つかりませんでした';
+}
+add_action('init', 'Change_objectlabel');
+add_action('admin_menu', 'Change_menulabel');
+
+
+// 人気記事の取得
+function my_custom_popular_posts($post_id)
+{
+    $count_key = 'cf_popular_posts';
+    $count = get_post_meta($post_id, $count_key, true);
+    if ($count == '') {
+        $count = 0;
+        delete_post_meta($post_id, $count_key);
+        add_post_meta($post_id, $count_key, '0');
+    } else {
+        $count++;
+        update_post_meta($post_id, $count_key, $count);
+    }
+}
+function my_custom_track_posts($post_id)
+{
+    if (!is_single()) return;
+    if (empty($post_id)) {
+        global $post;
+        $post_id = $post->ID;
+    }
+    my_custom_popular_posts($post_id);
+}
+add_action('wp_head', 'my_custom_track_posts');

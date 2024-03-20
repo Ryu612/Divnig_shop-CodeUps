@@ -2691,6 +2691,22 @@ html {
 	margin-top: 1.5rem;
 }
 
+.single-post-content__image img {
+	-o-object-fit: cover;
+	aspect-ratio: 345/231;
+	height: auto;
+	object-fit: cover;
+	width: 100%;
+}
+
+.wp-block-image img {
+	-o-object-fit: cover;
+	aspect-ratio: 345/231;
+	height: auto;
+	object-fit: cover;
+	width: 100%;
+}
+
 .single-post-content div img {
 	margin-top: 1.5rem;
 }
@@ -4013,6 +4029,14 @@ html {
 
 .single-post-content p {
 	margin-top: 2.5rem;
+}
+
+.single-post-content__image img {
+	aspect-ratio: 700/468;
+}
+
+.wp-block-image img {
+	aspect-ratio: 700/468;
 }
 
 .single-post-content div img {
