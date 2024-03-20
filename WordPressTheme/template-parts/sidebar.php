@@ -131,32 +131,36 @@
 	<div class="side__archive side-archive">
 		<h4 class="side-archive__head side-head">アーカイブ</h4>
 		<ul class="side-archive__items">
-			<li class="side-archive__item">
-				<div class="side-archive__year is-open">2023</div>
-				<ul class="side-archive__months is-open">
-					<li class="side-archive__month"><a href="#">3月</a></li>
-					<li class="side-archive__month"><a href="#">2月</a></li>
-					<li class="side-archive__month"><a href="#">1月</a></li>
-				</ul>
-			</li>
-			<li class="side-archive__item">
-				<div class="side-archive__year">2022</div>
-				<ul class="side-archive__months">
-					<li class="side-archive__month"><a href="#">12月</a></li>
-					<li class="side-archive__month"><a href="#">11月</a></li>
-					<li class="side-archive__month"><a href="#">10月</a></li>
-					<li class="side-archive__month"><a href="#">9月</a></li>
-					<li class="side-archive__month"><a href="#">8月</a></li>
-					<li class="side-archive__month"><a href="#">7月</a></li>
-					<li class="side-archive__month"><a href="#">6月</a></li>
-					<li class="side-archive__month"><a href="#">5月</a></li>
-					<li class="side-archive__month"><a href="#">4月</a></li>
-					<li class="side-archive__month"><a href="#">3月</a></li>
-					<li class="side-archive__month"><a href="#">2月</a></li>
-					<li class="side-archive__month"><a href="#">1月</a></li>
-				</ul>
-			</li>
+			<?php
+			global $wpdb;
+			$limit = 0;
+			$year_prev = null;
+			$months = $wpdb->get_results("SELECT DISTINCT MONTH( post_date ) AS month , YEAR( post_date ) AS year, COUNT( id ) as post_count FROM $wpdb->posts WHERE post_status = 'publish' and post_date <= now( ) and post_type = 'post' GROUP BY month , year ORDER BY post_date DESC");
+
+			foreach ($months as $month) :
+				$year_current = $month->year;
+				if ($year_current != $year_prev) {
+					if ($year_prev != null) { ?>
 		</ul>
+		</li>
+	<?php } ?>
+	<li class="side-archive__item">
+		<div class="side-archive__year"><?php echo $month->year; ?></div>
+		<ul class="side-archive__months">
+		<?php } ?>
+		<li class="side-archive__month"><a href="<?php bloginfo('url') ?>/<?php echo date('Y/m', strtotime($month->year . '-' . $month->month)); ?>/"><?php echo date_i18n('F', strtotime($month->year . '-' . $month->month)); ?></a></li>
+	<?php $year_prev = $year_current;
+
+				if (++$limit >= 18) {
+					break;
+				}
+
+			endforeach; ?>
+		</ul>
+	</li>
+	</ul>
 	</div>
+
+
 
 </aside>

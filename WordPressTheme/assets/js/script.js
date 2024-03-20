@@ -334,7 +334,10 @@ $(function ($) {
   // 		$(this).toggleClass("is-active");
   // 	});
   // });
-
+  $(document).ready(function() {
+    $('.side-archive__item:first-child .side-archive__months').addClass('is-open');
+  });
+  
   $(function () {
     $('.side-archive__year').on('click', function () {
       $(this).next().slideToggle();
