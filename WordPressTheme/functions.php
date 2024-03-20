@@ -180,8 +180,4 @@ function my_custom_track_posts($post_id)
     }
     my_custom_popular_posts($post_id);
 }
-<<<<<<< HEAD
 add_action('wp_head', 'my_custom_track_posts');
-=======
-add_action('wp_head', 'my_custom_track_posts');
->>>>>>> ca08078c5152db3c5e2cbf2ec94eb125099ffe2e
