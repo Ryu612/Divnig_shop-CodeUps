@@ -109,7 +109,7 @@ $contact = esc_url(home_url('/contact/'));
         <div class="drawer-content__wrapper drawer-content__wrapper--left">
             <ul class="drawer-content__items">
                 <li class="drawer-content__item"><a href="<?php echo $campaign; ?>">キャンペーン</a></li>
-                <li class="drawer-content__item"><a href="#">ライセンス取得</a></li>
+                <li class="drawer-content__item"><a href="<?php echo esc_url(home_url('/campaign_category/ファンダイビング')); ?>">ライセンス取得</a></li>
                 <li class="drawer-content__item"><a href="#">貸切体験ダイビング</a></li>
                 <li class="drawer-content__item"><a href="#">ナイトダイビング</a></li>
             </ul>

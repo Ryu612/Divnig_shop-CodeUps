@@ -47,7 +47,7 @@ $voice = esc_url(home_url('/voice/'));
 								<h3 class="blog-card__title"><?php the_title(); ?></h3>
 								<p class="blog-card__text"><?php echo wp_trim_words(get_the_content(), 87, '...'); ?></p>
 							</a>
-						<?php endwhile; ?>
+							<?php endwhile; ?>
 					</div>
 				<?php else : ?>
 					<p class="no-posts">記事が投稿されていません。</p>
