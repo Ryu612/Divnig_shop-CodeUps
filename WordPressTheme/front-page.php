@@ -196,7 +196,7 @@ $contact = esc_url(home_url('/contact/'));
 			<div class="blog__items blog-list">
 				<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 					<!-- ループ開始 -->
-					<a href="" class="blog-list__item blog-card">
+					<a href="<?php the_permalink(); ?>" class="blog-list__item blog-card">
 						<div class="blog-card__image">
 							<?php if (has_post_thumbnail()) : ?>
 								<?php the_post_thumbnail('full'); ?>

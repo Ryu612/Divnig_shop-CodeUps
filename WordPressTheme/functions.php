@@ -48,6 +48,7 @@ add_action('wp_enqueue_scripts', 'my_script_init');
  */
 SCF::add_options_page('About-ギャラリー', 'About-ギャラリー', 'edit_posts', 'about_gallery', 'dashicons-format-gallery', 21);
 SCF::add_options_page('料金一覧', '料金一覧', 'manage_options', 'price_list', 'dashicons-money-alt', 21);
+SCF::add_options_page('よくある質問', 'よくある質問', 'manage_options', 'faq_list', 'dashicons-info', 22);
 
 /**
  * About usギャラリーのカスタムフィールドを定義

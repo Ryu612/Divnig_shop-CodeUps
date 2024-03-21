@@ -9,11 +9,11 @@
 	margin-top: rem(24);
 	transition: opacity 0.3s ease;
 
-	@media(hover: hover) {
-			&:hover {
-					opacity: 0.7;
-			}
-	}
+	// @media(hover: hover) {
+	// 		&:hover {
+	// 				opacity: 0.7;
+	// 		}
+	// }
 }
 
 .side-reviews__head {

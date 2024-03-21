@@ -60,17 +60,17 @@ $sitemap = esc_url(home_url('/sitemap/'));
 				<div class="footer__logo"><a href="<?php echo $home; ?>"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/footer-logo.png")); ?>" alt="CodeUpsのロゴ"></a>
 				</div>
 				<div class="footer__sns">
-					<a href="#" class="footer__facebook"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/icon-facebook.png")); ?>" alt="facebookのアイコン"></a>
-					<a href="#" class="footer__instagram"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/icon-instagram.png")); ?>" alt="インスタグラムのアイコン"></a>
+					<a href="https://www.facebook.com/" target=”_blank” class="footer__facebook"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/icon-facebook.png")); ?>" alt="facebookのアイコン"></a>
+					<a href="https://www.instagram.com/" target=”_blank” class="footer__instagram"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/icon-instagram.png")); ?>" alt="インスタグラムのアイコン"></a>
 				</div>
 			</div>
 			<div class="footer__nav footer-nav">
 				<div class="footer-nav__1">
 					<ul class="footer-nav__items">
 						<li class="footer-nav__item"><a href="<?php echo $campaign; ?>">キャンペーン</a></li>
-						<li class="footer-nav__item"><a href="#">ライセンス取得</a></li>
-						<li class="footer-nav__item"><a href="#">貸切体験ダイビング</a></li>
-						<li class="footer-nav__item"><a href="#">ナイトダイビング</a></li>
+						<li class="drawer-content__item"><a href="<?php echo esc_url(home_url('/campaign_category/ファンダイビング')); ?>">ファンダイビング</a></li>
+						<li class="drawer-content__item"><a href="<?php echo esc_url(home_url('/campaign_category/ライセンス講習')); ?>">ライセンス講習</a></li>
+						<li class="drawer-content__item"><a href="<?php echo esc_url(home_url('/campaign_category/体験ダイビング')); ?>">体験ダイビング</a></li>
 					</ul>
 					<ul class="footer-nav__items">
 						<li class="footer-nav__item"><a href="<?php echo $about; ?>">私たちについて</a></li>
@@ -93,9 +93,9 @@ $sitemap = esc_url(home_url('/sitemap/'));
 					</ul>
 					<ul class="footer-nav__items">
 						<li class="footer-nav__item"><a href="<?php echo $price; ?>">料金一覧</a></li>
-						<li class="footer-nav__item"><a href="#">ライセンス講習</a></li>
-						<li class="footer-nav__item"><a href="#">体験ダイビング</a></li>
-						<li class="footer-nav__item"><a href="#">ファンダイビング</a></li>
+						<li class="drawer-content__item"><a href="<?php echo $price; ?>#price-license">ライセンス講習</a></li>
+						<li class="drawer-content__item"><a href="<?php echo $price; ?>#price-experience">体験ダイビング</a></li>
+						<li class="drawer-content__item"><a href="<?php echo $price; ?>#price-fun">ファンダイビング</a></li>
 					</ul>
 				</div>
 				<div class="footer-nav__4">

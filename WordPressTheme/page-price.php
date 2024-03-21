@@ -26,7 +26,7 @@
 <section class="page-price layout-page-price">
 	<div class="page-price__inner inner fish-icon">
 		<div class="page-price__table price-tablels">
-			<div class="price-tablels__item price-table">
+			<div id="price-license" class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>ライセンス講習</span></h3>
 				<table class="price-table__body">
 				<?php
@@ -43,7 +43,7 @@
 					<?php } ?>
 				</table>
 			</div>
-			<div class="price-tablels__item price-table">
+			<div id="price-experience" class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>体験ダイビング</span></h3>
 				<table class="price-table__body">
 				<?php
@@ -60,7 +60,7 @@
 						<?php } ?>
 				</table>
 			</div>
-			<div class="price-tablels__item price-table">
+			<div id="price-fun" class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>ファンダイビング</span></h3>
 				<table class="price-table__body">
 				<?php
@@ -77,7 +77,7 @@
 						<?php } ?>
 				</table>
 			</div>
-			<div class="price-tablels__item price-table">
+			<div id="price-special" class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>スペシャルダイビング</span></h3>
 				<table class="price-table__body">
 				<?php

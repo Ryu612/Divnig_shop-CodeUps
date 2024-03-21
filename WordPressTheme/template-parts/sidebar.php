@@ -21,7 +21,7 @@ $voice = esc_url(home_url('/voice/'));
 			<div class="side-popular__items">
 				<?php while ($wp_query->have_posts()) : $wp_query > the_post(); ?>
 					<!-- ループ開始 -->
-					<a href="#" class="side-popular__item popular-card">
+					<a href="<?php the_permalink(); ?>" class="side-popular__item popular-card">
 						<div class="popular-card__image">
 							<?php if (has_post_thumbnail()) : ?>
 								<?php the_post_thumbnail('full', array()); ?>
@@ -55,7 +55,7 @@ $voice = esc_url(home_url('/voice/'));
 		?>
 		<?php if ($the_query->have_posts()) : ?>
 			<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-				<a href="#" class="side-reviews__item">
+				<div class="side-reviews__item">
 					<div class="side-reviews__image">
 						<?php if (has_post_thumbnail()) : ?>
 							<?php the_post_thumbnail('full', array()); ?>
@@ -65,7 +65,7 @@ $voice = esc_url(home_url('/voice/'));
 					</div>
 					<p class="side-reviews__age"><?php the_field("voice-profile"); ?></p>
 					<h5 class="side-reviews__title"><?php the_title(); ?></h5>
-				</a>
+				</div>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 		<?php else : ?>
@@ -93,7 +93,7 @@ $voice = esc_url(home_url('/voice/'));
 			<div class="side-campaign__items">
 				<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 					<!-- ループ開始 -->
-					<a href="<?php echo $campaign; ?>" class="side-campaign__item">
+					<div class="side-campaign__item">
 						<div class="campaign-card">
 							<div class="campaign-card__image campaign-card__image--side">
 								<?php if (has_post_thumbnail()) : ?>
@@ -115,7 +115,7 @@ $voice = esc_url(home_url('/voice/'));
 								</div>
 							</div>
 						</div>
-					</a>
+					</div>
 					<!-- ループ終了 -->
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>

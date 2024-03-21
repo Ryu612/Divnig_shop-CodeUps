@@ -333,6 +333,8 @@ $(function ($) { // この中であればWordpressでも「$」が使用可能�
 	// 		$(this).toggleClass("is-active");
 	// 	});
 	// });
+	// jQueryを使用して1つ目のside-archive__item内のside-archive__year要素にis-openクラスを追加する
+	$('.side-archive__item:first-child .side-archive__months').addClass('is-open');
 
 	$(function () {
 		$('.side-archive__year').on('click', function () {

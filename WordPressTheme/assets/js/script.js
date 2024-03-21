@@ -334,10 +334,8 @@ $(function ($) {
   // 		$(this).toggleClass("is-active");
   // 	});
   // });
-  $(document).ready(function() {
-    $('.side-archive__item:first-child .side-archive__months').addClass('is-open');
-  });
-  
+  // jQueryを使用して1つ目のside-archive__item内のside-archive__year要素にis-openクラスを追加する
+  $('.side-archive__item:first-child .side-archive__year, .side-archive__item:first-child .side-archive__months').addClass('is-open');
   $(function () {
     $('.side-archive__year').on('click', function () {
       $(this).next().slideToggle();

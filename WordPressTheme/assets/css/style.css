@@ -2527,10 +2527,6 @@ html {
 	margin-top: 1.5rem;
 }
 
-.side-campaign__item {
-	transition: opacity 0.3s ease;
-}
-
 .side-campaign__button {
 	margin-top: 2.5rem;
 	text-align: center;
@@ -2980,14 +2976,6 @@ html {
 @media (hover: hover) {
 
 .popular-card:hover {
-	opacity: 0.7;
-}
-
-.side-campaign__item:hover {
-	opacity: 0.7;
-}
-
-.side-reviews__item:hover {
 	opacity: 0.7;
 }
 

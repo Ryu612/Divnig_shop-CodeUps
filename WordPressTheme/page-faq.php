@@ -26,8 +26,9 @@
 <section class="page-faq layout-page-faq">
 	<div class="page-faq__inner inner fish-icon">
 		<div class="page-faq__items">
+
 			<?php
-			$faqItems = SCF::get('faq');
+			$faqItems = SCF::get_option_meta('faq_list', 'faq');
 			foreach ($faqItems as $item) {
 				$question = esc_html($item['question']);
 				$answer = esc_html($item['answer']);
