@@ -652,6 +652,11 @@ a {
 	flex-grow: 0;
 }
 
+.campaign-card__price-info--sub {
+	font-size: 0.875rem;
+	margin-top: 0.5rem;
+}
+
 .campaign-card__price--side {
 	gap: 1rem;
 }
@@ -3342,8 +3347,8 @@ html {
 }
 
 .campaign-card__price-info--sub {
-	font-size: 0.875rem;
-	margin-top: 0.625rem;
+	font-size: 1rem;
+	margin-top: 1.5rem;
 }
 
 .campaign-card__price--sub {
