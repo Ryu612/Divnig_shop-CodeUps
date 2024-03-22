@@ -367,12 +367,12 @@ $(function ($) {
   $(function ($) {
     $('#send').on("click", function () {
       $('form').find('.is-error').removeClass('is-error'); // 初期化
-      $('input[required]:invalid,textarea[required]:invalid').each(function () {
+      $('wpcf7-validates-as-required').each(function () {
         // 項目が空だったらエラー表示をする
         $(this).addClass('is-error');
         $('.page-contact__error-message').addClass('is-error');
       });
-      var errorPos = $('input[required]:invalid:first').offset() && $('input[required]:invalid:first').offset().top || 0;
+      var errorPos = $('wpcf7-validates-as-required:first').offset() && $('wpcf7-validates-as-required:first').offset().top || 0;
       // ずれるときは $().get(0).offsetTop を使う
       $('body').animate({
         scrollTop: errorPos
@@ -401,17 +401,17 @@ $(function ($) {
       // 	return false;
       // });
 
-      if ($('.is-error').length == 0) {
-        // 未入力がない時
-        $('form').submit();
-        var $form = $('#form_id');
-        $form.slideUp();
-        $('#js-success').slideDown();
-      } else {
-        // 未入力がある時
-        console.log('未入力があります');
-      }
-      return false; // submitの送信中止用
+      // if ($('.is-error').length == 0) {
+      //   // 未入力がない時
+      //   $('form').submit();
+      //   var $form = $('#form_id');
+      //   $form.slideUp();
+      //   $('#js-success').slideDown();
+      // } else {
+      //   // 未入力がある時
+      //   console.log('未入力があります');
+      // }
+      // return false; // submitの送信中止用
     });
   });
 });
