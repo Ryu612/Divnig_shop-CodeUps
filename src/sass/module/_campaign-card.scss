@@ -68,6 +68,12 @@
 	text-align: center;
 }
 
+.campaign-card__category {
+	display: flex;
+	flex-wrap: wrap;
+	gap: rem(5);
+}
+
 .campaign-card__label {
 	color: $color-green;
 	font-size: rem(12);
@@ -81,9 +87,10 @@
 	}
 }
 
-.campaign-card__label + .campaign-card__label {
-	margin-left: rem(10);
-}
+// .campaign-card__label:not(:first-child) {
+// 		margin-left: rem(10);
+// }
+
 
 .campaign-card__price-body {
 	position: relative;

@@ -565,6 +565,12 @@ a {
 	text-align: center;
 }
 
+.campaign-card__category {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3125rem;
+}
+
 .campaign-card__label {
 	border: 1px solid #408f95;
 	color: #408f95;
@@ -572,10 +578,6 @@ a {
 	font-size: 0.75rem;
 	line-height: 1.8333;
 	padding: 0.1875rem 0.6875rem;
-}
-
-.campaign-card__label + .campaign-card__label {
-	margin-left: 0.625rem;
 }
 
 .campaign-card__price-body {

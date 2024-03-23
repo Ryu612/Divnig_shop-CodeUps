@@ -101,14 +101,16 @@ $the_query = new WP_Query($args);
 						</div>
 						<div class="campaign-card__contents campaign-card__contents--sub">
 							<div class="campaign-card__head campaign-card__head--sub">
-								<?php
-								$taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
-								if (!empty($taxonomy_terms)) {
-									foreach ($taxonomy_terms as $taxonomy_term) {
-										echo '<div class="campaign-card__label">' . esc_html($taxonomy_term->name) . '</div>';
+								<div class="campaign-card__category">
+									<?php
+									$taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
+									if (!empty($taxonomy_terms)) {
+										foreach ($taxonomy_terms as $taxonomy_term) {
+											echo '<div class="campaign-card__label">' . esc_html($taxonomy_term->name) . '</div>';
+										}
 									}
-								}
-								?>
+									?>
+								</div>
 								<h3 class="campaign-card__title campaign-card__title--sub"><?php the_title(); ?></h3>
 							</div>
 							<div class="campaign-card__price-body campaign-card__price-body--sub">
