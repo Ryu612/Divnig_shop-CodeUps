@@ -372,6 +372,13 @@ $(function ($) {
       // 必須項目の入力チェック
       var hasError = false;
       $('.wpcf7-validates-as-required').each(function () {
+        // チェックボックスグループの場合
+        if ($(this).hasClass('wpcf7-checkbox')) {
+          // グループ内のいずれか1つでも選択されていればエラーとしない
+          if ($(this).find('input[type="checkbox"]:checked').length > 0) {
+            return true;
+          }
+        }
         // 項目が空だったらエラー表示をする
         if (!$(this).val()) {
           $(this).addClass('is-error');
