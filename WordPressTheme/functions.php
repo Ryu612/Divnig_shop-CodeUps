@@ -118,7 +118,7 @@ function add_original_choices()
     $i = 0;
     if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
 ?>
-            <option value="<?php echo $i; ?>"><?php the_title(); ?></option>
+            <option value="<?php echo the_title(); ?>"><?php the_title(); ?></option>
 <?php
             $i++;
         endwhile;
