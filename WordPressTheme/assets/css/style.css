@@ -2920,6 +2920,13 @@ html {
 	font-size: 0.75rem;
 }
 
+.voice-card__category {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3125rem;
+	width: 8.125rem;
+}
+
 .voice-card__label {
 	border: 1px solid #408f95;
 	color: #408f95;

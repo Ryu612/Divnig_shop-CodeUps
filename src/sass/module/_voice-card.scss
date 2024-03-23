@@ -44,6 +44,13 @@
 .voice-card__age {
 }
 
+.voice-card__category {
+	display: flex;
+	flex-wrap: wrap;
+	gap: rem(5);
+	width: rem(130);
+}
+
 .voice-card__label {
 	display: inline-block;
 	color: $color-green;

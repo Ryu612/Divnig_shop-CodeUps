@@ -89,6 +89,7 @@ $the_query = new WP_Query($args);
 							<div class="voice-card__title-wrapper">
 								<div class="voice-card__meta">
 									<div class="voice-card__age"><?php the_field("voice-profile"); ?></div>
+									<div class="voice-card__category">
 										<?php
 										$taxonomy_terms = get_the_terms($post->ID, 'voice_category');
 										if (!empty($taxonomy_terms)) {
@@ -97,6 +98,7 @@ $the_query = new WP_Query($args);
 											}
 										}
 										?>
+										</div>
 								</div>
 								<h3 class="voice-card__title"><?php the_title(); ?></h3>
 							</div>
