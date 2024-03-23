@@ -365,18 +365,32 @@ $(function ($) {
   //   }
   // });
   $(function ($) {
-    $('#send').on("click", function () {
-      $('form').find('.is-error').removeClass('is-error'); // 初期化
-      $('wpcf7-validates-as-required').each(function () {
+    $('.form__button').on("click", function () {
+      // 初期化
+      $('#form_id').find('.is-error').removeClass('is-error');
+
+      // 必須項目の入力チェック
+      var hasError = false;
+      $('.wpcf7-validates-as-required').each(function () {
         // 項目が空だったらエラー表示をする
-        $(this).addClass('is-error');
-        $('.page-contact__error-message').addClass('is-error');
+        if (!$(this).val()) {
+          $(this).addClass('is-error');
+          hasError = true;
+        }
       });
-      var errorPos = $('wpcf7-validates-as-required:first').offset() && $('wpcf7-validates-as-required:first').offset().top || 0;
-      // ずれるときは $().get(0).offsetTop を使う
-      $('body').animate({
-        scrollTop: errorPos
-      }, 'slow');
+
+      // エラーがある場合は、エラーメッセージを表示して、一番上のエラー項目にスクロールする
+      if (hasError) {
+        $('.page-contact__error-message').addClass('is-error');
+        var errorPos = $('.wpcf7-validates-as-required.is-error:first').offset().top || 0;
+        $('body').animate({
+          scrollTop: errorPos
+        }, 'slow');
+        return false; // 送信をキャンセル
+      }
+
+      // エラーがない場合は、送信処理を行う
+      return true;
 
       // let $form = $('#form_id')
       // $form.submit(function (e) {

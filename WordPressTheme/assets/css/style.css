@@ -1389,6 +1389,10 @@ textarea {
 	margin-top: 1rem;
 }
 
+.form__checkbox1 p span span.is-error {
+	background: rgba(201, 72, 0, 0.2);
+}
+
 .form__checkbox1 [type=checkbox] + span {
 	display: inline-block;
 	font-size: 0.875rem;
