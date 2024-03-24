@@ -120,7 +120,7 @@ $sitemap = esc_url(home_url('/sitemap/'));
 		</div>
 		</footer>
 
-		<div id="js-pagetop" class="pagetop"><a href="#"></a></div>
+		<div id="js-pagetop" class="pagetop"><a href></a></div>
 		<?php wp_footer(); ?>
 		</body>
 

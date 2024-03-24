@@ -82,6 +82,15 @@ $(function ($) {
       $('#js-pagetop').removeClass('is-show');
     }
   });
+  $(function () {
+    var pagetop = $('#js-pagetop');
+    pagetop.click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 0); /* 0秒でトップに移動する */
+      return false;
+    });
+  });
 
   /*
   トップへ戻るボタンをフッター手前で止める
