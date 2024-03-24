@@ -2080,7 +2080,7 @@ html {
 	z-index: 10;
 }
 
-.pagetop a {
+.pagetop span {
 	cursor: pointer;
 	display: block;
 	height: 3rem;
@@ -2088,7 +2088,7 @@ html {
 	width: 3rem;
 }
 
-.pagetop a::after {
+.pagetop span::after {
 	background: url(../../assets/images/common/pagetop-arrow.png) no-repeat center center/contain;
 	content: "";
 	height: 1.8125rem;
@@ -3900,12 +3900,12 @@ html {
 	width: 5rem;
 }
 
-.pagetop a {
+.pagetop span {
 	height: 5rem;
 	width: 5rem;
 }
 
-.pagetop a::after {
+.pagetop span::after {
 	height: 2.75rem;
 	left: 50%;
 	top: 50%;
