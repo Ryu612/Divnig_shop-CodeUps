@@ -43,18 +43,18 @@ $sitemap = esc_url(home_url('/sitemap/'));
 		<div class="page-sitemap__nav footer-nav footer-nav--sitemap">
 			<div class="footer-nav__1">
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item footer-nav__item--sitemap"><a href="#campaign">キャンペーン</a></li>
+					<li class="footer-nav__item footer-nav__item--sitemap"><a href="<?php echo $campaign; ?>">キャンペーン</a></li>
 					<li class="footer-nav__item footer-nav__item--sitemap"><a href="<?php echo esc_url(home_url('/campaign_category/ファンダイビング')); ?>">ファンダイビング</a></li>
 					<li class="footer-nav__item footer-nav__item--sitemap"><a href="<?php echo esc_url(home_url('/campaign_category/ライセンス講習')); ?>">ライセンス講習</a></li>
 					<li class="footer-nav__item footer-nav__item--sitemap"><a href="<?php echo esc_url(home_url('/campaign_category/体験ダイビング')); ?>">体験ダイビング</a></li>
 				</ul>
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item footer-nav__item--sitemap"><a href="#about">私たちについて</a></li>
+					<li class="footer-nav__item footer-nav__item--sitemap"><a href="<?php echo $about; ?>">私たちについて</a></li>
 				</ul>
 			</div>
 			<div class="footer-nav__2">
 				<ul class="footer-nav__items">
-					<li class="footer-nav__item footer-nav__item--sitemap"><a href="#information">ダイビング情報</a></li>
+					<li class="footer-nav__item footer-nav__item--sitemap"><a href="<?php echo $information; ?>">ダイビング情報</a></li>
 					<li class="footer-nav__item footer-nav__item--sitemap"><a href="<?php echo $information; ?>#tab1">ライセンス講習</a></li>
 					<li class="footer-nav__item footer-nav__item--sitemap"><a href="<?php echo $information; ?>#tab2">ファンダイビング</a></li>
 					<li class="footer-nav__item footer-nav__item--sitemap"><a href="<?php echo $information; ?>#tab3">体験ダイビング</a></li>
