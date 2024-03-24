@@ -2081,6 +2081,7 @@ html {
 }
 
 .pagetop a {
+	cursor: pointer;
 	display: block;
 	height: 3rem;
 	position: relative;
