@@ -398,7 +398,25 @@ $(function ($) {
 
       // エラーがない場合は、送信処理を行う
       return true;
+    });
+    $(function ($) {
+      $(document).ready(function () {
+        // 送信ボタンのセレクター
+        var submitButton = $('.wpcf7-submit');
 
+        // 送信ボタンを活性化
+        submitButton.prop('disabled', false);
+
+        // 必須項目の入力チェック
+        $('.wpcf7-validates-as-required').on('change', function () {
+          // 必須項目全て入力済み
+          if ($('.wpcf7-validates-as-required').filter(':invalid').length === 0) {
+            submitButton.prop('disabled', false);
+          } else {
+            submitButton.prop('disabled', true);
+          }
+        });
+      });
       // let $form = $('#form_id')
       // $form.submit(function (e) {
       // 	$.ajax({
