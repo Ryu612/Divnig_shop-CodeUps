@@ -205,7 +205,7 @@ $contact = esc_url(home_url('/contact/'));
 							<?php endif; ?>
 						</div>
 						<time datetime="<?php echo get_the_date('Y-m-d'); ?>" class="blog-card__date"><?php echo get_the_date('Y.m/d'); ?></time>
-						<h3 class="blog-card__title"><?php the_title(); ?></h3>
+						<h3 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 17, '...'); ?></h3>
 						<p class="blog-card__text">
 							<?php echo wp_trim_words(get_the_content(), 87, '...'); ?>
 						</p>
@@ -255,7 +255,7 @@ $contact = esc_url(home_url('/contact/'));
 									}
 									?>
 								</div>
-								<h3 class="voice-card__title"><?php the_title(); ?></h3>
+								<h3 class="voice-card__title"><?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
 							</div>
 							<div class="voice-card__image colorbox">
 								<?php if (has_post_thumbnail()) : ?>
