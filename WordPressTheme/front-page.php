@@ -302,11 +302,11 @@ $contact = esc_url(home_url('/contact/'));
 					foreach ($priceItems as $item) {
 						$plan_name = esc_html($item['plan_name_for_licence']);
 						$plan_name2 = esc_html($item['plan_name_2nd_for_licence']);
-						$price = esc_html($item['price_for_licence']);
+						$price_cost = esc_html($item['price_for_licence']);
 					?>
 						<dl class="price__contents">
 							<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-							<dd class="price__cost"><?php echo $price; ?></dd>
+							<dd class="price__cost"><?php echo $price_cost; ?></dd>
 						</dl>
 					<?php } ?>
 				</li>
@@ -317,11 +317,11 @@ $contact = esc_url(home_url('/contact/'));
 					foreach ($priceItems as $item) {
 						$plan_name = esc_html($item['plan_name_for_experience']);
 						$plan_name2 = esc_html($item['plan_name_2nd_for_experience']);
-						$price = esc_html($item['price_for_experience']);
+						$price_cost = esc_html($item['price_for_experience']);
 					?>
 						<dl class="price__contents">
 							<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-							<dd class="price__cost"><?php echo $price; ?></dd>
+							<dd class="price__cost"><?php echo $price_cost; ?></dd>
 						</dl>
 					<?php } ?>
 				</li>
@@ -332,11 +332,11 @@ $contact = esc_url(home_url('/contact/'));
 					foreach ($priceItems as $item) {
 						$plan_name = esc_html($item['plan_name_for_fun']);
 						$plan_name2 = esc_html($item['plan_name_2nd_for_fun']);
-						$price = esc_html($item['price_for_fun']);
+						$price_cost = esc_html($item['price_for_fun']);
 					?>
 						<dl class="price__contents">
 							<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-							<dd class="price__cost"><?php echo $price; ?></dd>
+							<dd class="price__cost"><?php echo $price_cost; ?></dd>
 						</dl>
 					<?php } ?>
 				</li>
@@ -347,11 +347,11 @@ $contact = esc_url(home_url('/contact/'));
 					foreach ($priceItems as $item) {
 						$plan_name = esc_html($item['plan_name_for_special']);
 						$plan_name2 = esc_html($item['plan_name_2nd_for_special']);
-						$price = esc_html($item['price_for_special']);
+						$price_cost = esc_html($item['price_for_special']);
 					?>
 						<dl class="price__contents">
 							<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-							<dd class="price__cost"><?php echo $price; ?></dd>
+							<dd class="price__cost"><?php echo $price_cost; ?></dd>
 						</dl>
 					<?php } ?>
 				</li>
