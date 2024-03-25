@@ -85,13 +85,14 @@ function custom_posts_per_page($query)
 {
     if (!is_admin() && $query->is_main_query()) {
         // カスタム投稿のスラッグを記述
-        if (is_post_type_archive('campaign')) {
+        if (is_post_type_archive('campaign') || is_tax('campaign_category')) {
             // 表示件数を指定
             $query->set('posts_per_page', 4);
         }
     }
 }
 add_action('pre_get_posts', 'custom_posts_per_page');
+
 
 function custom_posts_per_page2($query)
 {
