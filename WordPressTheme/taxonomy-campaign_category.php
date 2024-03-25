@@ -36,7 +36,7 @@ $contact = esc_url(home_url('/contact/'));
 			$terms = get_terms(array(
 				// 表示するタクソノミースラッグを記述
 				'taxonomy' => 'campaign_category',
-				'orderby' => 'name',
+				'orderby' => 'description',
 				'order'   => 'ASC',
 				// 表示するタームの数を指定
 				'number'  => 5
