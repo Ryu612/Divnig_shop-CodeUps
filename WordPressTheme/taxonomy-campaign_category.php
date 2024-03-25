@@ -28,25 +28,6 @@ $contact = esc_url(home_url('/contact/'));
 	<?php } ?>
 </div>
 
-<?php
-// タクソノミーのスラッグを指定
-$genre_slug = get_query_var('campaign_category');
-$args = array(
-	// カスタム投稿のスラッグを指定
-	"post_type" => "campaign",
-	"posts_per_page" => 4,
-	"paged" => get_query_var('paged'),
-	'tax_query' => array(
-		array(
-			// タクソノミーのスラッグを指定
-			'taxonomy' => 'campaign_category',
-			'field'    => 'slug',
-			'terms'    => $genre_slug,
-		),
-	),
-);
-$the_query = new WP_Query($args);
-?>
 <section class="archive-campaign layout-archive-campaign">
 	<div class="archive-campaign__inner inner fish-icon">
 		<div class="archive-campaign__label label">
@@ -96,9 +77,9 @@ $the_query = new WP_Query($args);
 			<a href="" class="label__item">体験ダイビング</a> -->
 		</div>
 
-		<?php if ($the_query->have_posts()) : ?>
+		<?php if (have_posts()) : ?>
 			<div class="archive-campaign__items">
-				<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+			<?php while (have_posts()) : the_post(); ?>
 					<div class="archive-campaign__item campaign-card">
 						<div class="campaign-card__image campaign-card__image--sub">
 							<?php if (has_post_thumbnail()) : ?>
@@ -141,7 +122,6 @@ $the_query = new WP_Query($args);
 						</div>
 					</div>
 				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
 			</div>
 		<?php else : ?>
 			<p class="no-posts">記事が投稿されていません。</p>
