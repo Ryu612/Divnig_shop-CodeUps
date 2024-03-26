@@ -26,6 +26,7 @@
 <section class="columns layout-single">
 	<div class="columns__inner inner fish-icon">
 		<div class="columns__2columns columns-single-post">
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<main class="columns__single-post single-post">
 				<time datetime="<?php echo get_the_date('Y-m-d'); ?>" class="single-post__date"><?php echo get_the_date('Y.m/d'); ?></time>
 				<h3 class="single-post__title"><?php the_title(); ?></h3>
@@ -52,6 +53,7 @@
 					?>
 				</div>
 			</main>
+			<?php endwhile; endif; ?>
 			<?php get_template_part('template-parts/sidebar'); ?>
 		</div>
 	</div>
