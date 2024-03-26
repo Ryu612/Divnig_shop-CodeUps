@@ -23,18 +23,6 @@
 	<?php } ?>
 </div>
 
-<?php
-// タクソノミーのスラッグを指定
-$genre_slug = get_query_var('voice_category');
-$args = array(
-	// カスタム投稿のスラッグを指定
-	"post_type" => "voice",
-	"posts_per_page" => 6,
-	"paged" => get_query_var('paged'),
-);
-$the_query = new WP_Query($args);
-?>
-
 <section class="archive-voice layout-archive-voice">
 	<div class="archive-voice__inner inner fish-icon">
 		<div class="archive-voice__label label">
@@ -80,9 +68,9 @@ $the_query = new WP_Query($args);
 			?>
 		</div>
 
-		<?php if ($the_query->have_posts()) : ?>
+		<?php if (have_posts()) : ?>
 			<div class="archive-voice__items voice-list voice-list--sub">
-				<?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+				<?php while (have_posts()) : the_post(); ?>
 					<!-- ループ開始 -->
 					<div class="voice-list__item voice-card">
 						<div class="voice-card__head">
@@ -98,7 +86,7 @@ $the_query = new WP_Query($args);
 											}
 										}
 										?>
-										</div>
+									</div>
 								</div>
 								<h3 class="voice-card__title"><?php the_title(); ?></h3>
 							</div>
@@ -120,14 +108,14 @@ $the_query = new WP_Query($args);
 			</div>
 	</div>
 	<div class="archive-voice__pagination pagination">
-	<?php
-			$args = array(
-				'mid_size' => 1,
-				'prev_text' => '<div class="pagination__prev"></div>',
-				'next_text' => '<div class="pagination__next"></div>',
-			);
-			the_posts_pagination($args);
-			?>
+		<?php
+		$args = array(
+			'mid_size' => 1,
+			'prev_text' => '<div class="pagination__prev"></div>',
+			'next_text' => '<div class="pagination__next"></div>',
+		);
+		the_posts_pagination($args);
+		?>
 	</div>
 </section>
 <?php get_footer(); ?>
