@@ -80,7 +80,7 @@ $contact = esc_url(home_url('/contact/'));
 
 		<?php if (have_posts()) : ?>
 			<div class="archive-campaign__items">
-			<?php while (have_posts()) : the_post(); ?>
+				<?php while (have_posts()) : the_post(); ?>
 					<div class="archive-campaign__item campaign-card">
 						<div class="campaign-card__image campaign-card__image--sub">
 							<?php if (has_post_thumbnail()) : ?>
@@ -95,12 +95,17 @@ $contact = esc_url(home_url('/contact/'));
 									<?php
 									$taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
 									if (!empty($taxonomy_terms)) {
+										// カテゴリーを説明でソートする
+										usort($taxonomy_terms, function ($a, $b) {
+											return strcmp($a->description, $b->description);
+										});
 										foreach ($taxonomy_terms as $taxonomy_term) {
 											echo '<div class="campaign-card__label">' . esc_html($taxonomy_term->name) . '</div>';
 										}
 									}
 									?>
 								</div>
+
 								<h3 class="campaign-card__title campaign-card__title--sub"><?php the_title(); ?></h3>
 							</div>
 							<div class="campaign-card__price-body campaign-card__price-body--sub">

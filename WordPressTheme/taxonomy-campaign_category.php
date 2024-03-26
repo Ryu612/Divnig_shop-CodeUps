@@ -91,9 +91,13 @@ $contact = esc_url(home_url('/contact/'));
 						<div class="campaign-card__contents campaign-card__contents--sub">
 							<div class="campaign-card__head campaign-card__head--sub">
 								<div class="campaign-card__category">
-									<?php
+								<?php
 									$taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
 									if (!empty($taxonomy_terms)) {
+										// カテゴリーを説明でソートする
+										usort($taxonomy_terms, function ($a, $b) {
+											return strcmp($a->description, $b->description);
+										});
 										foreach ($taxonomy_terms as $taxonomy_term) {
 											echo '<div class="campaign-card__label">' . esc_html($taxonomy_term->name) . '</div>';
 										}
