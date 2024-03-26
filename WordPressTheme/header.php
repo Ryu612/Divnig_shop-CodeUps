@@ -100,7 +100,7 @@ $sitemap = esc_url(home_url('/sitemap/'));
                 <div class="pc-nav__link">
                     <a href="<?php echo $contact; ?>">
                         <p class="pc-nav__link-en">Contact</p>
-                        <p class="pc-nav__link-ja">お問合せ</p>
+                        <p class="pc-nav__link-ja">お問い合わせ</p>
                     </a>
                 </div>
             </nav>
