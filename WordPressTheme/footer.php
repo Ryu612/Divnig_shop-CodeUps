@@ -109,7 +109,7 @@ $sitemap = esc_url(home_url('/sitemap/'));
 						<li class="footer-nav__item"><a href="<?php echo $tos; ?>">利用規約</a></li>
 					</ul>
 					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $contact; ?>">お問いわ合せ</a></li>
+						<li class="footer-nav__item"><a href="<?php echo $contact; ?>">お問い合わせ</a></li>
 					</ul>
 					<ul class="footer-nav__items">
 						<li class="footer-nav__item"><a href="<?php echo $sitemap; ?>">サイトマップ</a></li>
