@@ -31,7 +31,7 @@
 			$terms = get_terms(array(
 				// 表示するタクソノミースラッグを記述
 				'taxonomy' => 'voice_category',
-				'orderby' => 'name',
+				'orderby' => 'description',
 				'order'   => 'ASC',
 				// 表示するタームの数を指定
 				'number'  => 5
@@ -80,6 +80,10 @@
 									<?php
 									$taxonomy_terms = get_the_terms($post->ID, 'voice_category');
 									if (!empty($taxonomy_terms)) {
+										// カテゴリーを説明でソートする
+										usort($taxonomy_terms, function ($a, $b) {
+											return strcmp($a->description, $b->description);
+										});
 										foreach ($taxonomy_terms as $taxonomy_term) {
 											echo '<div class="voice-card__label">' . esc_html($taxonomy_term->name) . '</div>';
 										}
