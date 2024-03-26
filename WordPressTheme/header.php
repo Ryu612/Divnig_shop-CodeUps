@@ -149,7 +149,7 @@ $sitemap = esc_url(home_url('/sitemap/'));
                 <li class="drawer-content__item"><a href="<?php echo $tos; ?>">利用規約</a></li>
             </ul>
             <ul class="drawer-content__items">
-                <li class="drawer-content__item"><a href="<?php echo $contact; ?>">お問合せ</a></li>
+                <li class="drawer-content__item"><a href="<?php echo $contact; ?>">お問い合わせ</a></li>
             </ul>
         </div>
     </nav>
