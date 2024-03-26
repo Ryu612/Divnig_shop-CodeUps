@@ -31,7 +31,7 @@ $voice = esc_url(home_url('/voice/'));
 						</div>
 						<div class="popular-card__meta">
 							<time datetime="<?php echo get_the_date('Y-m-d'); ?>" class="popular-card__date"><?php echo get_the_date('Y.m/d'); ?></time>
-							<h5 class="popular-card__title"><?php the_title(); ?></h5>
+							<h5 class="popular-card__title"><?php echo wp_trim_words(get_the_title(), 7, '...'); ?></h5>
 						</div>
 					</a>
 				<?php endwhile; ?>
