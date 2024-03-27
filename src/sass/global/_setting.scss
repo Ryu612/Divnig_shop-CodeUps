@@ -53,3 +53,10 @@ $layer: (
   pagetop: 10,
   default: 1
 );
+
+/*================================
+reCAPTCHAバッジ非表示
+================================*/
+.grecaptcha-badge {
+  visibility: hidden;
+}

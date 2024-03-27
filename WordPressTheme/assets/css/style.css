@@ -5,6 +5,14 @@ body {
 	position: relative;
 }
 
+/*================================
+reCAPTCHAバッジ非表示
+================================*/
+
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
 .u-desktop {
 	display: none;
 }
