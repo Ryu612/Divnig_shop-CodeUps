@@ -429,7 +429,7 @@ textarea {
 	width: rem(202);
 	background-color: $color-green;
 	text-align: center;
-	padding-block: rem(15);
+	// padding-block: rem(15);
 	color: $color-white;
 	font-size: rem(14);
 	font-family: $english-font-family;
@@ -480,14 +480,14 @@ textarea {
 
 .form__button p {
 	display: inline-block;
-	padding-right: rem(48.75);
+	// padding-right: rem(48.75);
 	position: relative;
 }
 
 .form__button p::after {
 	position: absolute;
-	top: 40%;
-	right: 0;
+	top: 43%;
+	right: rem(56);
 	transform: translateY(-50%);
 	width: rem(41);
 	height: rem(8);
@@ -500,6 +500,14 @@ textarea {
 		background: url(../../assets/images/common/button-arrow-green.png) no-repeat center center / contain;
 		z-index: 3;
 	}
+}
+
+.form__button p input {
+	width: rem(202);
+	height: rem(54);
+	text-align-last: left;
+	padding-left: rem(56);
+	cursor: pointer;
 }
 
 .form__button:active {

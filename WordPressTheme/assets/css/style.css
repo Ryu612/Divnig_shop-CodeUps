@@ -1470,8 +1470,6 @@ textarea {
 	font-size: 0.875rem;
 	line-height: 1.57143;
 	margin: 0.125rem auto 0;
-	padding-bottom: 0.9375rem;
-	padding-top: 0.9375rem;
 	position: relative;
 	text-align: center;
 	transition: color 0.2s;
@@ -1506,7 +1504,6 @@ textarea {
 
 .form__button p {
 	display: inline-block;
-	padding-right: 3.046875rem;
 	position: relative;
 }
 
@@ -1515,10 +1512,19 @@ textarea {
 	content: "";
 	height: 0.5rem;
 	position: absolute;
-	right: 0;
-	top: 40%;
+	right: 3.5rem;
+	top: 43%;
 	transform: translateY(-50%);
 	width: 2.5625rem;
+}
+
+.form__button p input {
+	-moz-text-align-last: left;
+	cursor: pointer;
+	height: 3.375rem;
+	padding-left: 3.5rem;
+	text-align-last: left;
+	width: 12.625rem;
 }
 
 .form__button:active {
