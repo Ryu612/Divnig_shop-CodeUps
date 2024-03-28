@@ -20,7 +20,7 @@ function my_script_init()
 { // WordPressに含まれているjquery.jsを読み込まない
     wp_deregister_script('jquery');
     // Google Fonts
-    wp_enqueue_style('GoogleFonts', 'https://fonts.googleapis.com/css2?family=Gotu&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap',array(), null );
+    wp_enqueue_style('GoogleFonts', 'https://fonts.googleapis.com/css2?family=Gotu&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap', array(), null);
     // Swiper JS
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array('jquery'), "1.0.1", true);
     // jQuery Inview
@@ -185,3 +185,10 @@ function my_custom_track_posts($post_id)
     my_custom_popular_posts($post_id);
 }
 add_action('wp_head', 'my_custom_track_posts');
+
+// 管理画面のサイドメニュー非表示
+function remove_menus()
+{
+    remove_menu_page('edit-comments.php'); // コメント
+}
+add_action('admin_menu', 'remove_menus', 999);
