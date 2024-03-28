@@ -112,7 +112,7 @@ function add_original_choices()
 {
     ob_start();
     $args = array(
-        'post_type' => 'campaign', //worksというカスタム投稿をもとに動的にinputを生成
+        'post_type' => 'campaign',
         'orderby' => 'name',
         'order' => 'ASC',
         'posts_per_page' => -1,
