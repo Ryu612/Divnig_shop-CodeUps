@@ -192,3 +192,26 @@ function remove_menus()
     remove_menu_page('edit-comments.php'); // コメント
 }
 add_action('admin_menu', 'remove_menus', 999);
+
+
+//特定の固定ページのエディタを非表示
+add_filter('use_block_editor_for_post', function ($use_block_editor, $post) {
+    if ($post->post_type === 'page') {
+        if (in_array($post->post_name, ['sitemap', 'contact', 'thanks', 'information', 'blog', 'faq', 'about-us', 'price']) || (int)$post->ID === (int)get_option('page_on_front')) { //トップページの判定を追加
+            remove_post_type_support('page', 'editor');
+            return false;
+        }
+    }
+    return $use_block_editor;
+}, 10, 2);
+
+// 固定ページのメタボックスを非表示
+function remove_pageedit_metabox()
+{
+    remove_meta_box('postcustom', 'page', 'normal'); // カスタムフィールド
+    remove_meta_box('commentstatusdiv', 'page', 'normal'); // ディスカッション
+    remove_meta_box('commentsdiv', 'page', 'normal'); // コメント
+    remove_meta_box('slugdiv', 'page', 'normal'); // スラッグ
+    remove_meta_box('authordiv', 'page', 'normal'); // 投稿者
+}
+add_action('admin_menu', 'remove_pageedit_metabox');
