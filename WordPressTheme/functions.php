@@ -215,3 +215,14 @@ function remove_pageedit_metabox()
     remove_meta_box('authordiv', 'page', 'normal'); // 投稿者
 }
 add_action('admin_menu', 'remove_pageedit_metabox');
+
+
+//日本語のスラッグをpost_IDに自動生成
+function auto_post_slug($slug, $post_ID, $post_status, $post_type)
+{
+    if (preg_match('/(%[0-9a-f]{2})+/', $slug)) {
+        $slug = utf8_uri_encode($post_type) . '-' . $post_ID;
+    }
+    return $slug;
+}
+add_filter('wp_unique_post_slug', 'auto_post_slug', 10, 4);
