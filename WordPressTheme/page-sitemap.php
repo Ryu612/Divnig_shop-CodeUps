@@ -27,16 +27,7 @@ $sitemap = esc_url(home_url('/sitemap/'));
 		<h2 class="sub-mv__title">Site MAP</h2>
 	</div>
 
-<!-- パンくず -->
-<div class="breadcrumb layout-breadcrumb">
-	<?php if (function_exists('bcn_display')) { ?>
-		<div class="breadcrumb__inner inner">
-			<div class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-				<?php bcn_display(); ?>
-			</div>
-		</div>
-	<?php } ?>
-</div>
+			<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <section class="page-sitemap layout-page-sitemap">
 	<div class="page-sitemap__inner inner">

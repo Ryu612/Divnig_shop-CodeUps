@@ -17,16 +17,7 @@ $contact = esc_url(home_url('/contact/'));
 	<h2 class="sub-mv__title">Campaign</h2>
 </div>
 
-<!-- パンくず -->
-<div class="breadcrumb layout-breadcrumb">
-	<?php if (function_exists('bcn_display')) { ?>
-		<div class="breadcrumb__inner inner">
-			<div class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-				<?php bcn_display(); ?>
-			</div>
-		</div>
-	<?php } ?>
-</div>
+<?php get_template_part('template-parts/breadcrumb'); ?>
 
 
 <section class="archive-campaign layout-archive-campaign">

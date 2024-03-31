@@ -1,28 +1,19 @@
 <?php get_header(); ?>
 
-	<!-- メインビュー -->
-	<div class="sub-mv sub-mv--information">
-		<div class="sub-mv__image">
-			<picture>
-				<source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/pc/sub-information-mv-pc.webp")); ?>" media="(min-width: 768px)" type="image/webp">
-				<source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/pc/sub-information-mv-pc.png")); ?>" media="(min-width: 768px)" type="image/png">
-				<source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/sp/sub-information-mv-sp.webp")); ?>" type="image/webp">
-				<img src="<?php echo esc_url(get_theme_file_uri("/assets/images/sp/sub-information-mv-sp.png")); ?>" alt='魚' width='375' height='460' loading='lazy'>
-			</picture>
-		</div>
-		<h2 class="sub-mv__title">Information</h2>
+<!-- メインビュー -->
+<div class="sub-mv sub-mv--information">
+	<div class="sub-mv__image">
+		<picture>
+			<source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/pc/sub-information-mv-pc.webp")); ?>" media="(min-width: 768px)" type="image/webp">
+			<source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/pc/sub-information-mv-pc.png")); ?>" media="(min-width: 768px)" type="image/png">
+			<source srcset="<?php echo esc_url(get_theme_file_uri("/assets/images/sp/sub-information-mv-sp.webp")); ?>" type="image/webp">
+			<img src="<?php echo esc_url(get_theme_file_uri("/assets/images/sp/sub-information-mv-sp.png")); ?>" alt='魚' width='375' height='460' loading='lazy'>
+		</picture>
 	</div>
-
-<!-- パンくず -->
-<div class="breadcrumb layout-breadcrumb">
-	<?php if (function_exists('bcn_display')) { ?>
-		<div class="breadcrumb__inner inner">
-			<div class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-				<?php bcn_display(); ?>
-			</div>
-		</div>
-	<?php } ?>
+	<h2 class="sub-mv__title">Information</h2>
 </div>
+
+<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <section class="page-information layout-page-information">
 	<div class="page-information__inner inner fish-icon">

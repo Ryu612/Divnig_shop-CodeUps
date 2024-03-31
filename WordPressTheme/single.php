@@ -12,23 +12,14 @@
 	<h2 class="sub-mv__title">Blog</h2>
 </div>
 
-<!-- パンくず -->
-<div class="breadcrumb layout-breadcrumb">
-	<?php if (function_exists('bcn_display')) { ?>
-		<div class="breadcrumb__inner inner">
-			<div class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-				<?php bcn_display(); ?>
-			</div>
-		</div>
-	<?php } ?>
-</div>
+			<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <section class="columns layout-single">
 	<div class="columns__inner inner fish-icon">
 		<div class="columns__2columns columns-single-post">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<main class="columns__single-post single-post">
-				<time datetime="<?php echo get_the_date('Y-m-d'); ?>" class="single-post__date"><?php echo get_the_date('Y.m/d'); ?></time>
+				<time datetime="<?php the_time('c'); ?>" class="single-post__date"><?php echo get_the_date('Y.m/d'); ?></time>
 				<h3 class="single-post__title"><?php the_title(); ?></h3>
 				<div class="single-post__content single-post-content">
 					<div class="single-post-content__image">

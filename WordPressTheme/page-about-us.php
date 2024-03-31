@@ -12,16 +12,7 @@
 	<h2 class="sub-mv__title">About us</h2>
 </div>
 
-<!-- パンくず -->
-<div class="breadcrumb layout-breadcrumb">
-	<?php if (function_exists('bcn_display')) { ?>
-		<div class="breadcrumb__inner inner">
-			<div class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-				<?php bcn_display(); ?>
-			</div>
-		</div>
-	<?php } ?>
-</div>
+			<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <section class="about layout-page-about">
 	<div class="about__inner inner fish-icon fish-icon--about">

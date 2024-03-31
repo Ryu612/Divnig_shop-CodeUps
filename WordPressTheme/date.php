@@ -16,16 +16,7 @@ $voice = esc_url(home_url('/voice/'));
 	<h2 class="sub-mv__title">Blog</h2>
 </div>
 
-<!-- パンくず -->
-<div class="breadcrumb layout-breadcrumb">
-	<?php if (function_exists('bcn_display')) { ?>
-		<div class="breadcrumb__inner inner">
-			<div class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-				<?php bcn_display(); ?>
-			</div>
-		</div>
-	<?php } ?>
-</div>
+			<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <section class="columns layout-archive-home">
 	<div class="columns__inner inner fish-icon">
@@ -43,7 +34,7 @@ $voice = esc_url(home_url('/voice/'));
 										<img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/noimage.png")); ?>" alt="NoImage画像" />
 									<?php endif; ?>
 								</div>
-								<time datetime="<?php echo get_the_date('Y-m-d'); ?>" class="blog-card__date"><?php echo get_the_date('Y.m/d'); ?></time>
+								<time datetime="<?php the_time('c'); ?>" class="blog-card__date"><?php echo get_the_date('Y.m/d'); ?></time>
 								<h3 class="blog-card__title"><?php the_title(); ?></h3>
 								<p class="blog-card__text"><?php echo wp_trim_words(get_the_content(), 87, '...'); ?></p>
 							</a>
