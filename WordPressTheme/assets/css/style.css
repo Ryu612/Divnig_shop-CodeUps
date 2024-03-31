@@ -1979,6 +1979,11 @@ html {
 	margin-top: 2.5rem;
 }
 
+.nopost {
+	font-size: 1.25rem;
+	text-align: center;
+}
+
 .page-faq__items {
 	grid-gap: 2.5rem;
 	display: grid;
@@ -3852,6 +3857,10 @@ html {
 
 .page-faq__inner.inner {
 	max-width: 46.875rem;
+}
+
+.nopost {
+	font-size: 3.75rem;
 }
 
 .page-information__tab-contents {

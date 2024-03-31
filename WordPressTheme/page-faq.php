@@ -16,30 +16,47 @@
 
 <section class="page-faq layout-page-faq">
 	<div class="page-faq__inner inner fish-icon">
-		<div class="page-faq__items">
+		<?php
+		$faqItems = SCF::get_option_meta('faq_list', 'faq');
+		$hasItems = false;
 
-			<?php
-			$faqItems = SCF::get_option_meta('faq_list', 'faq');
-			foreach ($faqItems as $item) :
-				$question = esc_html($item['question']);
-				$answer = esc_html($item['answer']);
-			?>
-				<div class="page-faq__item faq">
-					<div class="faq__q">
-						<div><?php echo $question; ?></div>
-						<div class="faq__icon is-open">
-							<span></span>
-							<span></span>
-						</div>
-					</div>
-					<div class="faq__a">
-						<p class="faq__text">
-							<?php echo $answer; ?>
-						</p>
-					</div>
-				</div><!-- /.page-faq__item faq -->
-			<?php endforeach; ?>
-		</div>
-</section>
+		foreach ($faqItems as $item) :
+			if (!empty($item['question']) && !empty($item['answer'])) {
+				$hasItems = true;
+				break;
+			}
+		endforeach;
+
+		if ($hasItems) :
+		?>
+			<div class="page-faq__items">
+				<?php foreach ($faqItems as $item) :
+					$question = esc_html($item['question']);
+					$answer = esc_html($item['answer']);
+
+					if (!empty($question) && !empty($answer)) :
+				?>
+						<div class="page-faq__item faq">
+							<div class="faq__q">
+								<div><?php echo $question; ?></div>
+								<div class="faq__icon is-open">
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div class="faq__a">
+								<p class="faq__text">
+									<?php echo $answer; ?>
+								</p>
+							</div>
+						</div><!-- /.page-faq__item faq -->
+				<?php endif;
+				endforeach; ?>
+			</div><!-- /.page-faq__items -->
+		<?php else : ?>
+			<p class="nopost">準備中</p>
+		<?php endif; ?>
+	</div><!-- /.page-faq__inner -->
+</section><!-- /.layout-page-faq -->
 
 <?php get_footer(); ?>
