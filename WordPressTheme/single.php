@@ -19,7 +19,7 @@
 		<div class="columns__2columns columns-single-post">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<main class="columns__single-post single-post">
-				<time datetime="<?php the_time('c'); ?>" class="single-post__date"><?php echo get_the_date('Y.m/d'); ?></time>
+				<time datetime="<?php the_time('c'); ?>" class="single-post__date"><?php the_time('Y.m/d'); ?></time>
 				<h3 class="single-post__title"><?php the_title(); ?></h3>
 				<div class="single-post__content single-post-content">
 					<div class="single-post-content__image">
