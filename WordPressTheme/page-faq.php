@@ -12,7 +12,7 @@
 	<h2 class="sub-mv__title">FAQ</h2>
 </div>
 
-			<?php get_template_part('template-parts/breadcrumb'); ?>
+<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <section class="page-faq layout-page-faq">
 	<div class="page-faq__inner inner fish-icon">
@@ -20,7 +20,7 @@
 
 			<?php
 			$faqItems = SCF::get_option_meta('faq_list', 'faq');
-			foreach ($faqItems as $item) {
+			foreach ($faqItems as $item) :
 				$question = esc_html($item['question']);
 				$answer = esc_html($item['answer']);
 			?>
@@ -38,7 +38,7 @@
 						</p>
 					</div>
 				</div><!-- /.page-faq__item faq -->
-			<?php } ?>
+			<?php endforeach; ?>
 		</div>
 </section>
 

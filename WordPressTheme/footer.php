@@ -49,79 +49,74 @@ $sitemap = esc_url(home_url('/sitemap/'));
 	</section>
 <?php endif; ?>
 
-
-<?php if (!(is_404())) : ?>
-	<footer id="footer" class="top-footer footer">
-	<?php else : ?>
-		<footer id="footer" class="footer">
-		<?php endif; ?>
-		<div class="footer__inner inner">
-			<div class="footer__header">
-				<div class="footer__logo"><a href="<?php echo $home; ?>"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/footer-logo.png")); ?>" alt="CodeUpsのロゴ"></a>
-				</div>
-				<div class="footer__sns">
-					<a href="https://www.facebook.com/" target=”_blank” class="footer__facebook"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/icon-facebook.png")); ?>" alt="facebookのアイコン"></a>
-					<a href="https://www.instagram.com/" target=”_blank” class="footer__instagram"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/icon-instagram.png")); ?>" alt="インスタグラムのアイコン"></a>
-				</div>
+<footer id="footer" class="<?php echo is_404() ? '' : 'top-footer'; ?> footer">
+	<div class="footer__inner inner">
+		<div class="footer__header">
+			<div class="footer__logo"><a href="<?php echo $home; ?>"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/footer-logo.png")); ?>" alt="CodeUpsのロゴ"></a>
 			</div>
-			<div class="footer__nav footer-nav">
-				<div class="footer-nav__1">
-					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $campaign; ?>">キャンペーン</a></li>
-						<li class="drawer-content__item"><a href="<?php echo esc_url(home_url('/campaign_category/ファンダイビング')); ?>">ファンダイビング</a></li>
-						<li class="drawer-content__item"><a href="<?php echo esc_url(home_url('/campaign_category/ライセンス講習')); ?>">ライセンス講習</a></li>
-						<li class="drawer-content__item"><a href="<?php echo esc_url(home_url('/campaign_category/体験ダイビング')); ?>">体験ダイビング</a></li>
-					</ul>
-					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $about; ?>">私たちについて</a></li>
-					</ul>
-				</div>
-				<div class="footer-nav__2">
-					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $information; ?>">ダイビング情報</a></li>
-						<li class="footer-nav__item"><a href="<?php echo $information; ?>#tab1">ライセンス講習</a></li>
-						<li class="footer-nav__item"><a href="<?php echo $information; ?>#tab2">ファンダイビング</a></li>
-						<li class="footer-nav__item"><a href="<?php echo $information; ?>#tab3">体験ダイビング</a></li>
-					</ul>
-					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $blog; ?>">ブログ</a></li>
-					</ul>
-				</div>
-				<div class="footer-nav__3">
-					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $voice; ?>">お客様の声</a></li>
-					</ul>
-					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $price; ?>">料金一覧</a></li>
-						<li class="drawer-content__item"><a href="<?php echo $price; ?>#price-license">ライセンス講習</a></li>
-						<li class="drawer-content__item"><a href="<?php echo $price; ?>#price-experience">体験ダイビング</a></li>
-						<li class="drawer-content__item"><a href="<?php echo $price; ?>#price-fun">ファンダイビング</a></li>
-					</ul>
-				</div>
-				<div class="footer-nav__4">
-					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $faq; ?>">よくある質問</a></li>
-					</ul>
-					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $policy; ?>">プライバシー<br class="u-mobile">ポリシー</a></li>
-					</ul>
-					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $tos; ?>">利用規約</a></li>
-					</ul>
-					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $contact; ?>">お問い合わせ</a></li>
-					</ul>
-					<ul class="footer-nav__items">
-						<li class="footer-nav__item"><a href="<?php echo $sitemap; ?>">サイトマップ</a></li>
-					</ul>
-				</div>
+			<div class="footer__sns">
+				<a href="https://www.facebook.com/" target=”_blank” class="footer__facebook"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/icon-facebook.png")); ?>" alt="facebookのアイコン"></a>
+				<a href="https://www.instagram.com/" target=”_blank” class="footer__instagram"><img src="<?php echo esc_url(get_theme_file_uri("/assets/images/common/icon-instagram.png")); ?>" alt="インスタグラムのアイコン"></a>
 			</div>
-			<div class="footer__copyright">Copyright &copy; 2021 - <?php echo wp_date("Y"); ?> CodeUps LLC. All Rights Reserved.</div>
 		</div>
-		</footer>
+		<div class="footer__nav footer-nav">
+			<div class="footer-nav__1">
+				<ul class="footer-nav__items">
+					<li class="footer-nav__item"><a href="<?php echo $campaign; ?>">キャンペーン</a></li>
+					<li class="drawer-content__item"><a href="<?php echo esc_url(home_url('/campaign_category/ファンダイビング')); ?>">ファンダイビング</a></li>
+					<li class="drawer-content__item"><a href="<?php echo esc_url(home_url('/campaign_category/ライセンス講習')); ?>">ライセンス講習</a></li>
+					<li class="drawer-content__item"><a href="<?php echo esc_url(home_url('/campaign_category/体験ダイビング')); ?>">体験ダイビング</a></li>
+				</ul>
+				<ul class="footer-nav__items">
+					<li class="footer-nav__item"><a href="<?php echo $about; ?>">私たちについて</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav__2">
+				<ul class="footer-nav__items">
+					<li class="footer-nav__item"><a href="<?php echo $information; ?>">ダイビング情報</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $information; ?>#tab1">ライセンス講習</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $information; ?>#tab2">ファンダイビング</a></li>
+					<li class="footer-nav__item"><a href="<?php echo $information; ?>#tab3">体験ダイビング</a></li>
+				</ul>
+				<ul class="footer-nav__items">
+					<li class="footer-nav__item"><a href="<?php echo $blog; ?>">ブログ</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav__3">
+				<ul class="footer-nav__items">
+					<li class="footer-nav__item"><a href="<?php echo $voice; ?>">お客様の声</a></li>
+				</ul>
+				<ul class="footer-nav__items">
+					<li class="footer-nav__item"><a href="<?php echo $price; ?>">料金一覧</a></li>
+					<li class="drawer-content__item"><a href="<?php echo $price; ?>#price-license">ライセンス講習</a></li>
+					<li class="drawer-content__item"><a href="<?php echo $price; ?>#price-experience">体験ダイビング</a></li>
+					<li class="drawer-content__item"><a href="<?php echo $price; ?>#price-fun">ファンダイビング</a></li>
+				</ul>
+			</div>
+			<div class="footer-nav__4">
+				<ul class="footer-nav__items">
+					<li class="footer-nav__item"><a href="<?php echo $faq; ?>">よくある質問</a></li>
+				</ul>
+				<ul class="footer-nav__items">
+					<li class="footer-nav__item"><a href="<?php echo $policy; ?>">プライバシー<br class="u-mobile">ポリシー</a></li>
+				</ul>
+				<ul class="footer-nav__items">
+					<li class="footer-nav__item"><a href="<?php echo $tos; ?>">利用規約</a></li>
+				</ul>
+				<ul class="footer-nav__items">
+					<li class="footer-nav__item"><a href="<?php echo $contact; ?>">お問い合わせ</a></li>
+				</ul>
+				<ul class="footer-nav__items">
+					<li class="footer-nav__item"><a href="<?php echo $sitemap; ?>">サイトマップ</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer__copyright">Copyright &copy; 2021 - <?php echo wp_date("Y"); ?> CodeUps LLC. All Rights Reserved.</div>
+	</div>
+</footer>
 
-		<div id="js-pagetop" class="pagetop"><span></span></div>
-		<?php wp_footer(); ?>
-		</body>
+<div id="js-pagetop" class="pagetop"><span></span></div>
+<?php wp_footer(); ?>
+</body>
 
-		</html>
+</html>

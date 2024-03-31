@@ -13,10 +13,21 @@ $voice = esc_url(home_url('/voice/'));
 			<img src="<?php echo esc_url(get_theme_file_uri("/assets/images/sp/sub-blog-mv-sp.png")); ?>" alt='魚' width='375' height='460' loading='lazy'>
 		</picture>
 	</div>
-	<h2 class="sub-mv__title">Blog</h2>
+	<h2 class="sub-mv__title">
+		<?php
+		$year = get_query_var('year');
+		$month = get_query_var('monthnum');
+
+		if ($month != 0) {
+			echo $year . '年' . $month . '月';
+		} else {
+			echo $year . '年';
+		}
+		?>
+	</h2>
 </div>
 
-			<?php get_template_part('template-parts/breadcrumb'); ?>
+<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <section class="columns layout-archive-home">
 	<div class="columns__inner inner fish-icon">
@@ -54,7 +65,7 @@ $voice = esc_url(home_url('/voice/'));
 					?>
 				</div>
 			</main>
-			<?php get_template_part('template-parts/sidebar'); ?>
+			<?php get_sidebar(); ?>
 		</div>
 	</div>
 </section>

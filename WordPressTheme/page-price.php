@@ -12,7 +12,7 @@
 	<h2 class="sub-mv__title">Price</h2>
 </div>
 
-			<?php get_template_part('template-parts/breadcrumb'); ?>
+<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <section class="page-price layout-page-price">
 	<div class="page-price__inner inner fish-icon">
@@ -20,9 +20,9 @@
 			<div id="price-license" class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>ライセンス講習</span></h3>
 				<table class="price-table__body">
-				<?php
+					<?php
 					$priceItems = SCF::get_option_meta('price_list', 'licence');
-					foreach ($priceItems as $item) {
+					foreach ($priceItems as $item) :
 						$plan_name = esc_html($item['plan_name_for_licence']);
 						$plan_name2 = esc_html($item['plan_name_2nd_for_licence']);
 						$price = esc_html($item['price_for_licence']);
@@ -31,15 +31,15 @@
 							<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
 							<td><?php echo $price; ?></td>
 						</tr>
-					<?php } ?>
+					<?php endforeach; ?>
 				</table>
 			</div>
 			<div id="price-experience" class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>体験ダイビング</span></h3>
 				<table class="price-table__body">
-				<?php
+					<?php
 					$priceItems = SCF::get_option_meta('price_list', 'experience');
-					foreach ($priceItems as $item) {
+					foreach ($priceItems as $item) :
 						$plan_name = esc_html($item['plan_name_for_experience']);
 						$plan_name2 = esc_html($item['plan_name_2nd_for_experience']);
 						$price = esc_html($item['price_for_experience']);
@@ -48,15 +48,15 @@
 							<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
 							<td><?php echo $price; ?></td>
 						</tr>
-						<?php } ?>
+					<?php endforeach; ?>
 				</table>
 			</div>
 			<div id="price-fun" class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>ファンダイビング</span></h3>
 				<table class="price-table__body">
-				<?php
+					<?php
 					$priceItems = SCF::get_option_meta('price_list', 'fun');
-					foreach ($priceItems as $item) {
+					foreach ($priceItems as $item) :
 						$plan_name = esc_html($item['plan_name_for_fun']);
 						$plan_name2 = esc_html($item['plan_name_2nd_for_fun']);
 						$price = esc_html($item['price_for_fun']);
@@ -65,15 +65,15 @@
 							<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
 							<td><?php echo $price; ?></td>
 						</tr>
-						<?php } ?>
+					<?php endforeach; ?>
 				</table>
 			</div>
 			<div id="price-special" class="price-tablels__item price-table">
 				<h3 class="price-table__head"><span>スペシャルダイビング</span></h3>
 				<table class="price-table__body">
-				<?php
+					<?php
 					$priceItems = SCF::get_option_meta('price_list', 'special');
-					foreach ($priceItems as $item) {
+					foreach ($priceItems as $item) :
 						$plan_name = esc_html($item['plan_name_for_special']);
 						$plan_name2 = esc_html($item['plan_name_2nd_for_special']);
 						$price = esc_html($item['price_for_special']);
@@ -82,7 +82,7 @@
 							<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
 							<td><?php echo $price; ?></td>
 						</tr>
-						<?php } ?>
+					<?php endforeach; ?>
 				</table>
 			</div>
 

@@ -143,23 +143,24 @@ $voice = esc_url(home_url('/voice/'));
 
 			foreach ($months as $month) :
 				$year_current = $month->year;
-				if ($year_current != $year_prev) {
-					if ($year_prev != null) { ?>
+				if ($year_current != $year_prev) :
+					if ($year_prev != null) : ?>
 		</ul>
 		</li>
-	<?php } ?>
+	<?php endif; ?>
 	<li class="side-archive__item">
 		<div class="side-archive__year"><?php echo $month->year; ?></div>
 		<ul class="side-archive__months">
-		<?php } ?>
+		<?php endif; ?>
 		<li class="side-archive__month"><a href="<?php bloginfo('url') ?>/<?php echo date('Y/m', strtotime($month->year . '-' . $month->month)); ?>/"><?php echo date_i18n('F', strtotime($month->year . '-' . $month->month)); ?></a></li>
-	<?php $year_prev = $year_current;
-
-				if (++$limit >= 18) {
+	<?php
+				$year_prev = $year_current;
+				if (++$limit >= 18) :
 					break;
-				}
+				endif;
+			endforeach;
+	?>
 
-			endforeach; ?>
 		</ul>
 	</li>
 	</ul>
