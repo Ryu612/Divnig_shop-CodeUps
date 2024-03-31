@@ -18,23 +18,12 @@
 	<div class="page-faq__inner inner fish-icon">
 		<?php
 		$faqItems = SCF::get_option_meta('faq_list', 'faq');
-		$hasItems = false;
-
-		foreach ($faqItems as $item) :
-			if (!empty($item['question']) && !empty($item['answer'])) {
-				$hasItems = true;
-				break;
-			}
-		endforeach;
-
-		if ($hasItems) :
+		if (!empty($faqItems) && !empty($faqItems[0]['question']) && !empty($faqItems[0]['answer'])) :
 		?>
 			<div class="page-faq__items">
 				<?php foreach ($faqItems as $item) :
 					$question = esc_html($item['question']);
 					$answer = esc_html($item['answer']);
-
-					if (!empty($question) && !empty($answer)) :
 				?>
 						<div class="page-faq__item faq">
 							<div class="faq__q">
@@ -50,8 +39,7 @@
 								</p>
 							</div>
 						</div><!-- /.page-faq__item faq -->
-				<?php endif;
-				endforeach; ?>
+				<?php endforeach; ?>
 			</div><!-- /.page-faq__items -->
 		<?php else : ?>
 			<p class="nopost">準備中</p>
