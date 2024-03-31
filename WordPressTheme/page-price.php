@@ -38,7 +38,7 @@
 							$plan_name2 = esc_html($item['plan_name_2nd_for_licence']);
 							$price = esc_html($item['price_for_licence']);
 
-							if (!empty($plan_name) && !empty($price)) :
+							if (!empty($plan_name) || !empty($price)) :
 						?>
 								<tr>
 									<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
@@ -55,7 +55,7 @@
 				$hasItems = false;
 
 				foreach ($priceItems as $item) :
-					if (!empty($item['plan_name_for_experience']) && !empty($item['plan_name_2nd_for_experience']) && !empty($item['price_for_experience'])) {
+					if (!empty($item['plan_name_for_experience']) || !empty($item['price_for_experience'])) {
 						$hasItems = true;
 						break;
 					}
@@ -70,7 +70,7 @@
 							$plan_name2 = esc_html($item['plan_name_2nd_for_experience']);
 							$price = esc_html($item['price_for_experience']);
 
-							if (!empty($plan_name) && !empty($plan_name2) && !empty($price)) :
+							if (!empty($plan_name) || !empty($price)) :
 						?>
 								<tr>
 									<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
@@ -87,7 +87,7 @@
 				$hasItems = false;
 
 				foreach ($priceItems as $item) :
-					if (!empty($item['plan_name_for_fun']) && !empty($item['plan_name_2nd_for_fun']) && !empty($item['price_for_fun'])) {
+					if (!empty($item['plan_name_for_fun']) || !empty($item['price_for_fun'])) {
 						$hasItems = true;
 						break;
 					}
@@ -102,7 +102,7 @@
 							$plan_name2 = esc_html($item['plan_name_2nd_for_fun']);
 							$price = esc_html($item['price_for_fun']);
 
-							if (!empty($plan_name) && !empty($plan_name2) && !empty($price)) :
+							if (!empty($plan_name) || !empty($price)) :
 						?>
 								<tr>
 									<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
@@ -121,7 +121,7 @@
 				$hasItems = false;
 
 				foreach ($priceItems as $item) :
-					if (!empty($item['plan_name_for_special']) && !empty($item['plan_name_2nd_for_special']) && !empty($item['price_for_special'])) {
+					if (!empty($item['plan_name_for_special']) || !empty($item['price_for_special'])) {
 						$hasItems = true;
 						break;
 					}
@@ -136,7 +136,7 @@
 							$plan_name2 = esc_html($item['plan_name_2nd_for_special']);
 							$price = esc_html($item['price_for_special']);
 
-							if (!empty($plan_name) && !empty($plan_name2) && !empty($price)) :
+							if (!empty($plan_name) || !empty($price)) :
 						?>
 								<tr>
 									<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
