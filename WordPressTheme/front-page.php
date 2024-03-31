@@ -36,7 +36,6 @@ $contact = esc_url(home_url('/contact/'));
 						</div>
 					</div>
 				<?php endforeach; ?>
-
 			</div>
 		</div>
 		<div class="mv__lead">
@@ -301,66 +300,78 @@ $contact = esc_url(home_url('/contact/'));
 				<img src="<?php echo esc_url(get_theme_file_uri("/assets/images/sp/price-sp.jpg")); ?>" alt="海の中を泳ぐ亀" width="345" height="227">
 			</picture>
 			<ul class="price__lists">
-				<li class="price__list">
-					<h3 class="price__category">ライセンス講習</h3>
-					<?php
-					$priceItems = SCF::get_option_meta('price_list', 'licence');
-					foreach ($priceItems as $item) :
-						$plan_name = esc_html($item['plan_name_for_licence']);
-						$plan_name2 = esc_html($item['plan_name_2nd_for_licence']);
-						$price_cost = esc_html($item['price_for_licence']);
-					?>
-						<dl class="price__contents">
-							<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-							<dd class="price__cost"><?php echo $price_cost; ?></dd>
-						</dl>
-					<?php endforeach; ?>
-				</li>
-				<li class="price__list">
-					<h3 class="price__category">体験ダイビング</h3>
-					<?php
-					$priceItems = SCF::get_option_meta('price_list', 'experience');
-					foreach ($priceItems as $item) :
-						$plan_name = esc_html($item['plan_name_for_experience']);
-						$plan_name2 = esc_html($item['plan_name_2nd_for_experience']);
-						$price_cost = esc_html($item['price_for_experience']);
-					?>
-						<dl class="price__contents">
-							<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-							<dd class="price__cost"><?php echo $price_cost; ?></dd>
-						</dl>
-					<?php endforeach; ?>
-				</li>
-				<li class="price__list">
-					<h3 class="price__category">ファンダイビング</h3>
-					<?php
-					$priceItems = SCF::get_option_meta('price_list', 'fun');
-					foreach ($priceItems as $item) :
-						$plan_name = esc_html($item['plan_name_for_fun']);
-						$plan_name2 = esc_html($item['plan_name_2nd_for_fun']);
-						$price_cost = esc_html($item['price_for_fun']);
-					?>
-						<dl class="price__contents">
-							<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-							<dd class="price__cost"><?php echo $price_cost; ?></dd>
-						</dl>
-					<?php endforeach; ?>
-				</li>
-				<li class="price__list">
-					<h3 class="price__category">スペシャルダイビング</h3>
-					<?php
-					$priceItems = SCF::get_option_meta('price_list', 'special');
-					foreach ($priceItems as $item) :
-						$plan_name = esc_html($item['plan_name_for_special']);
-						$plan_name2 = esc_html($item['plan_name_2nd_for_special']);
-						$price_cost = esc_html($item['price_for_special']);
-					?>
-						<dl class="price__contents">
-							<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-							<dd class="price__cost"><?php echo $price_cost; ?></dd>
-						</dl>
-					<?php endforeach; ?>
-				</li>
+				<?php
+				$priceItems = SCF::get_option_meta('price_list', 'licence');
+				if (!empty($priceItems) && !empty($priceItems[0]['plan_name_for_licence'])) :
+				?>
+					<li class="price__list">
+						<h3 class="price__category">ライセンス講習</h3>
+						<?php foreach ($priceItems as $item) :
+							$plan_name = esc_html($item['plan_name_for_licence']);
+							$plan_name2 = esc_html($item['plan_name_2nd_for_licence']);
+							$price_cost = esc_html($item['price_for_licence']);
+						?>
+							<dl class="price__contents">
+								<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
+								<dd class="price__cost"><?php echo $price_cost; ?></dd>
+							</dl>
+						<?php endforeach; ?>
+					</li>
+				<?php endif; ?>
+				<?php
+				$priceItems = SCF::get_option_meta('price_list', 'experience');
+				if (!empty($priceItems) && !empty($priceItems[0]['plan_name_for_experience'])) :
+				?>
+					<li class="price__list">
+						<h3 class="price__category">体験ダイビング</h3>
+						<?php foreach ($priceItems as $item) :
+							$plan_name = esc_html($item['plan_name_for_experience']);
+							$plan_name2 = esc_html($item['plan_name_2nd_for_experience']);
+							$price_cost = esc_html($item['price_for_experience']);
+						?>
+							<dl class="price__contents">
+								<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
+								<dd class="price__cost"><?php echo $price_cost; ?></dd>
+							</dl>
+						<?php endforeach; ?>
+					</li>
+				<?php endif; ?>
+				<?php
+				$priceItems = SCF::get_option_meta('price_list', 'fun');
+				if (!empty($priceItems) && !empty($priceItems[0]['plan_name_for_fun'])) :
+				?>
+					<li class="price__list">
+						<h3 class="price__category">ファンダイビング</h3>
+						<?php foreach ($priceItems as $item) :
+							$plan_name = esc_html($item['plan_name_for_fun']);
+							$plan_name2 = esc_html($item['plan_name_2nd_for_fun']);
+							$price_cost = esc_html($item['price_for_fun']);
+						?>
+							<dl class="price__contents">
+								<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
+								<dd class="price__cost"><?php echo $price_cost; ?></dd>
+							</dl>
+						<?php endforeach; ?>
+					</li>
+				<?php endif; ?>
+				<?php
+				$priceItems = SCF::get_option_meta('price_list', 'special');
+				if (!empty($priceItems) && !empty($priceItems[0]['plan_name_for_special'])) :
+				?>
+					<li class="price__list">
+						<h3 class="price__category">スペシャルダイビング</h3>
+						<?php foreach ($priceItems as $item) :
+							$plan_name = esc_html($item['plan_name_for_special']);
+							$plan_name2 = esc_html($item['plan_name_2nd_for_special']);
+							$price_cost = esc_html($item['price_for_special']);
+						?>
+							<dl class="price__contents">
+								<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
+								<dd class="price__cost"><?php echo $price_cost; ?></dd>
+							</dl>
+						<?php endforeach; ?>
+					</li>
+				<?php endif; ?>
 			</ul>
 		</div>
 		<div class="price__button">

@@ -57,11 +57,11 @@
 					</table>
 				</div><!-- /.price-tablels__item -->
 			<?php endif; ?>
-			<div id="price-fun" class="price-tablels__item price-table">
-				<?php
-				$priceItems = SCF::get_option_meta('price_list', 'fun');
-				if (!empty($priceItems) && !empty($priceItems[0]['plan_name_for_fun'])) :
-				?>
+			<?php
+			$priceItems = SCF::get_option_meta('price_list', 'fun');
+			if (!empty($priceItems) && !empty($priceItems[0]['plan_name_for_fun'])) :
+			?>
+				<div id="price-fun" class="price-tablels__item price-table">
 					<h3 class="price-table__head"><span>ファンダイビング</span></h3>
 					<table class="price-table__body">
 						<?php foreach ($priceItems as $item) :
@@ -75,41 +75,28 @@
 							</tr>
 						<?php endforeach; ?>
 					</table>
-			</div><!-- /.price-tablels__item -->
-		<?php endif; ?>
-		<div id="price-special" class="price-tablels__item price-table">
+				</div><!-- /.price-tablels__item -->
+			<?php endif; ?>
 			<?php
 			$priceItems = SCF::get_option_meta('price_list', 'special');
-			$hasItems = false;
-
-			foreach ($priceItems as $item) :
-				if (!empty($item['plan_name_for_special']) || !empty($item['price_for_special'])) {
-					$hasItems = true;
-					break;
-				}
-			endforeach;
-
-			if ($hasItems) :
+			if (!empty($priceItems) && !empty($priceItems[0]['plan_name_for_special'])) :
 			?>
-				<h3 class="price-table__head"><span>スペシャルダイビング</span></h3>
-				<table class="price-table__body">
-					<?php foreach ($priceItems as $item) :
-						$plan_name = esc_html($item['plan_name_for_special']);
-						$plan_name2 = esc_html($item['plan_name_2nd_for_special']);
-						$price = esc_html($item['price_for_special']);
-
-						if (!empty($plan_name) || !empty($price)) :
-					?>
+				<div id="price-special" class="price-tablels__item price-table">
+					<h3 class="price-table__head"><span>スペシャルダイビング</span></h3>
+					<table class="price-table__body">
+						<?php foreach ($priceItems as $item) :
+							$plan_name = esc_html($item['plan_name_for_special']);
+							$plan_name2 = esc_html($item['plan_name_2nd_for_special']);
+							$price = esc_html($item['price_for_special']);
+						?>
 							<tr>
 								<td><?php echo $plan_name; ?><br class="u-mobile"><?php echo $plan_name2; ?></td>
 								<td><?php echo $price; ?></td>
 							</tr>
-					<?php endif;
-					endforeach; ?>
-				</table>
+						<?php endforeach; ?>
+					</table>
+				</div><!-- /.price-tablels__item -->
 			<?php endif; ?>
-		</div><!-- /.price-tablels__item -->
-
 		</div>
 	</div>
 </section>
