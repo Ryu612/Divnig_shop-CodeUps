@@ -102,7 +102,9 @@ $contact = esc_url(home_url('/contact/'));
 							<div class="campaign-card__price-body campaign-card__price-body--sub">
 								<p class="campaign-card__price-info campaign-card__price-info--sub">全部コミコミ(お一人様)</p>
 								<div class="campaign-card__price campaign-card__price--sub">
-									<div class="campaign-card__price-old"><?php the_field("old-price"); ?></div>
+									<?php if (get_field("old-price")) : ?>
+										<div class="campaign-card__price-old"><?php the_field("old-price"); ?></div>
+									<?php endif; ?>
 									<div class="campaign-card__price-new"><?php the_field("new-price"); ?></div>
 								</div>
 							</div>
