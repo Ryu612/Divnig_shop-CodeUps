@@ -12,7 +12,7 @@
 	<h2 class="sub-mv__title">About us</h2>
 </div>
 
-			<?php get_template_part('template-parts/breadcrumb'); ?>
+<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <section class="about layout-page-about">
 	<div class="about__inner inner fish-icon fish-icon--about">
@@ -51,7 +51,7 @@
 		<?php
 		$about_gallery = SCF::get_option_meta('about_gallery');
 		$about_gallery_group = $about_gallery['about_gallery_group'];
-		if (!empty($about_gallery_group)) :
+		if (!empty($about_gallery_group) && !empty($about_gallery_group[0]['about_gallery-image'])) :
 		?>
 			<div class="gallery__photos">
 				<?php foreach ($about_gallery_group as $item) :
@@ -60,13 +60,12 @@
 					$about_gallery_src = wp_get_attachment_url($about_gallery_id);
 					//alt
 					$alt_text = get_post_meta($about_gallery_id, '_wp_attachment_image_alt', true);
-
 				?>
-
 					<img src="<?php echo $about_gallery_src; ?>" alt="<?php echo $alt_text; ?>">
-
 				<?php endforeach; ?>
 			</div>
+				<?php else: ?>
+					<p class="nopost">準備中</p>
 		<?php endif; ?>
 	</div>
 	<div id="blackDisplay"></div>
