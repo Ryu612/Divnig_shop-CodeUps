@@ -69,7 +69,7 @@ function my_add_meta_box($settings, $type, $id, $meta_type)
                 'type'        => 'image', //*タイプ
                 'name'        => 'about_gallery-image', //*名前
                 'label'       => 'ギャラリー画像', //ラベル
-                'size'        => 'large' // プレビューサイズ
+                'size'        => 'medium' // プレビューサイズ
             )
         );
         $setting->add_group('about_gallery_group', true, $items);
