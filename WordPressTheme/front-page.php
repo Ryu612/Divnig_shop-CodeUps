@@ -306,72 +306,72 @@ $contact = esc_url(home_url('/contact/'));
 			<ul class="price__lists">
 				<?php
 				$priceItems = SCF::get_option_meta('price_list', 'licence');
-				if (!empty($priceItems) && !empty($priceItems[0]['plan_name_for_licence'])) :
+				if (!empty($priceItems) && !empty($priceItems[0]['course_name_1'])) :
 				?>
 					<li class="price__list">
 						<h3 class="price__category">ライセンス講習</h3>
 						<?php foreach ($priceItems as $item) :
-							$plan_name = esc_html($item['plan_name_for_licence']);
-							$plan_name2 = esc_html($item['plan_name_2nd_for_licence']);
-							$price_cost = esc_html($item['price_for_licence']);
+							$course_name = esc_html($item['course_name_1']);
+							$course_name2 = esc_html($item['course_name_2nd_1']);
+							$price = esc_html($item['price_1']);
 						?>
 							<dl class="price__contents">
-								<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-								<dd class="price__cost"><?php echo $price_cost; ?></dd>
+								<dt class="price__name"><?php echo $course_name . $course_name2; ?></dt>
+								<dd class="price__cost"><?php echo $price; ?></dd>
 							</dl>
 						<?php endforeach; ?>
 					</li>
 				<?php endif; ?>
 				<?php
 				$priceItems = SCF::get_option_meta('price_list', 'experience');
-				if (!empty($priceItems) && !empty($priceItems[0]['plan_name_for_experience'])) :
+				if (!empty($priceItems) && !empty($priceItems[0]['course_name_2'])) :
 				?>
 					<li class="price__list">
 						<h3 class="price__category">体験ダイビング</h3>
 						<?php foreach ($priceItems as $item) :
-							$plan_name = esc_html($item['plan_name_for_experience']);
-							$plan_name2 = esc_html($item['plan_name_2nd_for_experience']);
-							$price_cost = esc_html($item['price_for_experience']);
+							$course_name = esc_html($item['course_name_2']);
+							$course_name2 = esc_html($item['course_name_2nd_2']);
+							$price = esc_html($item['price_2']);
 						?>
 							<dl class="price__contents">
-								<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-								<dd class="price__cost"><?php echo $price_cost; ?></dd>
+								<dt class="price__name"><?php echo $course_name . $course_name2; ?></dt>
+								<dd class="price__cost"><?php echo $price; ?></dd>
 							</dl>
 						<?php endforeach; ?>
 					</li>
 				<?php endif; ?>
 				<?php
 				$priceItems = SCF::get_option_meta('price_list', 'fun');
-				if (!empty($priceItems) && !empty($priceItems[0]['plan_name_for_fun'])) :
+				if (!empty($priceItems) && !empty($priceItems[0]['course_name_3'])) :
 				?>
 					<li class="price__list">
 						<h3 class="price__category">ファンダイビング</h3>
 						<?php foreach ($priceItems as $item) :
-							$plan_name = esc_html($item['plan_name_for_fun']);
-							$plan_name2 = esc_html($item['plan_name_2nd_for_fun']);
-							$price_cost = esc_html($item['price_for_fun']);
+							$course_name = esc_html($item['course_name_3']);
+							$course_name2 = esc_html($item['course_name_2nd_3']);
+							$price = esc_html($item['price_3']);
 						?>
 							<dl class="price__contents">
-								<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-								<dd class="price__cost"><?php echo $price_cost; ?></dd>
+								<dt class="price__name"><?php echo $course_name . $course_name2; ?></dt>
+								<dd class="price__cost"><?php echo $price; ?></dd>
 							</dl>
 						<?php endforeach; ?>
 					</li>
 				<?php endif; ?>
 				<?php
 				$priceItems = SCF::get_option_meta('price_list', 'special');
-				if (!empty($priceItems) && !empty($priceItems[0]['plan_name_for_special'])) :
+				if (!empty($priceItems) && !empty($priceItems[0]['course_name_4'])) :
 				?>
 					<li class="price__list">
 						<h3 class="price__category">スペシャルダイビング</h3>
 						<?php foreach ($priceItems as $item) :
-							$plan_name = esc_html($item['plan_name_for_special']);
-							$plan_name2 = esc_html($item['plan_name_2nd_for_special']);
-							$price_cost = esc_html($item['price_for_special']);
+							$course_name = esc_html($item['course_name_4']);
+							$course_name2 = esc_html($item['course_name_2nd_4']);
+							$price = esc_html($item['price_4']);
 						?>
 							<dl class="price__contents">
-								<dt class="price__name"><?php echo $plan_name . $plan_name2; ?></dt>
-								<dd class="price__cost"><?php echo $price_cost; ?></dd>
+								<dt class="price__name"><?php echo $course_name . $course_name2; ?></dt>
+								<dd class="price__cost"><?php echo $price; ?></dd>
 							</dl>
 						<?php endforeach; ?>
 					</li>
