@@ -24,17 +24,17 @@
 				<div id="price-license" class="price-tablels__item price-table">
 					<h3 class="price-table__head"><span>ライセンス講習</span></h3>
 					<table class="price-table__body">
-					<?php foreach ($priceItems as $item) :
-						$course_name = esc_html($item['course_name_1']);
-						$course_name2 = esc_html($item['course_name_2nd_1']);
-						$price = esc_html($item['price_1']);
-					?>
+						<?php foreach ($priceItems as $item) :
+							$course_name = esc_html($item['course_name_1']);
+							$course_name2 = esc_html($item['course_name_2nd_1']);
+							$price = esc_html($item['price_1']);
+						?>
 							<tr>
 								<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
 								<td><?php echo $price; ?></td>
 							</tr>
-							<?php endforeach; ?>
-						</table>
+						<?php endforeach; ?>
+					</table>
 				</div><!-- /.price-tablels__item -->
 			<?php endif; ?>
 			<?php
@@ -44,17 +44,17 @@
 				<div id="price-experience" class="price-tablels__item price-table">
 					<h3 class="price-table__head"><span>体験ダイビング</span></h3>
 					<table class="price-table__body">
-					<?php foreach ($priceItems as $item) :
-						$course_name = esc_html($item['course_name_2']);
-						$course_name2 = esc_html($item['course_name_2nd_2']);
-						$price = esc_html($item['price_2']);
-					?>
+						<?php foreach ($priceItems as $item) :
+							$course_name = esc_html($item['course_name_2']);
+							$course_name2 = esc_html($item['course_name_2nd_2']);
+							$price = esc_html($item['price_2']);
+						?>
 							<tr>
 								<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
 								<td><?php echo $price; ?></td>
 							</tr>
-							<?php endforeach; ?>
-						</table>
+						<?php endforeach; ?>
+					</table>
 				</div><!-- /.price-tablels__item -->
 			<?php endif; ?>
 			<?php
@@ -64,17 +64,17 @@
 				<div id="price-experience" class="price-tablels__item price-table">
 					<h3 class="price-table__head"><span>ファンダイビング</span></h3>
 					<table class="price-table__body">
-					<?php foreach ($priceItems as $item) :
-						$course_name = esc_html($item['course_name_3']);
-						$course_name2 = esc_html($item['course_name_2nd_3']);
-						$price = esc_html($item['price_3']);
-					?>
+						<?php foreach ($priceItems as $item) :
+							$course_name = esc_html($item['course_name_3']);
+							$course_name2 = esc_html($item['course_name_2nd_3']);
+							$price = esc_html($item['price_3']);
+						?>
 							<tr>
 								<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
 								<td><?php echo $price; ?></td>
 							</tr>
-							<?php endforeach; ?>
-						</table>
+						<?php endforeach; ?>
+					</table>
 				</div><!-- /.price-tablels__item -->
 			<?php endif; ?>
 			<?php
@@ -84,17 +84,17 @@
 				<div id="price-experience" class="price-tablels__item price-table">
 					<h3 class="price-table__head"><span>スペシャルダイビング</span></h3>
 					<table class="price-table__body">
-					<?php foreach ($priceItems as $item) :
-						$course_name = esc_html($item['course_name_4']);
-						$course_name2 = esc_html($item['course_name_2nd_4']);
-						$price = esc_html($item['price_4']);
-					?>
+						<?php foreach ($priceItems as $item) :
+							$course_name = esc_html($item['course_name_4']);
+							$course_name2 = esc_html($item['course_name_2nd_4']);
+							$price = esc_html($item['price_4']);
+						?>
 							<tr>
 								<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
 								<td><?php echo $price; ?></td>
 							</tr>
-							<?php endforeach; ?>
-						</table>
+						<?php endforeach; ?>
+					</table>
 				</div><!-- /.price-tablels__item -->
 			<?php endif; ?>
 		</div>
