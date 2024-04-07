@@ -99,18 +99,21 @@ $contact = esc_url(home_url('/contact/'));
 
 								<h3 class="campaign-card__title campaign-card__title--sub"><?php the_title(); ?></h3>
 							</div>
+							<?php $priceGroup = get_field('price-group'); ?>
 							<div class="campaign-card__price-body campaign-card__price-body--sub">
 								<p class="campaign-card__price-info campaign-card__price-info--sub">全部コミコミ(お一人様)</p>
 								<div class="campaign-card__price campaign-card__price--sub">
-									<?php if (get_field("old-price")) : ?>
-										<div class="campaign-card__price-old"><?php the_field("old-price"); ?></div>
+									<?php if ($priceGroup['old-price']) : ?>
+										<div class="campaign-card__price-old">¥<?php echo	$priceGroup['old-price'] ?></div>
 									<?php endif; ?>
-									<div class="campaign-card__price-new"><?php the_field("new-price"); ?></div>
+									<div class="campaign-card__price-new">¥<?php echo	$priceGroup['new-price'] ?></div>
 								</div>
 							</div>
 							<p class="campaign-card__text u-desktop"><?php the_content(); ?></p>
 							<div class="campaign-card__info u-desktop">
-								<div class="campaign-card__dates"><?php the_field("campaign-period"); ?></div>
+								<?php if ($priceGroup['campaign-start'] || $priceGroup['campaign-end']) : ?>
+									<div class="campaign-card__dates"><?php echo $priceGroup['campaign-start'] . '-' .  $priceGroup['campaign-end'] ?></div>
+								<?php endif; ?>
 								<div class="campaign-card__contact">ご予約・お問い合わせはコチラ</div>
 								<div class="campaign-card__button">
 									<a href="<?php echo $contact; ?>" class="button">
