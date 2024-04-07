@@ -48,6 +48,7 @@ add_filter(
 			'.gitignore',
 			'README.md',
 			'.DS_Store',
+			'updraft',
 		);
 		return $exclude_filters;
 	}
