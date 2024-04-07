@@ -20,22 +20,24 @@ $contact = esc_url(home_url('/contact/'));
 			<!-- Additional required wrapper -->
 			<div class="swiper-wrapper">
 				<!-- Slides -->
+
 				<?php
-				$slideItems = SCF::get('mv-images');
-				foreach ($slideItems as $item) :
-					$imgurlpc = wp_get_attachment_image_src($item['image_pc'], 'large');
-					$imgurlsp = wp_get_attachment_image_src($item['image_sp'], 'large');
-					$altText = esc_html($item['alt_text']);
+				$image_fields = array('image4', 'image1', 'image2', 'image3');
+
+				foreach ($image_fields as $field) :
+					$image = get_field($field);
+					if (!empty($image)) :
 				?>
-					<div class="swiper-slide">
-						<div class="mv__image">
-							<picture>
-								<source media="(min-width:768px)" srcset="<?php echo $imgurlpc[0]; ?>">
-								<img src="<?php echo $imgurlsp[0]; ?>" alt="<?php echo $altText; ?>">
-							</picture>
+						<div class="swiper-slide">
+							<div class="mv__image">
+								<picture>
+									<source media="(min-width:768px)" srcset="<?php echo esc_url($image['pc_image']); ?>">
+									<img src="<?php echo esc_url($image['sp_image']); ?>" alt="<?php echo esc_attr($image['alt_text']); ?>">
+								</picture>
+							</div>
 						</div>
-					</div>
-				<?php endforeach; ?>
+					<?php endif; ?>
+				<?php endforeach;	?>
 			</div>
 		</div>
 		<div class="mv__lead">
