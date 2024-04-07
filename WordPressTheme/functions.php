@@ -36,6 +36,22 @@ function my_script_init()
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
 
+//All-in-One WP Migrationの除外フォルダ指定
+add_filter(
+	'ai1wm_exclude_themes_from_export',
+	function ( $exclude_filters ) {
+		$exclude_filters = array(
+			'_gulp',
+			'dist',
+			'src',
+			'.git',
+			'.gitignore',
+			'README.md',
+			'.DS_Store',
+		);
+		return $exclude_filters;
+	}
+);
 
 //SCF設定
 /**
