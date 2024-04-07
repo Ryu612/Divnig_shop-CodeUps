@@ -79,7 +79,7 @@ SCF::add_options_page('よくある質問', 'よくある質問', 'manage_option
 function my_add_meta_box($settings, $type, $id, $meta_type)
 {
     if ('about_gallery' == $type) {
-        $setting = SCF::add_setting('id-about_gallery', 'About Usギャラリー');
+        $setting = SCF::add_setting('id-about_gallery', 'About Usギャラリー（「縦・横・横・横・横・縦」の順番で繰り返し表示されます。）');
         $items = array(
             array(
                 'type'        => 'image', //*タイプ
