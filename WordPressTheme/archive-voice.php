@@ -67,7 +67,8 @@
 						<div class="voice-card__head">
 							<div class="voice-card__title-wrapper">
 								<div class="voice-card__meta">
-									<div class="voice-card__age"><?php the_field("voice-profile"); ?></div>
+								<?php $voiceProfile = get_field('voiceprofile'); ?>
+									<div class="voice-card__age"><?php echo	$voiceProfile['age'] . '(' . $voiceProfile['gender'] . ')' ?></div>
 									<div class="voice-card__category">
 										<?php
 										$taxonomy_terms = get_the_terms($post->ID, 'voice_category');
