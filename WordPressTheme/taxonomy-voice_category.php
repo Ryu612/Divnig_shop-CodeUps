@@ -12,7 +12,7 @@
 	<h2 class="sub-mv__title">Voice</h2>
 </div>
 
-			<?php get_template_part('template-parts/breadcrumb'); ?>
+<?php get_template_part('template-parts/breadcrumb'); ?>
 
 <section class="archive-voice layout-archive-voice">
 	<div class="archive-voice__inner inner fish-icon">
@@ -67,19 +67,22 @@
 						<div class="voice-card__head">
 							<div class="voice-card__title-wrapper">
 								<div class="voice-card__meta">
-									<div class="voice-card__age"><?php the_field("voice-profile"); ?></div>
-									<?php
-									$taxonomy_terms = get_the_terms($post->ID, 'voice_category');
-									if (!empty($taxonomy_terms)) {
-										// カテゴリーを説明でソートする
-										usort($taxonomy_terms, function ($a, $b) {
-											return strcmp($a->description, $b->description);
-										});
-										foreach ($taxonomy_terms as $taxonomy_term) {
-											echo '<div class="voice-card__label">' . esc_html($taxonomy_term->name) . '</div>';
+									<?php $voiceProfile = get_field('voiceprofile'); ?>
+									<div class="voice-card__age"><?php echo	$voiceProfile['age'] . '(' . $voiceProfile['gender'] . ')' ?></div>
+									<div class="voice-card__category">
+										<?php
+										$taxonomy_terms = get_the_terms($post->ID, 'voice_category');
+										if (!empty($taxonomy_terms)) {
+											// カテゴリーを説明でソートする
+											usort($taxonomy_terms, function ($a, $b) {
+												return strcmp($a->description, $b->description);
+											});
+											foreach ($taxonomy_terms as $taxonomy_term) {
+												echo '<div class="voice-card__label">' . esc_html($taxonomy_term->name) . '</div>';
+											}
 										}
-									}
-									?>
+										?>
+									</div>
 								</div>
 								<h3 class="voice-card__title"><?php the_title(); ?></h3>
 							</div>
