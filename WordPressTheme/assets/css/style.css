@@ -3964,8 +3964,6 @@ html {
 	align-content: center;
 	display: grid;
 	justify-content: center;
-	padding-bottom: 0;
-	padding-top: 0;
 	place-content: center;
 	width: 28.5714285714%;
 }
