@@ -16,88 +16,97 @@
 
 <section class="page-price layout-page-price">
 	<div class="page-price__inner inner fish-icon">
-		<div class="page-price__table price-tablels">
-			<?php
-			$priceItems = SCF::get_option_meta('price_list', 'licence');
-			if (!empty($priceItems) && !empty($priceItems[0]['course_name_1'])) :
-			?>
-				<div id="price-license" class="price-tablels__item price-table">
-					<h3 class="price-table__head"><span>ライセンス講習</span></h3>
-					<table class="price-table__body">
-						<?php foreach ($priceItems as $item) :
-							$course_name = esc_html($item['course_name_1']);
-							$course_name2 = esc_html($item['course_name_2nd_1']);
-							$price = esc_html($item['price_1']);
-						?>
-							<tr>
-								<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
-								<td><?php echo $price; ?></td>
-							</tr>
-						<?php endforeach; ?>
-					</table>
-				</div><!-- /.price-tablels__item -->
-			<?php endif; ?>
-			<?php
-			$priceItems = SCF::get_option_meta('price_list', 'experience');
-			if (!empty($priceItems) && !empty($priceItems[0]['course_name_2'])) :
-			?>
-				<div id="price-experience" class="price-tablels__item price-table">
-					<h3 class="price-table__head"><span>体験ダイビング</span></h3>
-					<table class="price-table__body">
-						<?php foreach ($priceItems as $item) :
-							$course_name = esc_html($item['course_name_2']);
-							$course_name2 = esc_html($item['course_name_2nd_2']);
-							$price = esc_html($item['price_2']);
-						?>
-							<tr>
-								<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
-								<td><?php echo $price; ?></td>
-							</tr>
-						<?php endforeach; ?>
-					</table>
-				</div><!-- /.price-tablels__item -->
-			<?php endif; ?>
-			<?php
-			$priceItems = SCF::get_option_meta('price_list', 'fun');
-			if (!empty($priceItems) && !empty($priceItems[0]['course_name_3'])) :
-			?>
-				<div id="price-experience" class="price-tablels__item price-table">
-					<h3 class="price-table__head"><span>ファンダイビング</span></h3>
-					<table class="price-table__body">
-						<?php foreach ($priceItems as $item) :
-							$course_name = esc_html($item['course_name_3']);
-							$course_name2 = esc_html($item['course_name_2nd_3']);
-							$price = esc_html($item['price_3']);
-						?>
-							<tr>
-								<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
-								<td><?php echo $price; ?></td>
-							</tr>
-						<?php endforeach; ?>
-					</table>
-				</div><!-- /.price-tablels__item -->
-			<?php endif; ?>
-			<?php
-			$priceItems = SCF::get_option_meta('price_list', 'special');
-			if (!empty($priceItems) && !empty($priceItems[0]['course_name_4'])) :
-			?>
-				<div id="price-experience" class="price-tablels__item price-table">
-					<h3 class="price-table__head"><span>スペシャルダイビング</span></h3>
-					<table class="price-table__body">
-						<?php foreach ($priceItems as $item) :
-							$course_name = esc_html($item['course_name_4']);
-							$course_name2 = esc_html($item['course_name_2nd_4']);
-							$price = esc_html($item['price_4']);
-						?>
-							<tr>
-								<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
-								<td><?php echo $price; ?></td>
-							</tr>
-						<?php endforeach; ?>
-					</table>
-				</div><!-- /.price-tablels__item -->
-			<?php endif; ?>
-		</div>
+		<?php
+		// 各項目から価格を取得
+		$priceItems_licence = SCF::get_option_meta('price_list', 'licence');
+		$priceItems_experience = SCF::get_option_meta('price_list', 'experience');
+		$priceItems_fun = SCF::get_option_meta('price_list', 'fun');
+		$priceItems_special = SCF::get_option_meta('price_list', 'special');
+
+		// 何らかのコース名が入力されていれば.price-tablelsを表示
+		if (!empty($priceItems_licence[0]['course_name_1']) || !empty($priceItems_experience[0]['course_name_2']) || !empty($priceItems_fun[0]['course_name_3']) || !empty($priceItems_special[0]['course_name_4'])) :
+		?>
+			<div class="page-price__table price-tablels">
+				<?php
+				if (!empty($priceItems_licence) && !empty($priceItems_licence[0]['course_name_1'])) :
+				?>
+					<div id="price-license" class="price-tablels__item price-table">
+						<h3 class="price-table__head"><span>ライセンス講習</span></h3>
+						<table class="price-table__body">
+							<?php foreach ($priceItems_licence as $item) :
+								$course_name = esc_html($item['course_name_1']);
+								$course_name2 = esc_html($item['course_name_2nd_1']);
+								$price = esc_html($item['price_1']);
+							?>
+								<tr>
+									<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
+									<td><?php echo $price; ?></td>
+								</tr>
+							<?php endforeach; ?>
+						</table>
+					</div><!-- /.price-tablels__item -->
+				<?php endif; ?>
+				<?php
+				if (!empty($priceItems_experience) && !empty($priceItems_experience[0]['course_name_2'])) :
+				?>
+					<div id="price-experience" class="price-tablels__item price-table">
+						<h3 class="price-table__head"><span>体験ダイビング</span></h3>
+						<table class="price-table__body">
+							<?php foreach ($priceItems_experience as $item) :
+								$course_name = esc_html($item['course_name_2']);
+								$course_name2 = esc_html($item['course_name_2nd_2']);
+								$price = esc_html($item['price_2']);
+							?>
+								<tr>
+									<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
+									<td><?php echo $price; ?></td>
+								</tr>
+							<?php endforeach; ?>
+						</table>
+					</div><!-- /.price-tablels__item -->
+				<?php endif; ?>
+				<?php
+				if (!empty($priceItems_fun) && !empty($priceItems_fun[0]['course_name_3'])) :
+				?>
+					<div id="price-experience" class="price-tablels__item price-table">
+						<h3 class="price-table__head"><span>ファンダイビング</span></h3>
+						<table class="price-table__body">
+							<?php foreach ($priceItems_fun as $item) :
+								$course_name = esc_html($item['course_name_3']);
+								$course_name2 = esc_html($item['course_name_2nd_3']);
+								$price = esc_html($item['price_3']);
+							?>
+								<tr>
+									<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
+									<td><?php echo $price; ?></td>
+								</tr>
+							<?php endforeach; ?>
+						</table>
+					</div><!-- /.price-tablels__item -->
+				<?php endif; ?>
+				<?php
+				if (!empty($priceItems_special) && !empty($priceItems_special[0]['course_name_4'])) :
+				?>
+					<div id="price-experience" class="price-tablels__item price-table">
+						<h3 class="price-table__head"><span>スペシャルダイビング</span></h3>
+						<table class="price-table__body">
+							<?php foreach ($priceItems_special as $item) :
+								$course_name = esc_html($item['course_name_4']);
+								$course_name2 = esc_html($item['course_name_2nd_4']);
+								$price = esc_html($item['price_4']);
+							?>
+								<tr>
+									<td><?php echo $course_name; ?><br class="u-mobile"><?php echo $course_name2; ?></td>
+									<td><?php echo $price; ?></td>
+								</tr>
+							<?php endforeach; ?>
+						</table>
+					</div><!-- /.price-tablels__item -->
+				<?php endif; ?>
+			</div>
+		<?php else : ?>
+			<p class="nopost">準備中</p>
+		<?php endif; ?>
 	</div>
 </section>
 
