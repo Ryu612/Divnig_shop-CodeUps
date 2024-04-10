@@ -299,7 +299,6 @@ $contact = esc_url(home_url('/contact/'));
 			<h2 class="section-header__japanese">料金一覧</h2>
 		</div>
 		<?php
-		// 各項目から価格を取得
 		$priceItems_licence = SCF::get_option_meta('price_list', 'licence');
 		$priceItems_experience = SCF::get_option_meta('price_list', 'experience');
 		$priceItems_fun = SCF::get_option_meta('price_list', 'fun');

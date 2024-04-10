@@ -17,7 +17,6 @@
 <section class="page-price layout-page-price">
 	<div class="page-price__inner inner fish-icon">
 		<?php
-		// 各項目から価格を取得
 		$priceItems_licence = SCF::get_option_meta('price_list', 'licence');
 		$priceItems_experience = SCF::get_option_meta('price_list', 'experience');
 		$priceItems_fun = SCF::get_option_meta('price_list', 'fun');
